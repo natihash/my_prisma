@@ -380,20 +380,19 @@ def load_hooked_model(
     return model
 
 
-def _get_general_hf_config(model_name: str, model_type=None):
-    """Get HuggingFace config from TIMM model."""
-    from transformers import AutoConfig
+# def _get_general_hf_config(model_name: str, model_type=None):
+#     """Get HuggingFace config from TIMM model."""
+#     from transformers import AutoConfig
 
-    if model_type:
-        if model_type == ModelType.VISION:
-            model_type = "vision_config"
-        elif model_type == ModelType.TEXT:
-            model_type = "text_config"
-    hf_config = AutoConfig.from_pretrained(model_name)
-    if model_type:
-        hf_config = getattr(hf_config, model_type)
-    return hf_config
-
+#     if model_type:
+#         if model_type == ModelType.VISION:
+#             model_type = "vision_config"
+#         elif model_type == ModelType.TEXT:
+#             model_type = "text_config"
+#     hf_config = AutoConfig.from_pretrained(model_name)
+#     if model_type:
+#         hf_config = getattr(hf_config, model_type)
+#     return hf_config
 
 def _get_timm_hf_config(model_name: str):
     """Get HuggingFace config from TIMM model."""
@@ -403,6 +402,52 @@ def _get_timm_hf_config(model_name: str):
     from transformers import AutoConfig
 
     hf_config = AutoConfig.from_pretrained(model.default_cfg["hf_hub_id"])
+    
+    # --- PATCH: Force correct architecture parameters directly from timm ---
+    if hasattr(model, "patch_embed"):
+        if hasattr(model.patch_embed, "proj") and hasattr(model.patch_embed.proj, "kernel_size"):
+            # Reliably extract from the underlying Conv2d layer
+            hf_config.patch_size = model.patch_embed.proj.kernel_size[0]
+        elif hasattr(model.patch_embed, "patch_size"):
+            p_size = model.patch_embed.patch_size
+            hf_config.patch_size = p_size[0] if isinstance(p_size, (tuple, list)) else p_size
+            
+    if "input_size" in model.default_cfg:
+        hf_config.image_size = model.default_cfg["input_size"][-1]
+        hf_config.num_channels = model.default_cfg["input_size"][0]
+    # ----------------------------------------------------------------------
+        
+    return hf_config
+
+
+# def _get_timm_hf_config(model_name: str):
+#     """Get HuggingFace config from TIMM model."""
+#     import timm
+
+#     model = timm.create_model(model_name)
+#     from transformers import AutoConfig
+
+#     hf_config = AutoConfig.from_pretrained(model.default_cfg["hf_hub_id"])
+#     return hf_config
+
+def _get_timm_hf_config(model_name: str):
+    """Get HuggingFace config from TIMM model."""
+    import timm
+
+    model = timm.create_model(model_name)
+    from transformers import AutoConfig
+
+    hf_config = AutoConfig.from_pretrained(model.default_cfg["hf_hub_id"])
+    
+    # --- PATCH: Force correct architecture parameters directly from timm ---
+    if hasattr(model, "patch_embed") and hasattr(model.patch_embed, "patch_size"):
+        hf_config.patch_size = model.patch_embed.patch_size[0]
+        
+    if "input_size" in model.default_cfg:
+        hf_config.image_size = model.default_cfg["input_size"][-1]
+        hf_config.num_channels = model.default_cfg["input_size"][0]
+    # ----------------------------------------------------------------------
+        
     return hf_config
 
 
