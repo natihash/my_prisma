@@ -143,3 +143,5 @@ configs/
 ehthumbs.db
 Thumbs.db
 .idea
+demos/dla_matrices/
+demos/head_activations/
