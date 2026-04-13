@@ -36,6 +36,29 @@ TIMM_CONFIGS = {
     "vit_large_patch16_224": {
         "return_type": "class_logits",
     },
+    "vit_base_patch32_clip_224.laion2b_ft_in1k": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 1000, # Explicitly define ImageNet-1k classes
+    },
+
+    "vit_base_patch16_clip_224.laion2b_ft_in1k": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 1000,
+    },
+    "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_linear_probe": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 1000, 
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_linear_probe_real": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 1000,
+    }
+
 }
 
 
@@ -234,6 +257,11 @@ OPEN_CLIP_BASE_CONFIGS = {
     },
     "open-clip:timm/vit_large_patch14_clip_224.laion400m_e32": {
         **BASE_OPEN_CLIP_CONFIGS["ViT-L"],
+    },
+    "open-clip:timm/vit_base_patch32_clip_224.laion2b_ft_in1k": {
+        "patch_size": 32,
+        "n_classes": 1000, # Specifically for ImageNet-1k finetune
+        **BASE_OPEN_CLIP_CONFIGS["ViT-B"],
     },
     "open-clip:timm/vit_medium_patch16_clip_224.tinyclip_yfcc15m": {
         # "d_model": 640,

@@ -632,9 +632,29 @@ def convert_timm_weights(
     new_state_dict["cls_token"] = old_state_dict["cls_token"]
     new_state_dict["pos_embed.W_pos"] = old_state_dict["pos_embed"].squeeze(0)
     new_state_dict["embed.proj.weight"] = old_state_dict["patch_embed.proj.weight"]
-    new_state_dict["embed.proj.bias"] = old_state_dict["patch_embed.proj.bias"]
+    # new_state_dict["embed.proj.bias"] = old_state_dict["patch_embed.proj.bias"]
+    # new_state_dict["ln_final.w"] = old_state_dict["norm.weight"]
+    # new_state_dict["ln_final.b"] = old_state_dict["norm.bias"]
+    # new_state_dict["pos_embed.W_pos"] = old_state_dict["pos_embed"].squeeze(0)
+    # new_state_dict["embed.proj.weight"] = old_state_dict["patch_embed.proj.weight"]
+    
+    # --- PATCH: Safely check for patch embedding bias ---
+    if "patch_embed.proj.bias" in old_state_dict:
+        new_state_dict["embed.proj.bias"] = old_state_dict["patch_embed.proj.bias"]
+    else:
+        # If it doesn't exist, create a zero bias tensor to keep Prisma's HookedViT happy
+        d_model = old_state_dict["patch_embed.proj.weight"].shape[0]
+        new_state_dict["embed.proj.bias"] = torch.zeros(d_model)
+    # -----------------------------------------------------
+        
     new_state_dict["ln_final.w"] = old_state_dict["norm.weight"]
     new_state_dict["ln_final.b"] = old_state_dict["norm.bias"]
+
+        # --- NEW PATCH: Safely grab ln_pre weights if the model has them ---
+    if "norm_pre.weight" in old_state_dict:
+        new_state_dict["ln_pre.w"] = old_state_dict["norm_pre.weight"]
+        new_state_dict["ln_pre.b"] = old_state_dict["norm_pre.bias"]
+    # ------------------------------------------------------------------
 
     for layer in range(cfg.n_layers):
         layer_key = f"blocks.{layer}"
