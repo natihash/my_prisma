@@ -57,7 +57,14 @@ TIMM_CONFIGS = {
         "return_type": "class_logits",
         "layer_norm_pre": True,
         "n_classes": 1000,
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_fullft": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 1000,
     }
+
 
 }
 

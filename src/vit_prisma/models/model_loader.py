@@ -124,6 +124,7 @@ PASSING_MODELS = {
     "vit_base_patch16_clip_224.laion2b_ft_in1k",
     "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_linear_probe",
     "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_linear_probe_real",
+    "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_fullft",
     "facebook/dino-vitb16",
     "facebook/dino-vitb8",
     "openai/clip-vit-large-patch14-336",
