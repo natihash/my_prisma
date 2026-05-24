@@ -31,20 +31,48 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = load_hooked_model(MODEL_NAME)
 model.to(DEVICE);
 
+# sae_trainer_cfg = VisionModelSAERunnerConfig( 
+#     model_name=MODEL_NAME,
+#     hook_point_layer=11,
+#     layer_subtype='hook_resid_post',
+#     dataset_name="imagenet",
+#     feature_sampling_window=1000,
+#     activation_fn_str='relu',
+#     wandb_project="sae_training_clip_b16_cls_only",
+#     expansion_factor=16,
+    
+#     cls_token_only=True,  
+#     context_size=1,
+#     # -------------------------------
+    
+#     num_workers=6,
+#     store_batch_size=256,   
+#     train_batch_size=8192,  
+#     checkpoint_path='/home/nfm/ViT-Prisma/demos/sae_ckpts',
+#     num_epochs=10,
+#     n_checkpoints=5
+# )
+
 sae_trainer_cfg = VisionModelSAERunnerConfig( 
     model_name=MODEL_NAME,
-    hook_point_layer=11,
+    
+    # 1. Move back to the penultimate layer for CLIP!
+    hook_point_layer=11, 
     layer_subtype='hook_resid_post',
+    
     dataset_name="imagenet",
     feature_sampling_window=1000,
     activation_fn_str='relu',
-    wandb_project="sae_training_clip_b16_cls_only",
+    wandb_project="sae_training_clip_b16_cls_only2",
     expansion_factor=16,
+    use_ghost_grads=True,
     
-    # --- CHANGED FOR ALL PATCHES ---
+    # 2. Lower the L1 penalty so features are allowed to activate!
+    l1_coefficient=0.00004, # Try 4e-5 or 2e-5 (default is usually 2e-4)
+    lr=0.0004,              # Often a slightly higher LR helps if L1 is lowered
+    
     cls_token_only=True,  
-    context_size=1,      # 196 patches + 1 CLS token
-    # -------------------------------
+    context_size=1,
     
     num_workers=6,
     store_batch_size=256,   
