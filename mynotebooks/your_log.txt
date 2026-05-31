@@ -1,0 +1,84 @@
+Elbow indices: [    36 999981]
+Elbow values: [-0.375     1.046875]
+Analyzing Layer 11 Head 0...
+Photo taken in Beijing, China: 161 : 1.183||Photo taken in Seoul, South Korea: 124 : 1.161||Picture taken in Laos: 113 : 1.203||a picture of taiwan: 111 : 1.149||A picture of Taiwan: 111 : 1.149||Picture taken in Hungary: 108 : 1.173||Image taken in South Korea: 91 : 1.149||Picture taken in China: 87 : 1.171||Picture taken in Bavaria, Germany: 78 : 1.220||Picture taken in Vietnam: 76 : 1.154||Photo taken in Bangkok, Thailand: 73 : 1.198||Picture taken in South Korea: 71 : 1.145||Image taken in Thailand: 62 : 1.198||Image taken in the Thai beaches: 49 : 1.210||Photo taken in Nepal: 47 : 1.122||A picture of South Korea: 44 : 1.153||Photo taken in Kyoto: 43 : 1.158||Image taken in the Thai temples: 41 : 1.190||Picture taken in Thailand: 40 : 1.196||Photo taken in the Italian coastal towns: 40 : 1.196||
+--------------------------------------------------
+Head 36: Effective Dimension of Activations: 10.24 out of 768
+Head 36: Effective Dimension of Top Text Embeddings: 24.85 out of 512
+Elbow indices: [    36 999921]
+Elbow values: [-0.22363281  0.6171875 ]
+Analyzing Layer 11 Head 1...
+Blurred boundaries: 1832 : 0.666||Ephemeral encounters: 472 : 0.654||Secret rendezvous: 370 : 0.653||Subtle human presence: 276 : 0.658||Loose brushwork: 273 : 0.660||Central focal point: 208 : 0.676||Remote desolation: 189 : 0.659||Tranquil dialogues: 186 : 0.672||Reflective introspection: 176 : 0.709||Reflective  introspection: 176 : 0.709||Symmetry disrupted: 175 : 0.680||Reflection or mirror effect: 168 : 0.744||Distant horizons: 157 : 0.659||Reflective  moment: 153 : 0.718||Shattered reality: 134 : 0.676||Captivating reflections: 124 : 0.714||Tranquil interlude: 117 : 0.662||Reflective moments: 116 : 0.698||Hidden passage: 112 : 0.662||Whispering passages: 111 : 0.684||
+--------------------------------------------------
+Head 37: Effective Dimension of Activations: 37.30 out of 768
+Head 37: Effective Dimension of Top Text Embeddings: 56.32 out of 512
+Elbow indices: [     3 999962]
+Elbow values: [-0.62109375  0.609375  ]
+Analyzing Layer 11 Head 2...
+Picture of mammels: 296 : 0.702||Playful nuances: 102 : 0.701||Ephemeral glimmers: 95 : 0.719||Subdued grandeur: 76 : 0.731||Whispering narratives: 67 : 0.699||Whimsicachildren's scenel: 64 : 0.717||Emotional nuances: 62 : 0.682||Resonant harmony: 61 : 0.707||Playful narratives: 61 : 0.703||Monochromatic tones: 58 : 0.737||Harmonic symmetry: 57 : 0.727||Nostalgic glances: 56 : 0.690||Natural symmetry: 54 : 0.710||Ephemeral moment: 52 : 0.705||Dramatic chiaroscuro: 52 : 0.700||Dynamic symmetry: 51 : 0.688||Manmade object: 46 : 0.744||Whispering horizons: 46 : 0.690||Dynamic encounters: 46 : 0.691||A parabola: 42 : 0.693||
+--------------------------------------------------
+Head 38: Effective Dimension of Activations: 39.61 out of 768
+Head 38: Effective Dimension of Top Text Embeddings: 72.28 out of 512
+Elbow indices: [    85 999951]
+Elbow values: [-0.5         0.73828125]
+Analyzing Layer 11 Head 3...
+An image of a Emergency Medical Technician (EMT): 341 : 1.011||An image of a Paramedic: 247 : 0.997||An image of a Veterinarian: 208 : 0.888||An image of a Veterinary Technician: 208 : 0.890||Image of an ambulance: 204 : 0.963||An image of a Marine Biologist: 163 : 0.826||An image of a Chef de Cuisine: 161 : 0.854||Graceful swimming fish: 145 : 0.891||Submerged underwater scene: 142 : 0.854||Picture of Italian food: 141 : 0.840||An image of a Farmer: 140 : 0.873||An image with a tractor: 124 : 0.909||An image of a Surgeon: 121 : 0.968||An image of a Firefighter: 108 : 0.949||Picture taken in the Italian pasta kitchens: 106 : 0.841||An image of a Dermatologist: 99 : 0.937||meticulous surgical procedure: 97 : 0.942||An image of a Chef: 95 : 0.850||An image of a Orthopedic Surgeon: 91 : 0.976||Precise surgical procedure: 90 : 0.950||
+--------------------------------------------------
+Head 39: Effective Dimension of Activations: 21.01 out of 768
+Head 39: Effective Dimension of Top Text Embeddings: 39.60 out of 512
+Elbow indices: [     6 999978]
+Elbow values: [-0.53515625  1.1953125 ]
+Analyzing Layer 11 Head 4...
+Playful siblings: 1180 : 1.430||Image with a trio of friends: 329 : 1.403||Image with a duo of partners: 304 : 1.331||Image with three people: 231 : 1.403||An image of a parent and child: 211 : 1.417||Image with a four people: 186 : 1.339||Image with two subjects: 178 : 1.307||Image with a six people: 104 : 1.343||Image with a five people: 102 : 1.349||Joyful toddlers: 101 : 1.293||An image of two subjects: 93 : 1.292||Image with a seven people: 61 : 1.326||An image of a couple: 59 : 1.311||Image with a pair of subjects: 59 : 1.276||Image with a couple of subjects: 58 : 1.301||An image with dogs: 57 : 1.263||Image with a group of friends: 54 : 1.298||An image of three subjects: 43 : 1.363||Image with a trio of subjects: 34 : 1.338||An image with cats: 32 : 1.336||
+--------------------------------------------------
+Head 40: Effective Dimension of Activations: 11.92 out of 768
+Head 40: Effective Dimension of Top Text Embeddings: 12.20 out of 512
+Elbow indices: [    84 999971]
+Elbow values: [-0.75      1.734375]
+Analyzing Layer 11 Head 5...
+Photo of a reptile: 490 : 1.895||detailed reptile close-up: 466 : 1.897||A snake: 448 : 1.935||Snapshot of a marsupial: 435 : 1.931||Image with a seagull: 343 : 1.858||Image with a spider: 328 : 2.081||A scorpion: 272 : 1.944||detailed arachnid close-up: 258 : 1.976||Image with a hawk: 153 : 1.936||Image with an ant: 140 : 1.887||Image with a dragonfly: 130 : 2.099||detailed amphibian close-up: 129 : 1.868||An elephant: 126 : 1.942||Image with a sheep: 87 : 2.058||An image with sheep: 78 : 2.031||An image with seagulls: 77 : 1.841||Image with a donkey: 74 : 1.882||Image showing prairie grouse: 73 : 1.845||Image with a zebra: 64 : 2.074||image of a sheep: 64 : 1.972||
+--------------------------------------------------
+Head 41: Effective Dimension of Activations: 11.85 out of 768
+Head 41: Effective Dimension of Top Text Embeddings: 16.46 out of 512
+Elbow indices: [     8 999994]
+Elbow values: [-0.51953125  1.390625  ]
+Analyzing Layer 11 Head 6...
+Photo taken in the Alaskan mountains: 53 : 1.534||Photo taken in Namib Desert: 48 : 1.522||Photo taken in the Rub' al Khali (Empty Quarter): 38 : 1.527||Photo taken in Swiss Alps: 38 : 1.534||an image of liechtenstein: 37 : 1.595||Image taken in the Alaskan mountains: 32 : 1.531||Picture snapped in the Swiss Alps: 31 : 1.540||Photo captured in the Arizona desert: 30 : 1.528||Picture taken in Swiss Alps: 30 : 1.520||Picture snapped in the Alaskan mountains: 30 : 1.515||Picture taken in the Swiss Alps: 29 : 1.520||A picture of liechtenstein: 28 : 1.542||Image taken in the Namibian desert: 26 : 1.511||Photo captured in the Alaskan mountains: 24 : 1.495||Image snapped in the Swiss Alps: 20 : 1.516||An image of Andorra: 19 : 1.600||Image taken in Swiss Alps: 19 : 1.506||Photo taken in Venice, Italy: 19 : 1.504||Picture taken in the Icelandic glaciers: 16 : 1.513||Picture snapped in the Icelandic glaciers: 14 : 1.512||
+--------------------------------------------------
+Head 42: Effective Dimension of Activations: 9.15 out of 768
+Head 42: Effective Dimension of Top Text Embeddings: 14.56 out of 512
+Elbow indices: [    63 999987]
+Elbow values: [-0.55859375  0.9140625 ]
+Analyzing Layer 11 Head 7...
+A sock: 111 : 1.134||A cup: 99 : 1.018||A megaphone: 86 : 1.069||A blade (of grass or a knife): 81 : 1.128||Ephemeral soap bubble play: 76 : 1.072||A spoon: 65 : 1.039||A violin: 58 : 1.134||delicate soap bubble play: 51 : 1.122||fleeting soap bubble: 48 : 1.114||A blade (of a fan or a saw): 47 : 1.013||A mask: 44 : 1.122||delicate soap bubble: 40 : 1.104||A bonnet: 39 : 1.104||A shoelace: 39 : 1.010||A geyser: 39 : 1.027||Image of a hot air balloon: 38 : 1.084||delicate soap bubble display: 37 : 1.118||Ephemeral soap bubble: 36 : 1.062||A whisk: 35 : 1.006||fleeting soap bubble art: 33 : 1.113||
+--------------------------------------------------
+Head 43: Effective Dimension of Activations: 23.38 out of 768
+Head 43: Effective Dimension of Top Text Embeddings: 22.44 out of 512
+Elbow indices: [    53 999992]
+Elbow values: [-0.36523438  0.81640625]
+Analyzing Layer 11 Head 8...
+A laptop: 148 : 1.051||cozy home library: 90 : 1.007||Inviting home library: 89 : 0.996||A bag: 68 : 0.965||A wallet: 67 : 0.979||A rug: 63 : 0.948||A notebook: 62 : 1.008||A shelf: 53 : 0.960||A cushion: 51 : 1.077||A pillow: 45 : 1.097||A napkin: 37 : 0.963||cozy reading nook: 37 : 0.913||A book: 34 : 0.934||Inviting reading nook: 31 : 0.900||Image with a handwritten letter: 27 : 0.987||Photograph taken in a bookstore: 24 : 0.929||Picture taken in a grand theater: 23 : 0.975||Photograph taken in a cinema: 21 : 0.995||Artwork featuring crossword grid pattern: 17 : 0.900||Collage of vintage magazine clippings: 16 : 0.903||
+--------------------------------------------------
+Head 44: Effective Dimension of Activations: 17.12 out of 768
+Head 44: Effective Dimension of Top Text Embeddings: 21.67 out of 512
+Elbow indices: [    74 999963]
+Elbow values: [-0.18164062  0.40429688]
+Analyzing Layer 11 Head 9...
+An image of the number 4: 847 : 0.460||An image of the number 7: 228 : 0.509||The number two: 226 : 0.493||An image of the number 1: 218 : 0.452||An image of the number 10: 203 : 0.514||An image of the number 2: 202 : 0.502||An image of the number 8: 201 : 0.487||The number twelve: 184 : 0.496||An image of the number 9: 178 : 0.458||The number seven: 139 : 0.508||The number six: 125 : 0.514||The number eleven: 124 : 0.466||The number three: 115 : 0.480||An image of the number 3: 107 : 0.506||The number fifteen: 99 : 0.550||The number eight: 93 : 0.502||Image with a four people: 90 : 0.539||The number five: 89 : 0.545||The number twenty-five: 89 : 0.515||The number twenty: 84 : 0.498||
+--------------------------------------------------
+Head 45: Effective Dimension of Activations: 18.34 out of 768
+Head 45: Effective Dimension of Top Text Embeddings: 40.41 out of 512
+Elbow indices: [    37 999977]
+Elbow values: [-0.41015625  1.34375   ]
+Analyzing Layer 11 Head 10...
+An image with cold green tones: 587 : 1.608||Image with a green color: 499 : 1.621||Photograph with a green color palette: 389 : 1.589||Image with a yellow color: 328 : 1.588||Image with a pink color: 326 : 1.626||Photograph with a yellow color palette: 257 : 1.541||Image with a blue color: 232 : 1.698||Photograph with a blue color palette: 155 : 1.680||Image with a orange color: 126 : 1.537||Image with a purple color: 116 : 1.581||Image with a red color: 99 : 1.494||A grey color: 83 : 1.489||Photograph with a purple color palette: 68 : 1.559||Photograph with a red color palette: 59 : 1.492||A charcoal gray color: 55 : 1.449||Soft pastel hues: 34 : 1.441||Colorful diversity: 24 : 1.462||A rainbow: 22 : 1.469||colorful celebration: 19 : 1.481||Burst of color: 18 : 1.472||
+--------------------------------------------------
+Head 46: Effective Dimension of Activations: 11.47 out of 768
+Head 46: Effective Dimension of Top Text Embeddings: 16.16 out of 512
+Elbow indices: [    24 999965]
+Elbow values: [-0.39453125  0.43945312]
+Analyzing Layer 11 Head 11...
+A photo with the letter J: 177 : 0.585||A photo with the letter K: 151 : 0.602||A photo with the letter Y: 147 : 0.552||A photo with the letter L: 134 : 0.571||A photo with the letter E: 123 : 0.568||A photo with the letter V: 114 : 0.568||A zephyr: 111 : 0.582||A photo with the letter W: 105 : 0.569||A photo with the letter P: 103 : 0.556||A photo with the letter M: 102 : 0.551||A photo with the letter A: 101 : 0.542||A photo with the letter R: 100 : 0.599||A photo with the letter N: 98 : 0.583||A photo with the letter F: 98 : 0.565||A photo with the letter H: 96 : 0.585||Vivid cultural representation: 96 : 0.545||A photo with the letter C: 95 : 0.561||A photo with the letter U: 94 : 0.527||A photo with the letter Z: 87 : 0.580||A photo with the letter G: 83 : 0.560||
+--------------------------------------------------
+Head 47: Effective Dimension of Activations: 38.86 out of 768
+Head 47: Effective Dimension of Top Text Embeddings: 40.85 out of 512
