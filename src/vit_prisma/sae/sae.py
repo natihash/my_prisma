@@ -144,7 +144,7 @@ class SparseAutoencoder(HookedRootModule, ABC):
     def _compute_mse_loss(self, x: torch.Tensor, sae_out: torch.Tensor) -> torch.Tensor:
         x_centred = x - x.mean(dim=0, keepdim=True)
         mse_loss = torch.nn.functional.mse_loss(sae_out, x.detach(), reduction="none")
-        norm_factor = torch.norm(x_centred, p=2, dim=-1, keepdim=True)
+        norm_factor = torch.norm(x_centred, p=2, dim=-1, keepdim=True).clamp(min=1e-6)
         mse_loss = (mse_loss / norm_factor).mean()
         return mse_loss
 
@@ -830,10 +830,12 @@ def get_activation_fn(
         return tanh_relu
     elif activation_fn == "topk":
         assert "k" in kwargs, "TopK activation function requires a k value."
-        k = kwargs.get("k", 64)  # Default k to 1 if not provided
-        postact_fn = kwargs.get(
-            "postact_fn", nn.ReLU()
-        )  # Default post-activation to ReLU if not provided
+        k = kwargs.get("k", 64)
+        postact_fn_arg = kwargs.get("postact_fn", "identity")
+        if isinstance(postact_fn_arg, str):
+            postact_fn = nn.ReLU() if postact_fn_arg == "relu" else nn.Identity()
+        else:
+            postact_fn = postact_fn_arg
         return TopK(k, postact_fn)
     else:
         raise ValueError(f"Unknown activation function: {activation_fn}")

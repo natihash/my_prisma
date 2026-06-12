@@ -585,6 +585,51 @@ group_data = json.load(open("groups_output.json"))
 
 import os
 import torch
+
+def get_ablation_attribution_tensor(layer, base_dir="/home/nfm/ViT-Prisma/mynotebooks/sims_tensors"):
+    # 1. Load the baseline tensor [50000, 3498]
+    baseline_path = os.path.join(base_dir, "sims_baseline.pt")
+    print(f"Loading baseline from {baseline_path}...")
+    baseline_sims = torch.load(baseline_path).cpu()
+
+    # 2. Collect difference tensors for all 12 heads
+    num_heads = 12
+    diff_tensors = []
+    
+    for head in range(num_heads):
+        ablated_path = os.path.join(base_dir, f"sims_L{layer}_H{head}.pt")
+        # print(f"Loading ablated tensor for L{layer}_H{head}...")
+        ablated_sims = torch.load(ablated_path).cpu()
+        
+        # Calculate difference: Baseline - Ablated
+        # Positive value = Ablation lowered similarity (Head was contributing positively)
+        # Negative value = Ablation increased similarity (Head was a distractor)
+        diff = baseline_sims - ablated_sims
+        diff_tensors.append(diff)
+        
+    # 3. Stack the 12 tensors
+    # Resulting shape: [12, 50000, 3498]
+    print(f"Stacking tensors for layer {layer}...")
+    stacked_diffs = torch.stack(diff_tensors, dim=0)
+    
+    # 4. Reshape to separate the 1000 classes and 50 images
+    # 50000 -> 1000 classes, 50 images per class
+    # New shape: [12, 1000, 50, 3498]
+    reshaped_diffs = stacked_diffs.view(12, 1000, 50, 3498)
+    
+    # 5. Permute to get the final target shape: [1000, 12, 50, 3498]
+    # Dimension mapping: (heads=0, classes=1, images=2, texts=3) -> (classes=1, heads=0, images=2, texts=3)
+    final_tensor = reshaped_diffs.permute(1, 0, 2, 3)
+    
+    # Ensure contiguous memory after permute (good practice before saving or complex math)
+    final_tensor = final_tensor.contiguous()
+    
+    print(f"Successfully created tensor of shape {final_tensor.shape}")
+    return final_tensor
+
+
+import os
+import torch
 import json
 import csv
 import gc
@@ -598,8 +643,9 @@ dta_files = [
 ]
 
 # Paths for the output files
-LOGS_OUTPUT_FILE = "/home/nfm/ViT-Prisma/mynotebooks/head_metrics_log.csv"
-GROUP_SCORES_OUTPUT_FILE = "/home/nfm/ViT-Prisma/mynotebooks/all_group_scores.json"
+LOGS_OUTPUT_FILE = "/home/nfm/ViT-Prisma/mynotebooks/head_metrics_log_attr_patch.csv"
+GROUP_SCORES_OUTPUT_FILE = "/home/nfm/ViT-Prisma/mynotebooks/all_group_scores_attr_patch.json"
+HEAD_TEXTS_OUTPUT_FILE = "/home/nfm/ViT-Prisma/mynotebooks/head_top_texts_attr_patch.json"
 
 # Load the text dictionary once (since it's shared across all heads)
 text_dict = torch.load("/home/nfm/ViT-Prisma/demos/text_dict.pt")
@@ -607,13 +653,19 @@ text_dict = torch.load("/home/nfm/ViT-Prisma/demos/text_dict.pt")
 # Initialize containers for the accumulated data
 all_metrics_logs = []
 all_group_scores_dict = {}
-
+all_top_texts_dict = {}
 print("Starting automated workflow for all heads...")
+
+# mylayers = [8, 9, 10, 11]
 
 # 2. Iterate through each file and its corresponding heads
 for file_path, real_heads in dta_files:
     print(f"\nLoading DTA matrix: {file_path}")
-    DTA_imagent = torch.load(file_path)
+    # DTA_imagent = torch.load(file_path)
+
+    layer_to_analyze = real_heads[0] // 12 + 8 # Calculate layer number based on the first head index in the chunk
+    DTA_imagent = get_ablation_attribution_tensor(layer_to_analyze)
+    # DTA_imagent.shape
     
     # Process each head in the current file chunk
     for head in real_heads:
@@ -696,7 +748,10 @@ for file_path, real_heads in dta_files:
             "Head_Name": head_name,
             "Scores": group_scores
         }
-        
+        all_top_texts_dict[f"Head_{head}"] = {
+            "Head_Name": head_name,
+            "Top_Texts": top_texts_dict[head_name]
+        }
     # Memory management: Delete the massive DTA chunk and clear cache before loading the next one
     del DTA_imagent
     gc.collect()
@@ -718,5 +773,10 @@ with open(LOGS_OUTPUT_FILE, mode='w', newline='', encoding='utf-8') as csv_file:
 print(f"Saving full group scores to {GROUP_SCORES_OUTPUT_FILE}...")
 with open(GROUP_SCORES_OUTPUT_FILE, mode='w', encoding='utf-8') as json_file:
     json.dump(all_group_scores_dict, json_file, indent=4)
+
+# 5. Save the top texts for each head to a JSON file
+print(f"Saving top texts to {HEAD_TEXTS_OUTPUT_FILE}...")
+with open(HEAD_TEXTS_OUTPUT_FILE, mode='w', encoding='utf-8') as json_file:
+    json.dump(all_top_texts_dict, json_file, indent=4)
 
 print("Workflow complete!")
