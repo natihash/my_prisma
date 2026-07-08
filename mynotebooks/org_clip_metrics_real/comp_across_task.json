@@ -1,0 +1,883 @@
+{
+  "analysis": "Semantic-functionality evolution of CLIP attention heads under FULL fine-tuning (FFT), compared across three adaptation targets.",
+  "method": "FFT",
+  "tasks": [
+    "imagenet1k",
+    "sun397",
+    "text_classification"
+  ],
+  "head_scope": "Last 4 transformer blocks (Layers 8-11), 12 heads each = 48 heads. Only heads with interesting cross-task behaviour are reported.",
+  "categories": {
+    "same_function": "Top groups close/similar to org CLIP, OR the underlying computation (e.g. texture, colour, number reading) is preserved.",
+    "different_function": "Top groups change to a very different theme.",
+    "specialized": "Some org functions dropped while others are retained (the head narrows).",
+    "became_useless": "Relevance to the new task is low relative to other heads in the same layer (top_k_mean in the bottom tier, judged via new_task_rel_*.json), regardless of which groups appear on top."
+  },
+  "rules_for_deciding": {
+    "source_of_truth_imagenet": "imagenet1k semantic_change is taken verbatim from imagenet1k/changes_merged.json (fft entry).",
+    "before": "Top groups of org CLIP (all_group_scores.json) -- shared baseline for all tasks.",
+    "after_imagenet_sun": "Top groups from all_group_scores_fft.json (sorted desc, top ~5, noise/elbow trimmed).",
+    "after_text": "text dataset covers only two semantic groups (Numbers, and Letters/Text). It has no group scores, so the top texts (head_top_texts_fft.json, ranked by how many prompts map to each text) are used and the head is assigned to one of the two groups.",
+    "useless_rule": "Compare a head's top_k_mean to the other heads in the SAME layer (same new_task_rel file); a clear bottom-tier value with a gap below the rest = became_useless.",
+    "semantic_rule": "Compare org top groups vs after top groups: heavy overlap/preserved computation = same_function; partial overlap with dropped functions = specialized; disjoint theme = different_function."
+  },
+  "layer_topk_means": {
+    "imagenet1k": {
+      "L8": 1.425,
+      "L9": 2.96,
+      "L10": 4.611,
+      "L11": 5.248
+    },
+    "sun397": {
+      "L8": 0.935,
+      "L9": 1.719,
+      "L10": 3.121,
+      "L11": 3.867
+    },
+    "text": {
+      "L8": 0.797,
+      "L9": 1.317,
+      "L10": 3.533,
+      "L11": 4.869
+    }
+  },
+  "heads": {
+    "Layer 8 Head 0": {
+      "before_org_top_groups": {
+        "Locations & Places": 29.737,
+        "Letters, Text & Writing": 4.209,
+        "Plants & Botanical": 1.574,
+        "Natural Landscapes": 0.969,
+        "Trees & Forests": 0.824
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Animals": 424.256,
+          "Dogs & Canines": 99.909,
+          "Marine & Aquatic Life": 95.276,
+          "Reptiles & Amphibians": 80.54,
+          "Birds": 70.616
+        },
+        "semantic_change": "different_function",
+        "top_k_mean": 1.952,
+        "rank_mean": 0.463,
+        "layer_topk_mean": 1.425,
+        "justification": "Places/geography -> diffuse animal/object grab-bag"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Architecture & Buildings": 6.077,
+          "Transportation & Vehicles": 1.068,
+          "Sports & Athletics": 0.918,
+          "Water & Aquatic": 0.233,
+          "Cultural & Traditional": 0.227
+        },
+        "semantic_change": "same_function",
+        "top_k_mean": 0.888,
+        "rank_mean": 0.261,
+        "layer_topk_mean": 0.935,
+        "justification": "Place/geography head -> Architecture & Buildings / urban scenes: the place-scene thread is retained, though weak in this early layer (tk 0.89 ~ layer mean)."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "50",
+            "count": 35
+          },
+          {
+            "text": "jalapeno",
+            "count": 6
+          },
+          {
+            "text": "iceberg",
+            "count": 6
+          },
+          {
+            "text": "guitar",
+            "count": 2
+          },
+          {
+            "text": "latency",
+            "count": 2
+          },
+          {
+            "text": "trumpet",
+            "count": 2
+          }
+        ],
+        "assigned_group": "Numbers",
+        "semantic_change": "different_function",
+        "top_k_mean": 0.921,
+        "rank_mean": 0.316,
+        "layer_topk_mean": 0.797,
+        "justification": "Becomes a numeral reader (top text '50'); the geographic function is gone."
+      },
+      "cross_task_summary": "A geography/places head diverges three ways: scattered animals/objects under ImageNet (different), keeps a weak scene role under SUN (same), and turns into a numeral reader under text."
+    },
+    "Layer 8 Head 4": {
+      "before_org_top_groups": {
+        "Facial Expressions & Emotions": 399.606,
+        "Letters, Text & Writing": 171.331,
+        "People & Portraits": 107.31,
+        "Professions & Occupations": 39.413,
+        "Mood & Atmosphere (Dramatic / Mysterious)": 20.873
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Animals": 46.324,
+          "Fashion & Clothing": 29.792,
+          "Dogs & Canines": 23.101,
+          "Textiles & Fabrics": 15.79,
+          "People & Portraits": 13.04
+        },
+        "semantic_change": "became_useless",
+        "top_k_mean": 1.142,
+        "rank_mean": 0.26,
+        "layer_topk_mean": 1.425,
+        "justification": "Was facial-expression/portrait head"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Architecture & Buildings": 5.57,
+          "Toys, Games & Recreation": 5.525,
+          "Markets & Commerce": 5.523,
+          "Natural Landscapes": 1.99,
+          "Plants & Botanical": 1.814
+        },
+        "semantic_change": "became_useless",
+        "top_k_mean": 0.735,
+        "rank_mean": 0.232,
+        "layer_topk_mean": 0.935,
+        "justification": "Face/portrait head collapses to a weak scatter (Architecture/Toys/Markets); tk 0.74 is bottom-tier for the layer."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "guitar",
+            "count": 5
+          },
+          {
+            "text": "gust",
+            "count": 2
+          },
+          {
+            "text": "62",
+            "count": 2
+          },
+          {
+            "text": "noodles",
+            "count": 1
+          },
+          {
+            "text": "internet",
+            "count": 1
+          },
+          {
+            "text": "tempest",
+            "count": 1
+          }
+        ],
+        "assigned_group": "Letters, Text & Writing",
+        "semantic_change": "became_useless",
+        "top_k_mean": 0.641,
+        "rank_mean": 0.271,
+        "layer_topk_mean": 0.797,
+        "justification": "Only a few weak texts ('guitar'); tk 0.64 is the lowest in the layer."
+      },
+      "cross_task_summary": "A facial-expression/portrait head that has no purchase on any of the three target datasets: useless under ImageNet, SUN and text alike (consistent death)."
+    },
+    "Layer 8 Head 8": {
+      "before_org_top_groups": {
+        "Fantasy, Magic & Surreal": 105.722,
+        "Letters, Text & Writing": 83.899,
+        "Vintage & Retro Aesthetics": 54.099,
+        "Mood & Atmosphere (Serene / Peaceful)": 52.719,
+        "Graffiti & Street Art": 32.47
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Containers & Vessels": 116.438,
+          "Architecture & Buildings": 77.787,
+          "Animals": 73.894,
+          "Markets & Commerce": 64.158,
+          "Sports & Athletics": 50.551
+        },
+        "semantic_change": "specialized",
+        "top_k_mean": 1.859,
+        "rank_mean": 0.449,
+        "layer_topk_mean": 1.425,
+        "justification": "Keeps text/signage thread, adds objects; low power"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Sports & Athletics": 22.231,
+          "Transportation & Vehicles": 12.747,
+          "Architecture & Buildings": 3.883,
+          "Kitchen & Cooking Equipment": 2.691,
+          "Markets & Commerce": 2.134
+        },
+        "semantic_change": "different_function",
+        "top_k_mean": 0.985,
+        "rank_mean": 0.282,
+        "layer_topk_mean": 0.935,
+        "justification": "Text/signage thread is lost; drifts to Sports/Transportation/Architecture. tk 0.99 ~ layer mean (weak)."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "question",
+            "count": 34
+          },
+          {
+            "text": "carpenter",
+            "count": 29
+          },
+          {
+            "text": "94",
+            "count": 7
+          },
+          {
+            "text": "panther",
+            "count": 4
+          },
+          {
+            "text": "tundra",
+            "count": 3
+          },
+          {
+            "text": "network",
+            "count": 3
+          }
+        ],
+        "assigned_group": "Letters, Text & Writing",
+        "semantic_change": "same_function",
+        "top_k_mean": 1.305,
+        "rank_mean": 0.423,
+        "layer_topk_mean": 0.797,
+        "justification": "Top texts are words ('question','carpenter'); the org Letters,Text&Writing reading function is preserved and is relevant (tk 1.31, above layer mean 0.80)."
+      },
+      "cross_task_summary": "An org text/signage head: ImageNet specializes it onto objects, SUN scatters it, but the text-classification task re-uses exactly its original text-reading function (same)."
+    },
+    "Layer 8 Head 9": {
+      "before_org_top_groups": {
+        "Night & Darkness": 95.692,
+        "Vintage & Retro Aesthetics": 52.755,
+        "Lighting & Light Effects": 42.565,
+        "Urban & City Scenes": 36.011,
+        "Photography Techniques & Styles": 29.819
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Animals": 204.862,
+          "Toys, Games & Recreation": 187.238,
+          "Household Objects & Furniture": 98.754,
+          "Structures & Barriers": 95.731,
+          "Birds": 88.669
+        },
+        "semantic_change": "different_function",
+        "top_k_mean": 1.83,
+        "rank_mean": 0.469,
+        "layer_topk_mean": 1.425,
+        "justification": "Night/lighting/urban -> scattered objects/animals"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Architecture & Buildings": 17.579,
+          "Natural Landscapes": 14.113,
+          "Religious & Spiritual": 13.608,
+          "Natural Landforms & Geology": 11.195,
+          "Transportation & Vehicles": 8.885
+        },
+        "semantic_change": "same_function",
+        "top_k_mean": 1.579,
+        "rank_mean": 0.473,
+        "layer_topk_mean": 0.935,
+        "justification": "Night/urban head -> Architecture & Buildings / Natural Landscapes / landforms: the urban-scene thread is retained and it is the most relevant layer-8 head for SUN (tk 1.58, well above layer mean)."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "30",
+            "count": 73
+          },
+          {
+            "text": "pelican",
+            "count": 30
+          },
+          {
+            "text": "outpost",
+            "count": 9
+          },
+          {
+            "text": "31",
+            "count": 7
+          },
+          {
+            "text": "falsetto",
+            "count": 4
+          },
+          {
+            "text": "11",
+            "count": 2
+          }
+        ],
+        "assigned_group": "Numbers",
+        "semantic_change": "became_useless",
+        "top_k_mean": 0.538,
+        "rank_mean": 0.267,
+        "layer_topk_mean": 0.797,
+        "justification": "Top text '30' (numeral) but tk 0.54 is below the layer mean -> not relevant."
+      },
+      "cross_task_summary": "An urban/night-scene head: becomes a useful scene detector under SUN (same), scatters under ImageNet (different), and is effectively dead for text."
+    },
+    "Layer 9 Head 8": {
+      "before_org_top_groups": {
+        "Fashion & Clothing": 205.98,
+        "Architecture & Buildings": 122.709,
+        "Markets & Commerce": 117.105,
+        "Historical & Antique": 79.611,
+        "Urban & City Scenes": 77.51
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Architecture & Buildings": 112.931,
+          "Household Objects & Furniture": 41.321,
+          "Markets & Commerce": 35.386,
+          "Music, Dance & Performance": 29.128,
+          "Historical & Antique": 13.037
+        },
+        "semantic_change": "same_function",
+        "top_k_mean": 3.029,
+        "rank_mean": 0.563,
+        "layer_topk_mean": 2.96,
+        "justification": "Built/commercial interior spaces preserved"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Architecture & Buildings": 46.447,
+          "Artistic Styles & Movements": 16.182,
+          "Markets & Commerce": 11.345,
+          "Food & Cuisine": 10.405,
+          "Religious & Spiritual": 6.367
+        },
+        "semantic_change": "same_function",
+        "top_k_mean": 2.276,
+        "rank_mean": 0.576,
+        "layer_topk_mean": 1.719,
+        "justification": "Built/commercial-space head -> Architecture/Markets/Artistic: the built-environment function is preserved and relevant (tk 2.28, above layer mean 1.72)."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "kernel",
+            "count": 23
+          },
+          {
+            "text": "marathon",
+            "count": 11
+          },
+          {
+            "text": "remnant",
+            "count": 11
+          },
+          {
+            "text": "winter",
+            "count": 10
+          },
+          {
+            "text": "65",
+            "count": 9
+          },
+          {
+            "text": "monastery",
+            "count": 4
+          }
+        ],
+        "assigned_group": "Letters, Text & Writing",
+        "semantic_change": "different_function",
+        "top_k_mean": 2.055,
+        "rank_mean": 0.535,
+        "layer_topk_mean": 1.317,
+        "justification": "Re-used as a word reader ('kernel','marathon','monastery'); relevant (tk 2.06 > layer mean 1.32) but a different function from built spaces."
+      },
+      "cross_task_summary": "A robust built-environment head: keeps the same function under both ImageNet and SUN, and is repurposed into a useful word reader for text."
+    },
+    "Layer 9 Head 9": {
+      "before_org_top_groups": {
+        "Futuristic & Science Fiction": 274.865,
+        "Caricatures & Illustrations": 220.035,
+        "Artistic Styles & Movements": 207.93,
+        "Technology & Electronics": 155.148,
+        "Photography Techniques & Styles": 125.094
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Containers & Vessels": 185.431,
+          "Outdoor & Camping": 183.935,
+          "Animals": 165.024,
+          "Transportation & Vehicles": 105.136,
+          "Reptiles & Amphibians": 83.414
+        },
+        "semantic_change": "became_useless",
+        "top_k_mean": 1.281,
+        "rank_mean": 0.297,
+        "layer_topk_mean": 2.96,
+        "justification": "Was futuristic/tech/sci-fi illustration head"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Toys, Games & Recreation": 27.007,
+          "Architecture & Buildings": 26.861,
+          "Markets & Commerce": 25.86,
+          "Plants & Botanical": 20.984,
+          "Water & Aquatic": 3.034
+        },
+        "semantic_change": "became_useless",
+        "top_k_mean": 0.89,
+        "rank_mean": 0.252,
+        "layer_topk_mean": 1.719,
+        "justification": "Futuristic/tech/sci-fi head scatters to Toys/Architecture/Markets; tk 0.89 is below layer mean 1.72."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "9",
+            "count": 11
+          },
+          {
+            "text": "58",
+            "count": 10
+          },
+          {
+            "text": "43",
+            "count": 7
+          },
+          {
+            "text": "88",
+            "count": 4
+          },
+          {
+            "text": "34",
+            "count": 3
+          },
+          {
+            "text": "yacht",
+            "count": 2
+          }
+        ],
+        "assigned_group": "Numbers",
+        "semantic_change": "different_function",
+        "top_k_mean": 2.441,
+        "rank_mean": 0.648,
+        "layer_topk_mean": 1.317,
+        "justification": "Becomes a strong, dedicated numeral reader ('9','58','43','88','34' all numbers) and is highly relevant (tk 2.44, well above layer mean 1.32)."
+      },
+      "cross_task_summary": "Headline divergence: a sci-fi/tech-illustration head that is useless for ImageNet and SUN turns into one of the strongest numeral readers for the text task."
+    },
+    "Layer 10 Head 3": {
+      "before_org_top_groups": {
+        "Vintage & Retro Aesthetics": 1712.006,
+        "Artistic Styles & Movements": 1605.215
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Letters, Text & Writing": 1529.099,
+          "Containers & Vessels": 427.18,
+          "Technology & Electronics": 410.121,
+          "Food & Cuisine": 401.568,
+          "Markets & Commerce": 303.833
+        },
+        "semantic_change": "different_function",
+        "top_k_mean": 2.779,
+        "rank_mean": 0.368,
+        "layer_topk_mean": 4.611,
+        "justification": "Retro/art aesthetic -> text-bearing objects (typography thread)"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Letters, Text & Writing": 17.215,
+          "Markets & Commerce": 16.119,
+          "Architecture & Buildings": 5.043,
+          "Natural Landscapes": 4.534,
+          "Trees & Forests": 3.988
+        },
+        "semantic_change": "different_function",
+        "top_k_mean": 2.593,
+        "rank_mean": 0.514,
+        "layer_topk_mean": 3.121,
+        "justification": "Retro/art head -> Letters,Text&Writing + Markets (signage/typography emerges); same destination as ImageNet. tk 2.59 ~ layer mean 3.12."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "11",
+            "count": 15
+          },
+          {
+            "text": "65",
+            "count": 9
+          },
+          {
+            "text": "30",
+            "count": 5
+          }
+        ],
+        "assigned_group": "Numbers",
+        "semantic_change": "different_function",
+        "top_k_mean": 3.621,
+        "rank_mean": 0.724,
+        "layer_topk_mean": 3.533,
+        "justification": "Top texts are numerals ('11','65','30'); a numeral reader. tk 3.62 ~ layer mean."
+      },
+      "cross_task_summary": "An art/aesthetic head whose latent typography thread surfaces: it becomes a text/signage head under both ImageNet and SUN, and a numeral reader under text."
+    },
+    "Layer 10 Head 6": {
+      "before_org_top_groups": {
+        "Locations & Places": 195.33,
+        "Cultural & Traditional": 161.229,
+        "Colors": 73.582,
+        "Vintage & Retro Aesthetics": 33.428,
+        "Photography Techniques & Styles": 32.647
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Architecture & Buildings": 218.379,
+          "Markets & Commerce": 151.674,
+          "Fashion & Clothing": 135.862,
+          "Professions & Occupations": 130.917,
+          "People & Portraits": 51.112
+        },
+        "semantic_change": "same_function",
+        "top_k_mean": 3.131,
+        "rank_mean": 0.387,
+        "layer_topk_mean": 4.611,
+        "justification": "Retail/commercial/cultural venues preserved"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Food & Cuisine": 33.648,
+          "Architecture & Buildings": 33.648
+        },
+        "semantic_change": "same_function",
+        "top_k_mean": 2.893,
+        "rank_mean": 0.577,
+        "layer_topk_mean": 3.121,
+        "justification": "Retail/cultural-venue head -> Food/Architecture (venue/scene preserved); tk 2.89 ~ layer mean 3.12."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "61",
+            "count": 55
+          },
+          {
+            "text": "84",
+            "count": 31
+          },
+          {
+            "text": "crimson",
+            "count": 27
+          },
+          {
+            "text": "86",
+            "count": 18
+          },
+          {
+            "text": "77",
+            "count": 14
+          },
+          {
+            "text": "85",
+            "count": 12
+          }
+        ],
+        "assigned_group": "Numbers",
+        "semantic_change": "different_function",
+        "top_k_mean": 3.853,
+        "rank_mean": 0.731,
+        "layer_topk_mean": 3.533,
+        "justification": "Becomes a numeral reader ('61','84','86','77','85'); relevant (tk 3.85 > layer mean 3.53) but a different function."
+      },
+      "cross_task_summary": "A commercial/cultural-venue head: keeps its scene function under both ImageNet and SUN, and is repurposed into a useful numeral reader for text."
+    },
+    "Layer 11 Head 9": {
+      "before_org_top_groups": {
+        "Numbers & Numerals": 1932.791,
+        "Subject Count": 240.654,
+        "Textures & Materials (Close-up)": 100.344,
+        "Macro & Close-up Photography": 82.18,
+        "Lighting & Light Effects": 43.09
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Patterns, Textures & Designs": 101.564,
+          "Textures & Materials (Close-up)": 101.564,
+          "Fashion & Clothing": 93.488,
+          "Textiles & Fabrics": 87.108,
+          "Vegetables & Produce": 44.415
+        },
+        "semantic_change": "specialized",
+        "top_k_mean": 5.102,
+        "rank_mean": 0.532,
+        "layer_topk_mean": 5.248,
+        "justification": "Number-reading lost (no ImageNet class); latent texture/material function promoted"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Sports & Athletics": 122.977,
+          "Architecture & Buildings": 91.888,
+          "Natural Landscapes": 69.326,
+          "Water & Aquatic": 61.904,
+          "Transportation & Vehicles": 30.314
+        },
+        "semantic_change": "different_function",
+        "top_k_mean": 3.851,
+        "rank_mean": 0.736,
+        "layer_topk_mean": 3.867,
+        "justification": "The number-reading function has no scene use; drifts to Sports/Architecture/Landscapes. tk 3.85 ~ layer mean 3.87."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "96",
+            "count": 55
+          },
+          {
+            "text": "29",
+            "count": 23
+          },
+          {
+            "text": "46",
+            "count": 17
+          },
+          {
+            "text": "27",
+            "count": 13
+          },
+          {
+            "text": "50",
+            "count": 8
+          },
+          {
+            "text": "5",
+            "count": 4
+          }
+        ],
+        "assigned_group": "Numbers",
+        "semantic_change": "same_function",
+        "top_k_mean": 4.476,
+        "rank_mean": 0.709,
+        "layer_topk_mean": 4.869,
+        "justification": "Org was a dedicated Numbers & Numerals head; under text it stays a numeral reader ('96','29','46','27','50') and is highly relevant (tk 4.48, high absolute). Original function preserved."
+      },
+      "cross_task_summary": "Headline result: the dedicated numeral head is wasted/repurposed under ImageNet (specialized, number-reading lost) and SUN (different), but the text-classification task re-activates its exact original number-reading function (same)."
+    },
+    "Layer 11 Head 11": {
+      "before_org_top_groups": {
+        "Letters, Text & Writing": 1369.246,
+        "Cultural & Traditional": 149.629,
+        "Fantasy, Magic & Surreal": 109.75,
+        "Locations & Places": 104.938,
+        "Vintage & Retro Aesthetics": 89.365
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Animals": 2741.473,
+          "Dogs & Canines": 1180.342,
+          "Colors": 1147.818,
+          "Vegetables & Produce": 596.209,
+          "Fruits": 507.24
+        },
+        "semantic_change": "different_function",
+        "top_k_mean": 6.267,
+        "rank_mean": 0.647,
+        "layer_topk_mean": 5.248,
+        "justification": "Letter-reading lost (no ImageNet class) -> animals/colorful produce/colors"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Architecture & Buildings": 70.323,
+          "Religious & Spiritual": 37.873,
+          "Natural Landscapes": 17.452,
+          "Household Objects & Furniture": 14.929,
+          "Markets & Commerce": 13.309
+        },
+        "semantic_change": "different_function",
+        "top_k_mean": 4.215,
+        "rank_mean": 0.788,
+        "layer_topk_mean": 3.867,
+        "justification": "Letter-reading lost; -> Architecture/Religious/Landscapes scene head. tk 4.21, above layer mean 3.87."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "jade",
+            "count": 27
+          },
+          {
+            "text": "kayak",
+            "count": 21
+          },
+          {
+            "text": "44",
+            "count": 12
+          },
+          {
+            "text": "35",
+            "count": 10
+          },
+          {
+            "text": "jazz",
+            "count": 9
+          },
+          {
+            "text": "varnish",
+            "count": 5
+          }
+        ],
+        "assigned_group": "Letters, Text & Writing",
+        "semantic_change": "became_useless",
+        "top_k_mean": 3.052,
+        "rank_mean": 0.404,
+        "layer_topk_mean": 4.869,
+        "justification": "Despite being the org letter/text head, under text it gives a scattered word/number mix and tk 3.05 is the lowest in the layer (clear gap below the rest)."
+      },
+      "cross_task_summary": "Instructive contrast with L11H9: this dedicated letter/text head does NOT survive the text task (lowest relevance in its layer), while the numeral head does -- the text dataset leans numeral-heavy."
+    },
+    "Layer 11 Head 5": {
+      "before_org_top_groups": {
+        "Animals": 8604.836,
+        "Reptiles & Amphibians": 2923.742,
+        "Insects & Arachnids": 2400.594,
+        "Macro & Close-up Photography": 1640.078,
+        "Birds": 1555.836
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Animals": 1842.906,
+          "Dogs & Canines": 762.266,
+          "Reptiles & Amphibians": 302.146,
+          "Insects & Arachnids": 247.201,
+          "Patterns, Textures & Designs": 245.14
+        },
+        "semantic_change": "same_function",
+        "top_k_mean": 6.467,
+        "rank_mean": 0.602,
+        "layer_topk_mean": 5.248,
+        "justification": "Animals -> animals (strongest top_k; preserved)"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Plants & Botanical": 47.221,
+          "Markets & Commerce": 38.928,
+          "Trees & Forests": 38.544,
+          "Food & Cuisine": 34.082,
+          "Animals": 28.892
+        },
+        "semantic_change": "specialized",
+        "top_k_mean": 4.474,
+        "rank_mean": 0.809,
+        "layer_topk_mean": 3.867,
+        "justification": "Animal head -> Plants/Trees/Food with Animals still in the top-5: the organic/natural thread is retained but narrowed toward vegetation/markets. tk 4.47, above layer mean."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "uranium",
+            "count": 7
+          },
+          {
+            "text": "mongoose",
+            "count": 4
+          },
+          {
+            "text": "kindness",
+            "count": 4
+          },
+          {
+            "text": "dynamite",
+            "count": 1
+          },
+          {
+            "text": "tiramisu",
+            "count": 1
+          }
+        ],
+        "assigned_group": "Letters, Text & Writing",
+        "semantic_change": "different_function",
+        "top_k_mean": 5.532,
+        "rank_mean": 0.742,
+        "layer_topk_mean": 4.869,
+        "justification": "A few word texts ('uranium','mongoose','kindness'); mildly relevant (tk 5.53 > layer mean 4.87) but sparse and unrelated to animals."
+      },
+      "cross_task_summary": "The canonical animal head: preserved under ImageNet (same), narrowed toward natural/vegetation scenes under SUN (specialized), weak word reader under text."
+    },
+    "Layer 11 Head 6": {
+      "before_org_top_groups": {
+        "Locations & Places": 1285.492,
+        "Natural Landscapes": 659.016,
+        "Natural Landforms & Geology": 299.688,
+        "Sports & Athletics": 27.719
+      },
+      "imagenet1k": {
+        "after_top_groups": {
+          "Natural Landforms & Geology": 454.081,
+          "Natural Landscapes": 452.35,
+          "Water & Aquatic": 331.728,
+          "Mood & Atmosphere (Serene / Peaceful)": 144.102,
+          "Food & Cuisine": 92.965
+        },
+        "semantic_change": "same_function",
+        "top_k_mean": 5.24,
+        "rank_mean": 0.634,
+        "layer_topk_mean": 5.248,
+        "justification": "Natural scenery / landscapes & landforms preserved"
+      },
+      "sun397": {
+        "after_top_groups": {
+          "Architecture & Buildings": 48.089,
+          "Structures & Barriers": 35.243,
+          "Sports & Athletics": 28.444,
+          "Religious & Spiritual": 14.046,
+          "Urban & City Scenes": 10.584
+        },
+        "semantic_change": "same_function",
+        "top_k_mean": 3.964,
+        "rank_mean": 0.696,
+        "layer_topk_mean": 3.867,
+        "justification": "Scenery head -> Architecture/Structures/Sports: scene function preserved and relevant (tk 3.96, above layer mean 3.87)."
+      },
+      "text_classification": {
+        "after_top_texts": [
+          {
+            "text": "baseball",
+            "count": 20
+          },
+          {
+            "text": "spectrum",
+            "count": 2
+          },
+          {
+            "text": "maestro",
+            "count": 1
+          },
+          {
+            "text": "monastery",
+            "count": 1
+          },
+          {
+            "text": "spring",
+            "count": 1
+          }
+        ],
+        "assigned_group": "Letters, Text & Writing",
+        "semantic_change": "different_function",
+        "top_k_mean": 5.852,
+        "rank_mean": 0.718,
+        "layer_topk_mean": 4.869,
+        "justification": "Sparse word texts dominated by 'baseball'; high tk (5.85) but very few distinct texts -- relevance is concentrated, function changed."
+      },
+      "cross_task_summary": "A natural-scenery head that is robust across both image tasks (same function under ImageNet and SUN, a scene/landscape detector), and a sparse word reader under text."
+    }
+  }
+}

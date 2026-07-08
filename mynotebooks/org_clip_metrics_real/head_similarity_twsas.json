@@ -1,0 +1,386 @@
+{
+  "Head_0": {
+    "Head_Name": "Layer 8 Head 0",
+    "TWSAS": 0.7572501439844603,
+    "NDCG_A_to_B": 0.3955047216892645,
+    "top5_overlap": 0.1111111111111111,
+    "top10_overlap": 0.05263157894736842,
+    "support_size": 70
+  },
+  "Head_1": {
+    "Head_Name": "Layer 8 Head 1",
+    "TWSAS": 0.1443274972940826,
+    "NDCG_A_to_B": 0.4668243704618944,
+    "top5_overlap": 0.16666666666666666,
+    "top10_overlap": 0.25,
+    "support_size": 8
+  },
+  "Head_2": {
+    "Head_Name": "Layer 8 Head 2",
+    "TWSAS": 0.5524843087374722,
+    "NDCG_A_to_B": 0.21340193401229993,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.42857142857142855,
+    "support_size": 41
+  },
+  "Head_3": {
+    "Head_Name": "Layer 8 Head 3",
+    "TWSAS": 0.21585981563969164,
+    "NDCG_A_to_B": 0.3190282116294539,
+    "top5_overlap": 0.1111111111111111,
+    "top10_overlap": 0.1111111111111111,
+    "support_size": 42
+  },
+  "Head_4": {
+    "Head_Name": "Layer 8 Head 4",
+    "TWSAS": 0.6102596900418032,
+    "NDCG_A_to_B": 0.5036490311034844,
+    "top5_overlap": 0.25,
+    "top10_overlap": 0.25,
+    "support_size": 65
+  },
+  "Head_5": {
+    "Head_Name": "Layer 8 Head 5",
+    "TWSAS": 0.48663356826215504,
+    "NDCG_A_to_B": 0.36000765799919926,
+    "top5_overlap": 0.1111111111111111,
+    "top10_overlap": 0.1111111111111111,
+    "support_size": 49
+  },
+  "Head_6": {
+    "Head_Name": "Layer 8 Head 6",
+    "TWSAS": 0.6626004195391006,
+    "NDCG_A_to_B": 0.2998992262085887,
+    "top5_overlap": 0.2857142857142857,
+    "top10_overlap": 0.16666666666666666,
+    "support_size": 27
+  },
+  "Head_7": {
+    "Head_Name": "Layer 8 Head 7",
+    "TWSAS": 0.28972326442995483,
+    "NDCG_A_to_B": 0.33607921928719475,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.17647058823529413,
+    "support_size": 49
+  },
+  "Head_8": {
+    "Head_Name": "Layer 8 Head 8",
+    "TWSAS": 0.43061115535508654,
+    "NDCG_A_to_B": 0.3839899978125129,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.05263157894736842,
+    "support_size": 62
+  },
+  "Head_9": {
+    "Head_Name": "Layer 8 Head 9",
+    "TWSAS": 0.16110907878458947,
+    "NDCG_A_to_B": 0.38438014903507295,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.05263157894736842,
+    "support_size": 62
+  },
+  "Head_10": {
+    "Head_Name": "Layer 8 Head 10",
+    "TWSAS": 0.2903414508031398,
+    "NDCG_A_to_B": 0.5198543088947817,
+    "top5_overlap": 0.1111111111111111,
+    "top10_overlap": 0.3333333333333333,
+    "support_size": 33
+  },
+  "Head_11": {
+    "Head_Name": "Layer 8 Head 11",
+    "TWSAS": 0.1443033152343847,
+    "NDCG_A_to_B": 0.28451770689728456,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.17647058823529413,
+    "support_size": 57
+  },
+  "Head_12": {
+    "Head_Name": "Layer 9 Head 0",
+    "TWSAS": 0.4425853258430591,
+    "NDCG_A_to_B": 0.4533023598733076,
+    "top5_overlap": 0.25,
+    "top10_overlap": 0.25,
+    "support_size": 47
+  },
+  "Head_13": {
+    "Head_Name": "Layer 9 Head 1",
+    "TWSAS": 0.39897501004843755,
+    "NDCG_A_to_B": 0.38117227827923184,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.0,
+    "support_size": 31
+  },
+  "Head_14": {
+    "Head_Name": "Layer 9 Head 2",
+    "TWSAS": 0.3978233416365736,
+    "NDCG_A_to_B": 0.4983717708866105,
+    "top5_overlap": 0.25,
+    "top10_overlap": 0.42857142857142855,
+    "support_size": 45
+  },
+  "Head_15": {
+    "Head_Name": "Layer 9 Head 3",
+    "TWSAS": 0.341829028323698,
+    "NDCG_A_to_B": 0.30845655232163804,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.1111111111111111,
+    "support_size": 38
+  },
+  "Head_16": {
+    "Head_Name": "Layer 9 Head 4",
+    "TWSAS": 0.12388167755491349,
+    "NDCG_A_to_B": 0.2466956708969108,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.09090909090909091,
+    "support_size": 52
+  },
+  "Head_17": {
+    "Head_Name": "Layer 9 Head 5",
+    "TWSAS": 0.6844089068778655,
+    "NDCG_A_to_B": 0.4129684664827132,
+    "top5_overlap": 0.25,
+    "top10_overlap": 0.3333333333333333,
+    "support_size": 42
+  },
+  "Head_18": {
+    "Head_Name": "Layer 9 Head 6",
+    "TWSAS": 0.323572394821498,
+    "NDCG_A_to_B": 0.42829603603218036,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.1111111111111111,
+    "support_size": 51
+  },
+  "Head_19": {
+    "Head_Name": "Layer 9 Head 7",
+    "TWSAS": 0.7712684953723696,
+    "NDCG_A_to_B": 0.5724119912856775,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.25,
+    "support_size": 58
+  },
+  "Head_20": {
+    "Head_Name": "Layer 9 Head 8",
+    "TWSAS": 0.807235014695756,
+    "NDCG_A_to_B": 0.8695847558629695,
+    "top5_overlap": 0.42857142857142855,
+    "top10_overlap": 0.2857142857142857,
+    "support_size": 20
+  },
+  "Head_21": {
+    "Head_Name": "Layer 9 Head 9",
+    "TWSAS": 0.494426800858661,
+    "NDCG_A_to_B": 0.3965927449559769,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.0,
+    "support_size": 53
+  },
+  "Head_22": {
+    "Head_Name": "Layer 9 Head 10",
+    "TWSAS": 0.16105542120969743,
+    "NDCG_A_to_B": 0.4092494975083349,
+    "top5_overlap": 0.1111111111111111,
+    "top10_overlap": 0.17647058823529413,
+    "support_size": 42
+  },
+  "Head_23": {
+    "Head_Name": "Layer 9 Head 11",
+    "TWSAS": 0.30053903632973283,
+    "NDCG_A_to_B": 0.4135870697926858,
+    "top5_overlap": 0.1111111111111111,
+    "top10_overlap": 0.3333333333333333,
+    "support_size": 25
+  },
+  "Head_24": {
+    "Head_Name": "Layer 10 Head 0",
+    "TWSAS": 0.9250120163150103,
+    "NDCG_A_to_B": 0.7582669232868525,
+    "top5_overlap": 0.6666666666666666,
+    "top10_overlap": 0.8,
+    "support_size": 10
+  },
+  "Head_25": {
+    "Head_Name": "Layer 10 Head 1",
+    "TWSAS": 0.4184596635418001,
+    "NDCG_A_to_B": 0.4632076017893574,
+    "top5_overlap": 0.25,
+    "top10_overlap": 0.42857142857142855,
+    "support_size": 16
+  },
+  "Head_26": {
+    "Head_Name": "Layer 10 Head 2",
+    "TWSAS": 0.912299796769652,
+    "NDCG_A_to_B": 0.8523642312675433,
+    "top5_overlap": 0.25,
+    "top10_overlap": 0.46153846153846156,
+    "support_size": 14
+  },
+  "Head_27": {
+    "Head_Name": "Layer 10 Head 3",
+    "TWSAS": 0.28072850069703786,
+    "NDCG_A_to_B": 0.27169748529634313,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.25,
+    "support_size": 56
+  },
+  "Head_28": {
+    "Head_Name": "Layer 10 Head 4",
+    "TWSAS": 0.8801284661164989,
+    "NDCG_A_to_B": 0.7303761628385947,
+    "top5_overlap": 0.6666666666666666,
+    "top10_overlap": 0.3333333333333333,
+    "support_size": 31
+  },
+  "Head_29": {
+    "Head_Name": "Layer 10 Head 5",
+    "TWSAS": 0.8059693719438089,
+    "NDCG_A_to_B": 0.5762607624216203,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.25,
+    "support_size": 60
+  },
+  "Head_30": {
+    "Head_Name": "Layer 10 Head 6",
+    "TWSAS": 0.9297185573056068,
+    "NDCG_A_to_B": 0.8649303471385554,
+    "top5_overlap": 0.42857142857142855,
+    "top10_overlap": 0.6666666666666666,
+    "support_size": 13
+  },
+  "Head_31": {
+    "Head_Name": "Layer 10 Head 7",
+    "TWSAS": 0.40549649523764697,
+    "NDCG_A_to_B": 0.3637003935068156,
+    "top5_overlap": 0.25,
+    "top10_overlap": 0.42857142857142855,
+    "support_size": 50
+  },
+  "Head_32": {
+    "Head_Name": "Layer 10 Head 8",
+    "TWSAS": 0.7939044156267205,
+    "NDCG_A_to_B": 0.7862506975511193,
+    "top5_overlap": 0.25,
+    "top10_overlap": 0.1111111111111111,
+    "support_size": 49
+  },
+  "Head_33": {
+    "Head_Name": "Layer 10 Head 9",
+    "TWSAS": 0.4500340869946049,
+    "NDCG_A_to_B": 0.3681371658344015,
+    "top5_overlap": 0.42857142857142855,
+    "top10_overlap": 0.36363636363636365,
+    "support_size": 28
+  },
+  "Head_34": {
+    "Head_Name": "Layer 10 Head 10",
+    "TWSAS": 0.6824121429720206,
+    "NDCG_A_to_B": 0.587845948634547,
+    "top5_overlap": 0.42857142857142855,
+    "top10_overlap": 0.3333333333333333,
+    "support_size": 31
+  },
+  "Head_35": {
+    "Head_Name": "Layer 10 Head 11",
+    "TWSAS": 0.47723336573395464,
+    "NDCG_A_to_B": 0.29828214423078986,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.05263157894736842,
+    "support_size": 52
+  },
+  "Head_36": {
+    "Head_Name": "Layer 11 Head 0",
+    "TWSAS": 0.11368482158349137,
+    "NDCG_A_to_B": 0.3397612085024465,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.0,
+    "support_size": 54
+  },
+  "Head_37": {
+    "Head_Name": "Layer 11 Head 1",
+    "TWSAS": 0.6745795766349871,
+    "NDCG_A_to_B": 0.4591802370246894,
+    "top5_overlap": 0.1111111111111111,
+    "top10_overlap": 0.17647058823529413,
+    "support_size": 26
+  },
+  "Head_38": {
+    "Head_Name": "Layer 11 Head 2",
+    "TWSAS": 0.555658164906111,
+    "NDCG_A_to_B": 0.4911443886589839,
+    "top5_overlap": 0.1111111111111111,
+    "top10_overlap": 0.1111111111111111,
+    "support_size": 38
+  },
+  "Head_39": {
+    "Head_Name": "Layer 11 Head 3",
+    "TWSAS": 0.8804233200903792,
+    "NDCG_A_to_B": 0.5779235657944343,
+    "top5_overlap": 0.1111111111111111,
+    "top10_overlap": 0.1111111111111111,
+    "support_size": 58
+  },
+  "Head_40": {
+    "Head_Name": "Layer 11 Head 4",
+    "TWSAS": 0.6894183736358399,
+    "NDCG_A_to_B": 0.4774216875951825,
+    "top5_overlap": 0.42857142857142855,
+    "top10_overlap": 0.5,
+    "support_size": 15
+  },
+  "Head_41": {
+    "Head_Name": "Layer 11 Head 5",
+    "TWSAS": 0.8584537486851309,
+    "NDCG_A_to_B": 0.9313414381720093,
+    "top5_overlap": 0.6666666666666666,
+    "top10_overlap": 0.42857142857142855,
+    "support_size": 35
+  },
+  "Head_42": {
+    "Head_Name": "Layer 11 Head 6",
+    "TWSAS": 0.8282388823482305,
+    "NDCG_A_to_B": 0.8421206913561197,
+    "top5_overlap": 0.25,
+    "top10_overlap": 0.25,
+    "support_size": 27
+  },
+  "Head_43": {
+    "Head_Name": "Layer 11 Head 7",
+    "TWSAS": 0.7819010092039143,
+    "NDCG_A_to_B": 0.5011373725209906,
+    "top5_overlap": 0.1111111111111111,
+    "top10_overlap": 0.25,
+    "support_size": 39
+  },
+  "Head_44": {
+    "Head_Name": "Layer 11 Head 8",
+    "TWSAS": 0.8035114093192423,
+    "NDCG_A_to_B": 0.6133076065701646,
+    "top5_overlap": 0.25,
+    "top10_overlap": 0.5384615384615384,
+    "support_size": 34
+  },
+  "Head_45": {
+    "Head_Name": "Layer 11 Head 9",
+    "TWSAS": 0.7994101260131722,
+    "NDCG_A_to_B": 0.7162918712488029,
+    "top5_overlap": 0.25,
+    "top10_overlap": 0.7272727272727273,
+    "support_size": 12
+  },
+  "Head_46": {
+    "Head_Name": "Layer 11 Head 10",
+    "TWSAS": 0.3212865932538325,
+    "NDCG_A_to_B": 0.49953140820414355,
+    "top5_overlap": 0.14285714285714285,
+    "top10_overlap": 0.18181818181818182,
+    "support_size": 26
+  },
+  "Head_47": {
+    "Head_Name": "Layer 11 Head 11",
+    "TWSAS": 0.7903052341394459,
+    "NDCG_A_to_B": 0.6223304934542956,
+    "top5_overlap": 0.0,
+    "top10_overlap": 0.17647058823529413,
+    "support_size": 36
+  }
+}

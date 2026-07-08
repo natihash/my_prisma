@@ -69,7 +69,88 @@ TIMM_CONFIGS = {
         "return_type": "class_logits",
         "layer_norm_pre": True,
         "n_classes": 1000,
-    }
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_fullft_latest": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 1000,
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_lora_r4_merged": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 1000,
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_lora_r16_merged": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 1000,
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_linear_probe_sun": {
+    "return_type": "class_logits",
+    "layer_norm_pre": True,
+    "n_classes": 397,
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_fullft_sun": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 397,
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.sun_lora_r16_merged": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 397,
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.sun_lora_r4_merged": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 397,
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.laion2b_fullft_last": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 397,
+    },
+    "hf_hub:natihash/vit_base_patch16_clip_224.sun_lora_r4_last": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 397,
+    },
+    "hf_hub:natihash/vit_base_patch16_clip_224.sun_lora_r16_last": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 397,
+    },
+    "hf_hub:natihash/vit_base_patch16_clip_224.text_lp": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 400,
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.text_fft": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 400,
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.text_lora4": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 400,
+    },
+
+    "hf_hub:natihash/vit_base_patch16_clip_224.text_lora16": {
+        "return_type": "class_logits",
+        "layer_norm_pre": True,
+        "n_classes": 400,
+    },
 
 
 }

@@ -1,0 +1,290 @@
+{
+  "Layer 8 Head 0": {
+    "rank_mean_cos": 0.16047869622707367,
+    "top_k_mean_cos": 0.0034719870891422033,
+    "rank_mean_mse": 0.11861702054738998,
+    "top_k_mean_mse": 2.2169911972014233e-05
+  },
+  "Layer 8 Head 1": {
+    "rank_mean_cos": 0.03813829645514488,
+    "top_k_mean_cos": 0.0016673639183863997,
+    "rank_mean_mse": 0.05510638281702995,
+    "top_k_mean_mse": 1.2273298125364818e-05
+  },
+  "Layer 8 Head 2": {
+    "rank_mean_cos": 0.0018617021851241589,
+    "top_k_mean_cos": 0.000687302672304213,
+    "rank_mean_mse": 0.002925531705841422,
+    "top_k_mean_mse": 5.92588776271441e-06
+  },
+  "Layer 8 Head 3": {
+    "rank_mean_cos": 0.10601064562797546,
+    "top_k_mean_cos": 0.0032050199806690216,
+    "rank_mean_mse": 0.056063827127218246,
+    "top_k_mean_mse": 1.1937964700337034e-05
+  },
+  "Layer 8 Head 4": {
+    "rank_mean_cos": 0.42287230491638184,
+    "top_k_mean_cos": 0.01016984786838293,
+    "rank_mean_mse": 0.10824467241764069,
+    "top_k_mean_mse": 2.190535087720491e-05
+  },
+  "Layer 8 Head 5": {
+    "rank_mean_cos": 0.6547340154647827,
+    "top_k_mean_cos": 0.018511300906538963,
+    "rank_mean_mse": 0.23324468731880188,
+    "top_k_mean_mse": 5.527925895876251e-05
+  },
+  "Layer 8 Head 6": {
+    "rank_mean_cos": 0.04340425506234169,
+    "top_k_mean_cos": 0.001614003675058484,
+    "rank_mean_mse": 0.02297872304916382,
+    "top_k_mean_mse": 7.300225206563482e-06
+  },
+  "Layer 8 Head 7": {
+    "rank_mean_cos": 0.5835638046264648,
+    "top_k_mean_cos": 0.012876907363533974,
+    "rank_mean_mse": 0.1570744663476944,
+    "top_k_mean_mse": 3.120632754871622e-05
+  },
+  "Layer 8 Head 8": {
+    "rank_mean_cos": 0.7936169505119324,
+    "top_k_mean_cos": 0.08685025572776794,
+    "rank_mean_mse": 0.6470212340354919,
+    "top_k_mean_mse": 0.0010500290663912892
+  },
+  "Layer 8 Head 9": {
+    "rank_mean_cos": 0.5313297510147095,
+    "top_k_mean_cos": 0.012350068427622318,
+    "rank_mean_mse": 0.334627628326416,
+    "top_k_mean_mse": 9.816017700359225e-05
+  },
+  "Layer 8 Head 10": {
+    "rank_mean_cos": 0.06968085467815399,
+    "top_k_mean_cos": 0.0020966418087482452,
+    "rank_mean_mse": 0.09404254704713821,
+    "top_k_mean_mse": 2.0370631318655796e-05
+  },
+  "Layer 8 Head 11": {
+    "rank_mean_cos": 0.3459573984146118,
+    "top_k_mean_cos": 0.009285954758524895,
+    "rank_mean_mse": 0.22824466228485107,
+    "top_k_mean_mse": 6.436662806663662e-05
+  },
+  "Layer 9 Head 0": {
+    "rank_mean_cos": 0.41819143295288086,
+    "top_k_mean_cos": 0.00912733655422926,
+    "rank_mean_mse": 0.2772340476512909,
+    "top_k_mean_mse": 7.352911779889837e-05
+  },
+  "Layer 9 Head 1": {
+    "rank_mean_cos": 0.5096808075904846,
+    "top_k_mean_cos": 0.009916196577250957,
+    "rank_mean_mse": 0.5409042239189148,
+    "top_k_mean_mse": 0.00032684029429219663
+  },
+  "Layer 9 Head 2": {
+    "rank_mean_cos": 0.4255850911140442,
+    "top_k_mean_cos": 0.009089264087378979,
+    "rank_mean_mse": 0.4044680595397949,
+    "top_k_mean_mse": 0.0001468321861466393
+  },
+  "Layer 9 Head 3": {
+    "rank_mean_cos": 0.10819149017333984,
+    "top_k_mean_cos": 0.002742780838161707,
+    "rank_mean_mse": 0.19632978737354279,
+    "top_k_mean_mse": 4.749575964524411e-05
+  },
+  "Layer 9 Head 4": {
+    "rank_mean_cos": 0.16776596009731293,
+    "top_k_mean_cos": 0.003921364899724722,
+    "rank_mean_mse": 0.303617000579834,
+    "top_k_mean_mse": 8.730931585887447e-05
+  },
+  "Layer 9 Head 5": {
+    "rank_mean_cos": 0.15218085050582886,
+    "top_k_mean_cos": 0.0036480494309216738,
+    "rank_mean_mse": 0.2151595652103424,
+    "top_k_mean_mse": 5.1730585255427286e-05
+  },
+  "Layer 9 Head 6": {
+    "rank_mean_cos": 0.41723403334617615,
+    "top_k_mean_cos": 0.008568475022912025,
+    "rank_mean_mse": 0.3218616843223572,
+    "top_k_mean_mse": 8.64756220835261e-05
+  },
+  "Layer 9 Head 7": {
+    "rank_mean_cos": 0.269893616437912,
+    "top_k_mean_cos": 0.006174447480589151,
+    "rank_mean_mse": 0.3610638380050659,
+    "top_k_mean_mse": 0.00011661789903882891
+  },
+  "Layer 9 Head 8": {
+    "rank_mean_cos": 0.5099999904632568,
+    "top_k_mean_cos": 0.010862770490348339,
+    "rank_mean_mse": 0.431436151266098,
+    "top_k_mean_mse": 0.00017778157780412585
+  },
+  "Layer 9 Head 9": {
+    "rank_mean_cos": 0.744148850440979,
+    "top_k_mean_cos": 0.03551062196493149,
+    "rank_mean_mse": 0.6343616247177124,
+    "top_k_mean_mse": 0.0007633285713382065
+  },
+  "Layer 9 Head 10": {
+    "rank_mean_cos": 0.3600531816482544,
+    "top_k_mean_cos": 0.00806344673037529,
+    "rank_mean_mse": 0.332446813583374,
+    "top_k_mean_mse": 9.824312292039394e-05
+  },
+  "Layer 9 Head 11": {
+    "rank_mean_cos": 0.24920211732387543,
+    "top_k_mean_cos": 0.0052692824974656105,
+    "rank_mean_mse": 0.24835105240345,
+    "top_k_mean_mse": 6.135013973107561e-05
+  },
+  "Layer 10 Head 0": {
+    "rank_mean_cos": 0.2557978630065918,
+    "top_k_mean_cos": 0.005575872492045164,
+    "rank_mean_mse": 0.47047868371009827,
+    "top_k_mean_mse": 0.00023607932962477207
+  },
+  "Layer 10 Head 1": {
+    "rank_mean_cos": 0.37617018818855286,
+    "top_k_mean_cos": 0.008639171719551086,
+    "rank_mean_mse": 0.4558510482311249,
+    "top_k_mean_mse": 0.00023143643920775503
+  },
+  "Layer 10 Head 2": {
+    "rank_mean_cos": 0.34824466705322266,
+    "top_k_mean_cos": 0.006990488152951002,
+    "rank_mean_mse": 0.5490425229072571,
+    "top_k_mean_mse": 0.00035854833549819887
+  },
+  "Layer 10 Head 3": {
+    "rank_mean_cos": 0.3920212388038635,
+    "top_k_mean_cos": 0.009689913131296635,
+    "rank_mean_mse": 0.650744616985321,
+    "top_k_mean_mse": 0.0008457799558527768
+  },
+  "Layer 10 Head 4": {
+    "rank_mean_cos": 0.4754787087440491,
+    "top_k_mean_cos": 0.009765861555933952,
+    "rank_mean_mse": 0.5849468111991882,
+    "top_k_mean_mse": 0.00043911076500080526
+  },
+  "Layer 10 Head 5": {
+    "rank_mean_cos": 0.7458509802818298,
+    "top_k_mean_cos": 0.03662937507033348,
+    "rank_mean_mse": 0.7431382536888123,
+    "top_k_mean_mse": 0.0017114378279075027
+  },
+  "Layer 10 Head 6": {
+    "rank_mean_cos": 0.6085637807846069,
+    "top_k_mean_cos": 0.03576285392045975,
+    "rank_mean_mse": 0.5587233901023865,
+    "top_k_mean_mse": 0.0008505764417350292
+  },
+  "Layer 10 Head 7": {
+    "rank_mean_cos": 0.6267552971839905,
+    "top_k_mean_cos": 0.030988914892077446,
+    "rank_mean_mse": 0.7411169409751892,
+    "top_k_mean_mse": 0.002575660590082407
+  },
+  "Layer 10 Head 8": {
+    "rank_mean_cos": 0.6126595139503479,
+    "top_k_mean_cos": 0.0370091050863266,
+    "rank_mean_mse": 0.6842553615570068,
+    "top_k_mean_mse": 0.002049187896773219
+  },
+  "Layer 10 Head 9": {
+    "rank_mean_cos": 0.24734042584896088,
+    "top_k_mean_cos": 0.005391459912061691,
+    "rank_mean_mse": 0.49574464559555054,
+    "top_k_mean_mse": 0.00028019220917485654
+  },
+  "Layer 10 Head 10": {
+    "rank_mean_cos": 0.4661169946193695,
+    "top_k_mean_cos": 0.009447961114346981,
+    "rank_mean_mse": 0.6639893054962158,
+    "top_k_mean_mse": 0.00073809182504192
+  },
+  "Layer 10 Head 11": {
+    "rank_mean_cos": 0.4583510458469391,
+    "top_k_mean_cos": 0.015645286068320274,
+    "rank_mean_mse": 0.5579255223274231,
+    "top_k_mean_mse": 0.0006084265187382698
+  },
+  "Layer 11 Head 0": {
+    "rank_mean_cos": 0.8019148111343384,
+    "top_k_mean_cos": 0.08744404464960098,
+    "rank_mean_mse": 0.8330318331718445,
+    "top_k_mean_mse": 0.007138003595173359
+  },
+  "Layer 11 Head 1": {
+    "rank_mean_cos": 0.9562232494354248,
+    "top_k_mean_cos": 0.4838624894618988,
+    "rank_mean_mse": 0.9533509612083435,
+    "top_k_mean_mse": 0.05577829107642174
+  },
+  "Layer 11 Head 2": {
+    "rank_mean_cos": 0.9860105514526367,
+    "top_k_mean_cos": 0.7007760405540466,
+    "rank_mean_mse": 0.9870744347572327,
+    "top_k_mean_mse": 0.14694643020629883
+  },
+  "Layer 11 Head 3": {
+    "rank_mean_cos": 0.8764893412590027,
+    "top_k_mean_cos": 0.2652658522129059,
+    "rank_mean_mse": 0.9118617177009583,
+    "top_k_mean_mse": 0.028454601764678955
+  },
+  "Layer 11 Head 4": {
+    "rank_mean_cos": 0.8490956425666809,
+    "top_k_mean_cos": 0.09524673968553543,
+    "rank_mean_mse": 0.7996276021003723,
+    "top_k_mean_mse": 0.00403908547013998
+  },
+  "Layer 11 Head 5": {
+    "rank_mean_cos": 0.7476063370704651,
+    "top_k_mean_cos": 0.05465719848871231,
+    "rank_mean_mse": 0.8770744204521179,
+    "top_k_mean_mse": 0.009539362043142319
+  },
+  "Layer 11 Head 6": {
+    "rank_mean_cos": 0.7799999713897705,
+    "top_k_mean_cos": 0.20734921097755432,
+    "rank_mean_mse": 0.8199999928474426,
+    "top_k_mean_mse": 0.02059810422360897
+  },
+  "Layer 11 Head 7": {
+    "rank_mean_cos": 0.7135105729103088,
+    "top_k_mean_cos": 0.0890180915594101,
+    "rank_mean_mse": 0.8454254865646362,
+    "top_k_mean_mse": 0.012709781527519226
+  },
+  "Layer 11 Head 8": {
+    "rank_mean_cos": 0.8644680380821228,
+    "top_k_mean_cos": 0.25606104731559753,
+    "rank_mean_mse": 0.8250531554222107,
+    "top_k_mean_mse": 0.018427425995469093
+  },
+  "Layer 11 Head 9": {
+    "rank_mean_cos": 0.9349998831748962,
+    "top_k_mean_cos": 0.5792743563652039,
+    "rank_mean_mse": 0.9018084406852722,
+    "top_k_mean_mse": 0.07690229266881943
+  },
+  "Layer 11 Head 10": {
+    "rank_mean_cos": 0.836808443069458,
+    "top_k_mean_cos": 0.13116838037967682,
+    "rank_mean_mse": 0.8037765026092529,
+    "top_k_mean_mse": 0.007799305021762848
+  },
+  "Layer 11 Head 11": {
+    "rank_mean_cos": 0.9557446241378784,
+    "top_k_mean_cos": 0.5180315971374512,
+    "rank_mean_mse": 0.9605318903923035,
+    "top_k_mean_mse": 0.07577171176671982
+  }
+}

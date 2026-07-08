@@ -1,0 +1,762 @@
+{
+    "Head_0": {
+        "Head_Name": "Layer 8 Head 0",
+        "Top_Groups": [
+            {
+                "Group": "Plants & Botanical",
+                "Score": 59.9301
+            },
+            {
+                "Group": "Natural Landscapes",
+                "Score": 59.9301
+            }
+        ]
+    },
+    "Head_1": {
+        "Head_Name": "Layer 8 Head 1",
+        "Top_Groups": [
+            {
+                "Group": "Markets & Commerce",
+                "Score": 58.3087
+            },
+            {
+                "Group": "Food & Cuisine",
+                "Score": 50.5301
+            }
+        ]
+    },
+    "Head_2": {
+        "Head_Name": "Layer 8 Head 2",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 91.6348
+            }
+        ]
+    },
+    "Head_3": {
+        "Head_Name": "Layer 8 Head 3",
+        "Top_Groups": [
+            {
+                "Group": "Toys, Games & Recreation",
+                "Score": 58.5518
+            }
+        ]
+    },
+    "Head_4": {
+        "Head_Name": "Layer 8 Head 4",
+        "Top_Groups": [
+            {
+                "Group": "Office & Stationery",
+                "Score": 8.1555
+            },
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 4.2272
+            }
+        ]
+    },
+    "Head_5": {
+        "Head_Name": "Layer 8 Head 5",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 80.8305
+            },
+            {
+                "Group": "Urban & City Scenes",
+                "Score": 77.6567
+            },
+            {
+                "Group": "Transportation & Vehicles",
+                "Score": 33.1133
+            },
+            {
+                "Group": "Religious & Spiritual",
+                "Score": 24.321
+            }
+        ]
+    },
+    "Head_6": {
+        "Head_Name": "Layer 8 Head 6",
+        "Top_Groups": [
+            {
+                "Group": "Plants & Botanical",
+                "Score": 27.0642
+            },
+            {
+                "Group": "Natural Landscapes",
+                "Score": 27.0642
+            },
+            {
+                "Group": "Animals",
+                "Score": 10.8415
+            },
+            {
+                "Group": "Structures & Barriers",
+                "Score": 10.8415
+            }
+        ]
+    },
+    "Head_7": {
+        "Head_Name": "Layer 8 Head 7",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 33.5972
+            },
+            {
+                "Group": "Office & Stationery",
+                "Score": 18.3311
+            }
+        ]
+    },
+    "Head_8": {
+        "Head_Name": "Layer 8 Head 8",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 26.7304
+            },
+            {
+                "Group": "Sports & Athletics",
+                "Score": 19.8125
+            },
+            {
+                "Group": "Water & Aquatic",
+                "Score": 13.4649
+            },
+            {
+                "Group": "Natural Landscapes",
+                "Score": 12.7122
+            },
+            {
+                "Group": "Music, Dance & Performance",
+                "Score": 11.0203
+            },
+            {
+                "Group": "Markets & Commerce",
+                "Score": 9.496
+            }
+        ]
+    },
+    "Head_9": {
+        "Head_Name": "Layer 8 Head 9",
+        "Top_Groups": [
+            {
+                "Group": "Transportation & Vehicles",
+                "Score": 198.6038
+            },
+            {
+                "Group": "Water & Aquatic",
+                "Score": 198.6038
+            }
+        ]
+    },
+    "Head_10": {
+        "Head_Name": "Layer 8 Head 10",
+        "Top_Groups": [
+            {
+                "Group": "Toys, Games & Recreation",
+                "Score": 34.0661
+            },
+            {
+                "Group": "Religious & Spiritual",
+                "Score": 4.6467
+            },
+            {
+                "Group": "Historical & Antique",
+                "Score": 4.6467
+            }
+        ]
+    },
+    "Head_11": {
+        "Head_Name": "Layer 8 Head 11",
+        "Top_Groups": [
+            {
+                "Group": "Outdoor & Camping",
+                "Score": 30.9848
+            },
+            {
+                "Group": "Toys, Games & Recreation",
+                "Score": 30.9848
+            }
+        ]
+    },
+    "Head_12": {
+        "Head_Name": "Layer 9 Head 0",
+        "Top_Groups": [
+            {
+                "Group": "Markets & Commerce",
+                "Score": 47.8433
+            },
+            {
+                "Group": "Structures & Barriers",
+                "Score": 47.8433
+            }
+        ]
+    },
+    "Head_13": {
+        "Head_Name": "Layer 9 Head 1",
+        "Top_Groups": [
+            {
+                "Group": "Food & Cuisine",
+                "Score": 88.0799
+            },
+            {
+                "Group": "Children & Youth",
+                "Score": 58.8769
+            },
+            {
+                "Group": "Household Objects & Furniture",
+                "Score": 47.6146
+            },
+            {
+                "Group": "Toys, Games & Recreation",
+                "Score": 13.7431
+            }
+        ]
+    },
+    "Head_14": {
+        "Head_Name": "Layer 9 Head 2",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 67.7595
+            },
+            {
+                "Group": "Urban & City Scenes",
+                "Score": 51.7219
+            },
+            {
+                "Group": "Religious & Spiritual",
+                "Score": 13.1014
+            },
+            {
+                "Group": "Historical & Antique",
+                "Score": 9.6121
+            }
+        ]
+    },
+    "Head_15": {
+        "Head_Name": "Layer 9 Head 3",
+        "Top_Groups": [
+            {
+                "Group": "Food & Cuisine",
+                "Score": 112.3547
+            },
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 28.5038
+            },
+            {
+                "Group": "Office & Stationery",
+                "Score": 17.9831
+            },
+            {
+                "Group": "Structures & Barriers",
+                "Score": 10.1051
+            },
+            {
+                "Group": "Animals",
+                "Score": 9.5077
+            }
+        ]
+    },
+    "Head_16": {
+        "Head_Name": "Layer 9 Head 4",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 64.0977
+            },
+            {
+                "Group": "Outdoor & Camping",
+                "Score": 37.1303
+            },
+            {
+                "Group": "Water & Aquatic",
+                "Score": 24.1993
+            },
+            {
+                "Group": "Food & Cuisine",
+                "Score": 22.639
+            },
+            {
+                "Group": "Household Objects & Furniture",
+                "Score": 20.0962
+            },
+            {
+                "Group": "Natural Landscapes",
+                "Score": 16.2721
+            }
+        ]
+    },
+    "Head_17": {
+        "Head_Name": "Layer 9 Head 5",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 35.6532
+            }
+        ]
+    },
+    "Head_18": {
+        "Head_Name": "Layer 9 Head 6",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 234.3154
+            }
+        ]
+    },
+    "Head_19": {
+        "Head_Name": "Layer 9 Head 7",
+        "Top_Groups": [
+            {
+                "Group": "Natural Landscapes",
+                "Score": 10.2213
+            },
+            {
+                "Group": "Natural Landforms & Geology",
+                "Score": 5.5834
+            },
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 4.6386
+            },
+            {
+                "Group": "Plants & Botanical",
+                "Score": 4.6379
+            },
+            {
+                "Group": "Weather & Atmosphere",
+                "Score": 3.6902
+            },
+            {
+                "Group": "Food & Cuisine",
+                "Score": 3.3143
+            }
+        ]
+    },
+    "Head_20": {
+        "Head_Name": "Layer 9 Head 8",
+        "Top_Groups": [
+            {
+                "Group": "Food & Cuisine",
+                "Score": 99.4958
+            },
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 85.7552
+            }
+        ]
+    },
+    "Head_21": {
+        "Head_Name": "Layer 9 Head 9",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 100.0755
+            }
+        ]
+    },
+    "Head_22": {
+        "Head_Name": "Layer 9 Head 10",
+        "Top_Groups": [
+            {
+                "Group": "Medical & Scientific",
+                "Score": 37.9726
+            }
+        ]
+    },
+    "Head_23": {
+        "Head_Name": "Layer 9 Head 11",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 94.6772
+            },
+            {
+                "Group": "Music, Dance & Performance",
+                "Score": 87.5491
+            }
+        ]
+    },
+    "Head_24": {
+        "Head_Name": "Layer 10 Head 0",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 139.6481
+            },
+            {
+                "Group": "Historical & Antique",
+                "Score": 28.4054
+            },
+            {
+                "Group": "Animals",
+                "Score": 27.7898
+            },
+            {
+                "Group": "Urban & City Scenes",
+                "Score": 27.4589
+            },
+            {
+                "Group": "Religious & Spiritual",
+                "Score": 14.4592
+            }
+        ]
+    },
+    "Head_25": {
+        "Head_Name": "Layer 10 Head 1",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 30.6216
+            },
+            {
+                "Group": "Natural Landscapes",
+                "Score": 26.5643
+            },
+            {
+                "Group": "Weather & Atmosphere",
+                "Score": 25.6433
+            },
+            {
+                "Group": "Medical & Scientific",
+                "Score": 23.6693
+            }
+        ]
+    },
+    "Head_26": {
+        "Head_Name": "Layer 10 Head 2",
+        "Top_Groups": [
+            {
+                "Group": "Medical & Scientific",
+                "Score": 35.9015
+            },
+            {
+                "Group": "Industrial & Manufacturing",
+                "Score": 27.1116
+            },
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 21.4517
+            },
+            {
+                "Group": "Religious & Spiritual",
+                "Score": 19.9687
+            },
+            {
+                "Group": "Sports & Athletics",
+                "Score": 14.9194
+            },
+            {
+                "Group": "Weapons & Armor",
+                "Score": 13.5867
+            }
+        ]
+    },
+    "Head_27": {
+        "Head_Name": "Layer 10 Head 3",
+        "Top_Groups": [
+            {
+                "Group": "Markets & Commerce",
+                "Score": 75.3735
+            }
+        ]
+    },
+    "Head_28": {
+        "Head_Name": "Layer 10 Head 4",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 148.0045
+            }
+        ]
+    },
+    "Head_29": {
+        "Head_Name": "Layer 10 Head 5",
+        "Top_Groups": [
+            {
+                "Group": "Technology & Electronics",
+                "Score": 418.1144
+            },
+            {
+                "Group": "Medical & Scientific",
+                "Score": 418.1144
+            }
+        ]
+    },
+    "Head_30": {
+        "Head_Name": "Layer 10 Head 6",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 178.1314
+            },
+            {
+                "Group": "Food & Cuisine",
+                "Score": 121.3356
+            }
+        ]
+    },
+    "Head_31": {
+        "Head_Name": "Layer 10 Head 7",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 482.5486
+            },
+            {
+                "Group": "Children & Youth",
+                "Score": 480.9481
+            }
+        ]
+    },
+    "Head_32": {
+        "Head_Name": "Layer 10 Head 8",
+        "Top_Groups": [
+            {
+                "Group": "Plants & Botanical",
+                "Score": 554.7247
+            },
+            {
+                "Group": "Natural Landscapes",
+                "Score": 554.3998
+            }
+        ]
+    },
+    "Head_33": {
+        "Head_Name": "Layer 10 Head 9",
+        "Top_Groups": [
+            {
+                "Group": "Transportation & Vehicles",
+                "Score": 356.5033
+            }
+        ]
+    },
+    "Head_34": {
+        "Head_Name": "Layer 10 Head 10",
+        "Top_Groups": [
+            {
+                "Group": "Water & Aquatic",
+                "Score": 332.4676
+            },
+            {
+                "Group": "Sports & Athletics",
+                "Score": 280.5199
+            },
+            {
+                "Group": "Natural Landscapes",
+                "Score": 172.3164
+            }
+        ]
+    },
+    "Head_35": {
+        "Head_Name": "Layer 10 Head 11",
+        "Top_Groups": [
+            {
+                "Group": "Household Objects & Furniture",
+                "Score": 76.7627
+            },
+            {
+                "Group": "Urban & City Scenes",
+                "Score": 46.8754
+            },
+            {
+                "Group": "Outdoor & Camping",
+                "Score": 45.9867
+            },
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 45.0401
+            }
+        ]
+    },
+    "Head_36": {
+        "Head_Name": "Layer 11 Head 0",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 406.9486
+            },
+            {
+                "Group": "Religious & Spiritual",
+                "Score": 226.4927
+            },
+            {
+                "Group": "Cultural & Traditional",
+                "Score": 159.3038
+            },
+            {
+                "Group": "Food & Cuisine",
+                "Score": 121.8689
+            }
+        ]
+    },
+    "Head_37": {
+        "Head_Name": "Layer 11 Head 1",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 226.5873
+            },
+            {
+                "Group": "Structures & Barriers",
+                "Score": 171.5116
+            },
+            {
+                "Group": "Water & Aquatic",
+                "Score": 104.9128
+            },
+            {
+                "Group": "Natural Landscapes",
+                "Score": 78.6199
+            }
+        ]
+    },
+    "Head_38": {
+        "Head_Name": "Layer 11 Head 2",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 278.3549
+            }
+        ]
+    },
+    "Head_39": {
+        "Head_Name": "Layer 11 Head 3",
+        "Top_Groups": [
+            {
+                "Group": "Food & Cuisine",
+                "Score": 353.2179
+            },
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 220.4661
+            },
+            {
+                "Group": "Medical & Scientific",
+                "Score": 146.5707
+            },
+            {
+                "Group": "Markets & Commerce",
+                "Score": 104.1027
+            },
+            {
+                "Group": "Sports & Athletics",
+                "Score": 64.6941
+            },
+            {
+                "Group": "Letters, Text & Writing",
+                "Score": 59.3633
+            }
+        ]
+    },
+    "Head_40": {
+        "Head_Name": "Layer 11 Head 4",
+        "Top_Groups": [
+            {
+                "Group": "Children & Youth",
+                "Score": 243.8434
+            },
+            {
+                "Group": "Household Objects & Furniture",
+                "Score": 237.7439
+            }
+        ]
+    },
+    "Head_41": {
+        "Head_Name": "Layer 11 Head 5",
+        "Top_Groups": [
+            {
+                "Group": "Plants & Botanical",
+                "Score": 101.4695
+            },
+            {
+                "Group": "Trees & Forests",
+                "Score": 95.6036
+            },
+            {
+                "Group": "Fruits",
+                "Score": 53.5122
+            }
+        ]
+    },
+    "Head_42": {
+        "Head_Name": "Layer 11 Head 6",
+        "Top_Groups": [
+            {
+                "Group": "Natural Landscapes",
+                "Score": 932.0273
+            },
+            {
+                "Group": "Natural Landforms & Geology",
+                "Score": 512.7654
+            }
+        ]
+    },
+    "Head_43": {
+        "Head_Name": "Layer 11 Head 7",
+        "Top_Groups": [
+            {
+                "Group": "Water & Aquatic",
+                "Score": 611.2325
+            },
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 469.4902
+            },
+            {
+                "Group": "Structures & Barriers",
+                "Score": 448.7887
+            }
+        ]
+    },
+    "Head_44": {
+        "Head_Name": "Layer 11 Head 8",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 87.5295
+            }
+        ]
+    },
+    "Head_45": {
+        "Head_Name": "Layer 11 Head 9",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 30.6669
+            }
+        ]
+    },
+    "Head_46": {
+        "Head_Name": "Layer 11 Head 10",
+        "Top_Groups": [
+            {
+                "Group": "Water & Aquatic",
+                "Score": 130.2844
+            },
+            {
+                "Group": "Natural Landforms & Geology",
+                "Score": 101.6169
+            },
+            {
+                "Group": "Natural Landscapes",
+                "Score": 82.8034
+            }
+        ]
+    },
+    "Head_47": {
+        "Head_Name": "Layer 11 Head 11",
+        "Top_Groups": [
+            {
+                "Group": "Architecture & Buildings",
+                "Score": 24.9191
+            }
+        ]
+    }
+}

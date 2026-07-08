@@ -11,14 +11,19 @@ import re
 from collections import defaultdict, OrderedDict
 
 # ─── Read texts ───────────────────────────────────────────────────────────────
-with open('/home/nfm/clip_text_span/text_descriptions/image_descriptions_general.txt', 'r') as f:
-    texts = [line.strip() for line in f if line.strip()]
-
-print(f"Total description texts loaded: {len(texts)}")
+import os
+TEXT_FILE = '/home/nfm/clip_text_span/text_descriptions/image_descriptions_general.txt'
+if os.path.exists(TEXT_FILE):
+    with open(TEXT_FILE, 'r') as f:
+        texts = [line.strip() for line in f if line.strip()]
+    print(f"Total description texts loaded: {len(texts)}")
+else:
+    texts = []
+    print(f"Text file not found ({TEXT_FILE}), running with ImageNet classes only.")
 
 # ─── Read ImageNet classes ────────────────────────────────────────────────────
 imagenet_classes = []
-with open('/home/nfm/ViT-Prisma/mynotebooks/imagenet_classes.txt', 'r') as f:
+with open('/home/nfm/Desktop/rhome/nfm/ViT-Prisma/mynotebooks/imagenet_classes.txt', 'r') as f:
     for line in f:
         line = line.strip()
         if not line:
@@ -46,7 +51,23 @@ def normalize(s):
     return s.lower().replace('_', ' ')
 
 def matches(item_normalized, keywords):
-    return any(kw in item_normalized for kw in keywords)
+    """
+    Check if text matches any keyword.
+    - Plain keyword: substring match (original behavior).
+    - ~keyword:      whole-word match using \\b word boundaries.
+      Use ~ for short words that are substrings of common English words
+      (e.g. ~ant avoids matching 'elegant', 'plant', 'distant').
+    """
+    for kw in keywords:
+        if kw.startswith('~'):
+            # Whole-word / word-boundary match
+            pattern = r'\b' + re.escape(kw[1:]) + r'\b'
+            if re.search(pattern, item_normalized):
+                return True
+        else:
+            if kw in item_normalized:
+                return True
+    return False
 
 # ─── Group definitions ────────────────────────────────────────────────────────
 # Each group: list of lowercase substrings (any match → item belongs to group)
@@ -98,7 +119,7 @@ GROUPS = OrderedDict([
         # Golds / Yellows
         "goldfish", "goldfinch", "golden retriever",
         "sulphur butterfly", "sulphur-crested cockatoo",
-        "yellow lady", "banana", "lemon", "corn",
+        "yellow lady", "banana", "lemon", "~corn",
         # Reds / Oranges
         "red fox", "red wolf", "redbone",
         "red-breasted merganser", "red-backed sandpiper",
@@ -450,6 +471,8 @@ GROUPS = OrderedDict([
         "tile roof",  # repeating tile pattern
         "picket fence",  # repeating slat pattern
         "knot",
+        # ── additional coverage for unassigned classes ──
+        "~chain",
     ]),
 
     ("Fractals & Complex Math", [
@@ -510,7 +533,7 @@ GROUPS = OrderedDict([
         "waterfall", "a droplet",
         # ImageNet water features
         "coral reef", "seashore", "sandbar", "lakeside",
-        "breakwater", "dam", "dock", "pier",
+        "breakwater", "~dam", "dock", "pier",
         "fountain", "geyser",
     ]),
 
@@ -565,9 +588,9 @@ GROUPS = OrderedDict([
         # ImageNet plants & flowers
         "daisy", "yellow lady's slipper",
         "rapeseed",  # bright yellow flowering plant
-        "corn",  # crop plant
+        "~corn",  # crop plant
         "acorn",  # seed/nut
-        "hip",  # rose hip
+        "~hip",  # rose hip
         "buckeye",  # nut/plant
         "head cabbage", "broccoli", "cauliflower",
         "artichoke", "cardoon",
@@ -674,6 +697,8 @@ GROUPS = OrderedDict([
         "water tower", "flagpole",
         "yurt", "cliff dwelling",
         "boathouse",
+        # ── additional coverage for unassigned classes ──
+        "pedestal",
     ]),
 
     ("Industrial & Manufacturing", [
@@ -713,6 +738,8 @@ GROUPS = OrderedDict([
         "photo of a person", "photo of a woman",
         # ImageNet
         "ballplayer", "groom", "scuba diver",
+        # ── additional coverage for unassigned classes ──
+        "pirate",
     ]),
 
     ("Professions & Occupations", [
@@ -786,17 +813,19 @@ GROUPS = OrderedDict([
     ]),
 
     ("Body Parts", [
-        "a hand", "an eye", "arms", " legs", "a nose", "a mouth",
+        "a hand", "an eye", "~arms", " legs", "a nose", "a mouth",
         "cheeks", "ears", "fingers", "a head",
         "texture of hair", "texture of skin",
-        "feet", "lips", "teeth", "thumb",
-        "a paw", "a whisker", "a tail", "a fin",
+        "feet", "~lips", "teeth", "thumb",
+        "a paw", "a whisker", "a tail", "~a fin",
         "a wing", "hands in an embrace",
         "image of cheeks", "image of ears",
         "image of legs", "image of hands",
         "eyes", "mouth",
         # ImageNet
-        "ear",  # class 998
+        "~ear",  # class 998
+        # ── additional coverage for unassigned classes ──
+        "~wing",
     ]),
 
     ("Children & Youth", [
@@ -888,10 +917,10 @@ GROUPS = OrderedDict([
         # Fish
         "tench", "goldfish", "great white shark", "tiger shark",
         "hammerhead", "electric ray", "stingray",
-        "barracouta", "eel", "coho", "rock beauty",
-        "anemone fish", "sturgeon", "gar", "lionfish", "puffer",
+        "barracouta", "~eel", "~coho", "rock beauty",
+        "anemone fish", "sturgeon", "~gar", "lionfish", "puffer",
         # Birds
-        "cock", "hen", "ostrich", "brambling", "goldfinch",
+        "~cock", "~hen", "ostrich", "brambling", "goldfinch",
         "house finch", "junco", "indigo bunting", "robin",
         "bulbul", "jay", "magpie", "chickadee", "water ouzel",
         "kite", "bald eagle", "vulture", "great grey owl",
@@ -899,7 +928,7 @@ GROUPS = OrderedDict([
         "prairie chicken", "peacock", "quail", "partridge",
         "african grey", "macaw", "sulphur-crested cockatoo",
         "lorikeet", "coucal", "bee eater", "hornbill",
-        "hummingbird", "jacamar", "toucan", "drake",
+        "hummingbird", "jacamar", "toucan", "~drake",
         "red-breasted merganser", "goose", "black swan",
         "white stork", "black stork", "spoonbill", "flamingo",
         "little blue heron", "american egret", "bittern",
@@ -910,7 +939,7 @@ GROUPS = OrderedDict([
         # Marine mammals
         "grey whale", "killer whale", "dugong", "sea lion",
         # Amphibians
-        "european fire salamander", "common newt", "eft",
+        "european fire salamander", "common newt", "~eft",
         "spotted salamander", "axolotl", "bullfrog",
         "tree frog", "tailed frog",
         # Reptiles
@@ -932,11 +961,11 @@ GROUPS = OrderedDict([
         "trilobite", "harvestman", "scorpion",
         "black and gold garden spider", "barn spider",
         "garden spider", "black widow", "tarantula",
-        "wolf spider", "tick", "centipede",
+        "wolf spider", "~tick", "centipede",
         # Insects
         "tiger beetle", "ladybug", "ground beetle",
         "long-horned beetle", "leaf beetle", "dung beetle",
-        "rhinoceros beetle", "weevil", "fly", "bee", "ant",
+        "rhinoceros beetle", "weevil", "~fly", "~bee", "~ant",
         "grasshopper", "cricket", "walking stick",
         "cockroach", "mantis", "cicada", "leafhopper",
         "lacewing", "dragonfly", "damselfly",
@@ -946,7 +975,7 @@ GROUPS = OrderedDict([
         # Marine invertebrates
         "starfish", "sea urchin", "sea cucumber",
         "jellyfish", "sea anemone", "brain coral",
-        "flatworm", "nematode", "conch", "snail", "slug",
+        "flatworm", "nematode", "conch", "snail", "~slug",
         "sea slug", "chiton", "chambered nautilus",
         # Crustaceans
         "dungeness crab", "rock crab", "fiddler crab",
@@ -956,23 +985,23 @@ GROUPS = OrderedDict([
         "tusker", "echidna", "platypus", "wallaby",
         "koala", "wombat",
         # Mammals - rodents & lagomorphs
-        "wood rabbit", "hare", "angora", "hamster",
+        "wood rabbit", "~hare", "angora", "hamster",
         "porcupine", "fox squirrel", "marmot", "beaver",
         "guinea pig",
         # Mammals - ungulates
-        "sorrel", "zebra", "hog", "wild boar", "warthog",
-        "hippopotamus", "ox", "water buffalo", "bison",
-        "ram", "bighorn", "ibex", "hartebeest", "impala",
+        "sorrel", "zebra", "~hog", "wild boar", "warthog",
+        "hippopotamus", "~ox", "water buffalo", "bison",
+        "~ram", "bighorn", "ibex", "hartebeest", "impala",
         "gazelle", "arabian camel", "llama",
         # Mammals - carnivores
-        "weasel", "mink", "polecat", "black-footed ferret",
-        "otter", "skunk", "badger", "armadillo",
+        "weasel", "~mink", "polecat", "black-footed ferret",
+        "~otter", "skunk", "badger", "armadillo",
         "three-toed sloth",
         # Primates
         "orangutan", "gorilla", "chimpanzee", "gibbon",
         "siamang", "guenon", "patas", "baboon", "macaque",
         "langur", "colobus", "proboscis monkey", "marmoset",
-        "capuchin", "howler monkey", "titi", "spider monkey",
+        "capuchin", "howler monkey", "~titi", "spider monkey",
         "squirrel monkey", "madagascar cat", "indri",
         # Elephants
         "indian elephant", "african elephant",
@@ -1019,9 +1048,9 @@ GROUPS = OrderedDict([
         "boxer", "bull mastiff", "tibetan mastiff",
         "french bulldog", "great dane", "saint bernard",
         "eskimo dog", "malamute", "siberian husky",
-        "dalmatian", "affenpinscher", "basenji", "pug",
+        "dalmatian", "affenpinscher", "basenji", "~pug",
         "leonberg", "newfoundland", "great pyrenees",
-        "samoyed", "pomeranian", "chow", "keeshond",
+        "samoyed", "pomeranian", "~chow", "keeshond",
         "brabancon griffon", "pembroke", "cardigan",
         "toy poodle", "miniature poodle", "standard poodle",
         "mexican hairless",
@@ -1085,9 +1114,9 @@ GROUPS = OrderedDict([
         "boxer", "bull mastiff", "tibetan mastiff",
         "french bulldog", "great dane", "saint bernard",
         "eskimo dog", "malamute", "siberian husky",
-        "dalmatian", "affenpinscher", "basenji", "pug",
+        "dalmatian", "affenpinscher", "basenji", "~pug",
         "leonberg", "newfoundland", "great pyrenees",
-        "samoyed", "pomeranian", "chow", "keeshond",
+        "samoyed", "pomeranian", "~chow", "keeshond",
         "brabancon griffon", "pembroke", "cardigan",
         "toy poodle", "miniature poodle", "standard poodle",
         "mexican hairless",
@@ -1120,7 +1149,7 @@ GROUPS = OrderedDict([
         "with poultry", "image with poultry",
         "image showing prairie grouse",
         # All ImageNet bird classes
-        "cock", "hen", "ostrich", "brambling", "goldfinch",
+        "~cock", "~hen", "ostrich", "brambling", "goldfinch",
         "house finch", "junco", "indigo bunting", "robin",
         "bulbul", "jay", "magpie", "chickadee", "water ouzel",
         "kite", "bald eagle", "vulture", "great grey owl",
@@ -1128,7 +1157,7 @@ GROUPS = OrderedDict([
         "prairie chicken", "peacock", "quail", "partridge",
         "african grey", "macaw", "sulphur-crested cockatoo",
         "lorikeet", "coucal", "bee eater", "hornbill",
-        "hummingbird", "jacamar", "toucan", "drake",
+        "hummingbird", "jacamar", "toucan", "~drake",
         "red-breasted merganser", "goose", "black swan",
         "white stork", "black stork", "spoonbill", "flamingo",
         "little blue heron", "american egret", "bittern",
@@ -1147,7 +1176,7 @@ GROUPS = OrderedDict([
         "photo of a reptile",
         "detailed reptile close", "detailed amphibian close",
         # Amphibians
-        "european fire salamander", "common newt", "eft",
+        "european fire salamander", "common newt", "~eft",
         "spotted salamander", "axolotl", "bullfrog",
         "tree frog", "tailed frog",
         # Turtles
@@ -1188,13 +1217,13 @@ GROUPS = OrderedDict([
         "trilobite", "harvestman", "scorpion",
         "black and gold garden spider", "barn spider",
         "garden spider", "black widow", "tarantula",
-        "wolf spider", "tick", "centipede",
+        "wolf spider", "~tick", "centipede",
         # ImageNet insects - beetles
         "tiger beetle", "ladybug", "ground beetle",
         "long-horned beetle", "leaf beetle", "dung beetle",
         "rhinoceros beetle", "weevil",
         # Other insects
-        "fly", "bee", "ant", "grasshopper", "cricket",
+        "~fly", "~bee", "~ant", "grasshopper", "cricket",
         "walking stick", "cockroach", "mantis", "cicada",
         "leafhopper", "lacewing", "dragonfly", "damselfly",
         # Butterflies
@@ -1214,13 +1243,13 @@ GROUPS = OrderedDict([
         # ImageNet fish
         "tench", "goldfish", "great white shark", "tiger shark",
         "hammerhead", "electric ray", "stingray",
-        "barracouta", "eel", "coho", "rock beauty",
-        "anemone fish", "sturgeon", "gar", "lionfish", "puffer",
+        "barracouta", "~eel", "~coho", "rock beauty",
+        "anemone fish", "sturgeon", "~gar", "lionfish", "puffer",
         # Marine mammals
         "grey whale", "killer whale", "dugong", "sea lion",
         # Marine invertebrates
         "jellyfish", "sea anemone", "brain coral",
-        "flatworm", "nematode", "conch", "snail", "slug",
+        "flatworm", "nematode", "conch", "snail", "~slug",
         "sea slug", "chiton", "chambered nautilus",
         "starfish", "sea urchin", "sea cucumber",
         # Crustaceans
@@ -1235,7 +1264,7 @@ GROUPS = OrderedDict([
         "orangutan", "gorilla", "chimpanzee", "gibbon",
         "siamang", "guenon", "patas", "baboon", "macaque",
         "langur", "colobus", "proboscis monkey", "marmoset",
-        "capuchin", "howler monkey", "titi", "spider monkey",
+        "capuchin", "howler monkey", "~titi", "spider monkey",
         "squirrel monkey", "madagascar cat", "indri",
     ]),
 
@@ -1286,7 +1315,7 @@ GROUPS = OrderedDict([
         "zucchini", "spaghetti squash", "acorn squash",
         "butternut squash", "cucumber", "artichoke",
         "bell pepper", "cardoon", "mushroom",
-        "corn", "rapeseed",
+        "~corn", "rapeseed",
     ]),
 
     ("Sports & Athletics", [
@@ -1317,6 +1346,8 @@ GROUPS = OrderedDict([
         "sports car", "racer", "racket",
         "running shoe", "swimming trunks",
         "ballplayer", "scuba diver",
+        # ── additional coverage for unassigned classes ──
+        "~puck", "whistle",
     ]),
 
     ("Music, Dance & Performance", [
@@ -1337,7 +1368,7 @@ GROUPS = OrderedDict([
         "pulsating concert",
         "a violin",
         # ImageNet - see also Musical Instruments group
-        "stage", "theater curtain", "maypole",
+        "~stage", "theater curtain", "maypole",
     ]),
 
     ("Musical Instruments", [
@@ -1352,6 +1383,8 @@ GROUPS = OrderedDict([
         "organ", "panpipe", "sax", "steel drum",
         "trombone", "upright",  # upright piano
         "grand piano", "violin",
+        # ── additional coverage for unassigned classes ──
+        "~brass", "whistle",
     ]),
 
     ("Cultural & Traditional", [
@@ -1451,7 +1484,7 @@ GROUPS = OrderedDict([
         "picture with boats",
         # ImageNet vehicles
         "aircraft carrier", "airliner", "airship",
-        "ambulance", "amphibian",  # amphibious vehicle
+        "ambulance", "amphibious vehicle",  # ImageNet class 408
         "beach wagon", "bicycle-built-for-two",
         "bobsled", "bullet train", "cab", "canoe",
         "car wheel", "catamaran", "convertible",
@@ -1472,6 +1505,9 @@ GROUPS = OrderedDict([
         "trailer truck", "tricycle", "trimaran",
         "trolleybus", "unicycle", "warplane", "yawl",
         "container ship",
+        # ── additional coverage for unassigned classes ──
+        "~plane", "gas pump", "grille", "seat belt",
+        "~tank",
     ]),
 
     # ══════════════════════════════════════════════════════════════════════════
@@ -1527,6 +1563,8 @@ GROUPS = OrderedDict([
         "solar dish", "radio", "radio telescope",
         "microphone", "loudspeaker",
         "web site",
+        # ── additional coverage for unassigned classes ──
+        "~reel", "~switch",
     ]),
 
     ("Fashion & Clothing", [
@@ -1555,6 +1593,9 @@ GROUPS = OrderedDict([
         "suit", "sunglasses", "sunglass",
         "sweatshirt", "swimming trunks", "trench coat",
         "vestment", "wig", "windsor tie",
+        # ── additional coverage for unassigned classes ──
+        "~mask", "lipstick", "perfume", "lotion",
+        "hair spray",
     ]),
 
     ("Footwear", [
@@ -1603,6 +1644,8 @@ GROUPS = OrderedDict([
         "medicine chest", "neck brace", "crutch",
         "stretcher", "oxygen mask", "face powder",
         "petri dish", "beaker",
+        # ── additional coverage for unassigned classes ──
+        "band aid", "gasmask", "swab", "~scale",
     ]),
 
     ("Graffiti & Street Art", [
@@ -1914,6 +1957,8 @@ GROUPS = OrderedDict([
         # ImageNet
         "volcano", "torch", "matchstick",
         "fire engine", "fire screen", "fireboat",
+        # ── additional coverage for unassigned classes ──
+        "lighter",
     ]),
 
     ("Fog, Mist & Haze", [
@@ -1983,12 +2028,16 @@ GROUPS = OrderedDict([
         "window screen", "window shade",
         "vase", "flowerpot",
         "vacuum", "washer", "dishwasher",
-        "iron", "sewing machine",
+        "~iron", "sewing machine",
         "electric fan", "space heater",
         "refrigerator", "stove", "microwave",
         "toaster", "waffle iron",
         "lamp", "curtain", "bannister",
         "sliding door", "shoji",
+        # ── additional coverage for unassigned classes ──
+        "ashcan", "barber chair", "hand blower", "home theater",
+        "radiator", "soap dispenser", "~tub", "patio",
+        "nipple", "toilet tissue", "lighter",
     ]),
 
     ("Kitchen & Cooking Equipment", [
@@ -1997,11 +2046,11 @@ GROUPS = OrderedDict([
         "caldron", "coffeepot", "espresso maker",
         "crock pot", "dutch oven", "frying pan",
         "ladle", "measuring cup", "mixing bowl",
-        "pot", "spatula", "strainer",
-        "wok", "wooden spoon", "rotisserie",
+        "~pot", "spatula", "strainer",
+        "~wok", "wooden spoon", "rotisserie",
         "can opener", "cleaver", "corkscrew",
         "cocktail shaker", "beer bottle", "beer glass",
-        "coffee mug", "cup", "goblet",
+        "coffee mug", "~cup", "goblet",
         "pitcher", "soup bowl", "teapot",
         "plate rack", "tray", "saltshaker",
         "water bottle", "water jug", "wine bottle",
@@ -2012,12 +2061,16 @@ GROUPS = OrderedDict([
         # ── NEW GROUP ──
         "a gear", "a motor",
         "hammer", "hatchet", "screwdriver", "screw",
-        "nail", "plunger", "power drill", "shovel",
+        "~nail", "plunger", "power drill", "shovel",
         "carpenter's kit", "chain saw",
         "lawn mower", "plow", "broom",
         "paintbrush", "hook", "padlock",
-        "combination lock", "rule",  # ruler
+        "combination lock", "~rule",  # ruler
         "thimble",
+        # ── additional coverage for unassigned classes ──
+        "~pick", "spindle", "mortar",
+        "oil filter", "disk brake",
+        "potter's wheel", "~barrow",
     ]),
 
     ("Weapons & Armor", [
@@ -2027,6 +2080,8 @@ GROUPS = OrderedDict([
         "bulletproof vest", "breastplate", "cuirass",
         "chain mail", "shield", "scabbard",
         "holster",
+        # ── additional coverage for unassigned classes ──
+        "~tank", "~bow",
     ]),
 
     ("Containers & Vessels", [
@@ -2037,6 +2092,8 @@ GROUPS = OrderedDict([
         "mail bag", "mailbox", "piggy bank",
         "purse", "wallet", "backpack",
         "pencil box", "medicine chest",
+        # ── additional coverage for unassigned classes ──
+        "bottlecap", "milk can", "mailbag",
     ]),
 
     ("Toys, Games & Recreation", [
@@ -2044,7 +2101,7 @@ GROUPS = OrderedDict([
         "teddy",  # teddy bear
         "jigsaw puzzle", "crossword puzzle",
         "pinwheel", "swing", "carousel",
-        "slot",  # slot machine
+        "~slot",  # slot machine
         "pool table", "maraca",
         "toyshop",
     ]),
@@ -2073,10 +2130,12 @@ GROUPS = OrderedDict([
         # ── NEW GROUP: fences, walls, bridges, dams ──
         "chainlink fence", "picket fence",
         "worm fence", "stone wall",
-        "breakwater", "dam",
+        "breakwater", "~dam",
         "steel arch bridge", "suspension bridge",
         "viaduct", "pier", "dock",
         "turnstile", "manhole cover",
+        # ── additional coverage for unassigned classes ──
+        "~pole",
     ]),
 
     ("Outdoor & Camping", [
@@ -2086,11 +2145,13 @@ GROUPS = OrderedDict([
         "snorkel", "parachute",
         "recreational vehicle",
         "mobile home", "yurt",
+        # ── additional coverage for unassigned classes ──
+        "~reel",
     ]),
 
     ("Office & Stationery", [
         # ── NEW GROUP ──
-        "envelope", "binder", "file",
+        "envelope", "binder", "~file",
         "pencil box", "pencil sharpener",
         "letter opener", "fountain pen",
         "ballpoint", "quill", "notebook",
@@ -2196,7 +2257,7 @@ for name, items in group_items.items():
         "imagenet_classes": sorted(set(i for s, i in items if s == "imagenet")),
     }
 
-with open('/home/nfm/ViT-Prisma/mynotebooks/groups_output_combined.json', 'w') as f:
+with open('/home/nfm/Desktop/rhome/nfm/ViT-Prisma/mynotebooks/groups_output_combined_new.json', 'w') as f:
     json.dump(output, f, indent=2, ensure_ascii=False)
 
-print(f"\nSaved JSON to /home/nfm/ViT-Prisma/mynotebooks/groups_output_combined.json")
+print(f"\nSaved JSON to /home/nfm/Desktop/rhome/nfm/ViT-Prisma/mynotebooks/groups_output_combined_new.json")

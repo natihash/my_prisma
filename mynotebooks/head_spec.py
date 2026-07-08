@@ -223,7 +223,7 @@ import numpy as np
 from scipy.ndimage import gaussian_filter1d
 from scipy.signal import find_peaks
 
-def find_elbows(temp, plot_elbows=False, print_elbows=False, sigma = 500, elbows_to_find=2):
+def find_elbows(temp, plot_elbows=False, print_elbows=False, sigma=500, elbows_to_find=2):
     temp_sorted = torch.sort(temp).values
     num_plot = 1_000_000
     idx = torch.arange(
@@ -232,7 +232,10 @@ def find_elbows(temp, plot_elbows=False, print_elbows=False, sigma = 500, elbows
     ) * (temp_sorted.shape[0] - 1) // (num_plot - 1)
     y = temp_sorted[idx].float().cpu().numpy() if temp_sorted.shape[0] > num_plot else temp_sorted.float().cpu().numpy()
     x = np.linspace(0, 1, len(y))
-    y_smooth = gaussian_filter1d(y, sigma=sigma)
+    # Auto-scale sigma proportionally to data length (targets ~0.05% smoothing).
+    # The default 500 was designed for 1M-point subsamples; smaller arrays need a smaller sigma.
+    effective_sigma = sigma if len(y) >= num_plot else max(5, int(sigma * len(y) / num_plot))
+    y_smooth = gaussian_filter1d(y, sigma=effective_sigma)
 
 
     dy = np.gradient(y_smooth)
@@ -273,39 +276,54 @@ def find_elbows(temp, plot_elbows=False, print_elbows=False, sigma = 500, elbows
     return low_thresh, high_thresh
 
 
-def calculate_weighted_effective_dimension(activations, weights=None, weight_transform="log"):
-    """    
-    Args:
-        activations: torch.Tensor of shape (N, D). e.g., (800, 512) for text embeds.
-        weights: torch.Tensor of shape (N, 1) or (N,). These are your counts.
+def find_magnitude_threshold(norms, plot=False, print_result=False):
     """
-    if weights is None:
-        weights = torch.ones(activations.shape[0], 1, device=activations.device)
-    if weights.dim() == 1:
-        weights = weights.unsqueeze(1)
-        
-    if weight_transform == "log":
-        w = torch.log1p(weights)
-    elif weight_transform == "sqrt":
-        w = torch.sqrt(weights)
+    Finds a single threshold for activation magnitudes via adaptive elbow detection.
+    Falls back to the 90th percentile if no clear elbow is found.
+    Returns the scalar threshold value.
+    """
+    norms_np = norms.float().cpu().numpy()
+    sorted_norms = np.sort(norms_np)
+    n = len(sorted_norms)
+
+    # Scale sigma to ~1% of data length for small arrays
+    sigma = max(5, n // 100)
+    y_smooth = gaussian_filter1d(sorted_norms, sigma=sigma)
+
+    dy = np.gradient(y_smooth)
+    d2y = np.gradient(dy)
+    curvature = np.abs(d2y)
+
+    peaks, _ = find_peaks(
+        curvature,
+        distance=max(10, n // 5),
+        prominence=np.max(curvature) * 0.05,
+    )
+
+    if len(peaks) == 0:
+        threshold = float(np.percentile(sorted_norms, 90))
+        if print_result:
+            print(f"No elbow found; falling back to 90th-percentile threshold: {threshold:.4f}")
     else:
-        w = weights.clone()
-    w = w / torch.sum(w)
-    weighted_mean = torch.sum(activations * w, dim=0, keepdim=True)
-    centered_acts = activations - weighted_mean
-    weighted_cov = (centered_acts * w).T @ centered_acts
-    
-    eigenvalues = torch.linalg.eigvalsh(weighted_cov)
-    eigenvalues = torch.clamp(eigenvalues, min=0.0)
-    
-    sum_eig = torch.sum(eigenvalues)
-    sum_sq_eig = torch.sum(eigenvalues ** 2)
-    
-    if sum_sq_eig == 0:
-        return 0.0
-        
-    effective_dim = (sum_eig ** 2) / sum_sq_eig
-    return effective_dim.item()
+        best_peak = peaks[np.argmax(curvature[peaks])]
+        threshold = float(sorted_norms[best_peak])
+        if print_result:
+            print(f"Magnitude threshold (elbow at index {best_peak}/{n}): {threshold:.4f}")
+
+    if plot:
+        fig, axes = plt.subplots(1, 2, figsize=(12, 4))
+        axes[0].plot(sorted_norms, linewidth=0.5)
+        marker_x = best_peak if len(peaks) > 0 else int(0.9 * n)
+        axes[0].axvline(marker_x, color="red", linestyle="--", label=f"thresh={threshold:.3f}")
+        axes[0].set_title("Sorted Norms")
+        axes[0].legend()
+        axes[1].plot(curvature, linewidth=0.5)
+        axes[1].set_title("Curvature")
+        plt.tight_layout()
+        plt.show()
+
+    return threshold
+
 
 import math
 import torch
@@ -458,6 +476,21 @@ def get_thresholded_activations(dta_matrix, original_head_idx, target_heads, TEN
     
     return final_stacked_acts, metadata
 
+def get_all_activations_for_head(head, TENSORS_DIR, wnid_to_idx):
+    """Load every stored activation vector for a single head across all classes."""
+    all_acts = []
+    for pth in sorted(os.listdir(TENSORS_DIR)):
+        if not pth.endswith('.pt'):
+            continue
+        wnid = pth.split('_')[0]
+        if wnid not in wnid_to_idx:
+            continue
+        filepath = os.path.join(TENSORS_DIR, pth)
+        per_head_residual = torch.load(filepath, map_location='cpu', weights_only=True)
+        all_acts.append(per_head_residual[head])  # (50, d_model)
+    return torch.cat(all_acts, dim=0).float()  # (N_images, d_model)
+
+
 # a function
 import torch
 import torch.nn.functional as F
@@ -551,12 +584,19 @@ def calculate_entropy(values, is_logits=False, base=2, dim=-1):
 def compute_group_scores(top_texts, group_data):
     from collections import defaultdict
 
-    # Build text -> groups lookup
+    # Build text/class -> groups lookup (includes both texts and imagenet_classes)
     text_to_groups = defaultdict(list)
 
-    for group_name, texts_in_group in group_data["groups"].items():
+    for group_name, group_info in group_data["groups"].items():
+        # Get texts from the group
+        texts_in_group = group_info.get("texts", [])
         for text in texts_in_group:
             text_to_groups[text].append(group_name)
+        
+        # Get imagenet classes from the group
+        imagenet_classes = group_info.get("imagenet_classes", [])
+        for cls_name in imagenet_classes:
+            text_to_groups[cls_name].append(group_name)
 
     # Initialize all groups at 0
     group_scores = {
@@ -571,7 +611,7 @@ def compute_group_scores(top_texts, group_data):
 
         groups = text_to_groups.get(text, [])
 
-        # Ignore unassigned texts
+        # Ignore unassigned texts/classes
         if not groups:
             continue
 
@@ -580,7 +620,8 @@ def compute_group_scores(top_texts, group_data):
 
     return group_scores
 
-group_data = json.load(open("groups_output.json"))
+# group_data = json.load(open("groups_output.json"))
+group_data = json.load(open("/home/nfm/Desktop/rhome/nfm/ViT-Prisma/mynotebooks/groups_output_combined_new.json"))
 
 
 import os
@@ -631,7 +672,6 @@ def get_ablation_attribution_tensor(layer, base_dir="/home/nfm/ViT-Prisma/mynote
 import os
 import torch
 import json
-import csv
 import gc
 
 # 1. Define paths and mappings for the chunked DTA files
@@ -643,28 +683,37 @@ dta_files = [
 ]
 
 # Paths for the output files
-LOGS_OUTPUT_FILE = "/home/nfm/ViT-Prisma/mynotebooks/head_metrics_log_attr_patch.csv"
-GROUP_SCORES_OUTPUT_FILE = "/home/nfm/ViT-Prisma/mynotebooks/all_group_scores_attr_patch.json"
-HEAD_TEXTS_OUTPUT_FILE = "/home/nfm/ViT-Prisma/mynotebooks/head_top_texts_attr_patch.json"
+LOGS_OUTPUT_FILE = "/home/nfm/Desktop/rhome/nfm/ViT-Prisma/mynotebooks/org_clip_metrics_real/head_spec_metrics.json"
+GROUP_SCORES_OUTPUT_FILE = "/home/nfm/Desktop/rhome/nfm/ViT-Prisma/mynotebooks/org_clip_metrics_real/all_group_scores.json"
+HEAD_TEXTS_OUTPUT_FILE = "/home/nfm/Desktop/rhome/nfm/ViT-Prisma/mynotebooks/org_clip_metrics_real/head_top_texts.json"
+ELBOWS_CACHE_FILE = "/home/nfm/Desktop/rhome/nfm/ViT-Prisma/mynotebooks/org_clip_metrics_real/elbows_cache.json"
 
 # Load the text dictionary once (since it's shared across all heads)
 text_dict = torch.load("/home/nfm/ViT-Prisma/demos/text_dict.pt")
 
 # Initialize containers for the accumulated data
-all_metrics_logs = []
+all_metrics_dict = {}   # head_name -> metric dict (written to JSON)
 all_group_scores_dict = {}
 all_top_texts_dict = {}
+
+# Load elbows cache so the expensive sort-and-smooth step can be skipped on reruns
+if os.path.exists(ELBOWS_CACHE_FILE):
+    with open(ELBOWS_CACHE_FILE, 'r') as _f:
+        elbows_cache = json.load(_f)
+    print(f"Loaded elbows cache with {len(elbows_cache)} entries from {ELBOWS_CACHE_FILE}")
+else:
+    elbows_cache = {}
+
 print("Starting automated workflow for all heads...")
 
-# mylayers = [8, 9, 10, 11]
 
 # 2. Iterate through each file and its corresponding heads
 for file_path, real_heads in dta_files:
     print(f"\nLoading DTA matrix: {file_path}")
-    # DTA_imagent = torch.load(file_path)
+    DTA_imagent = torch.load(file_path)
 
-    layer_to_analyze = real_heads[0] // 12 + 8 # Calculate layer number based on the first head index in the chunk
-    DTA_imagent = get_ablation_attribution_tensor(layer_to_analyze)
+    # layer_to_analyze = real_heads[0] // 12 + 8 # Calculate layer number based on the first head index in the chunk
+    # DTA_imagent = get_ablation_attribution_tensor(layer_to_analyze)
     # DTA_imagent.shape
     
     # Process each head in the current file chunk
@@ -672,9 +721,17 @@ for file_path, real_heads in dta_files:
         print(f"  Processing Head {head}...")
         head_adj = head - real_heads[0] # Calculate the relative index (0 to 11)
         
-        # Calculate thresholds
-        temp = torch.clone(DTA_imagent[:, head_adj, :, :]).flatten()
-        low_thresh, high_thresh = find_elbows(temp, plot_elbows=False, print_elbows=False)
+        # Calculate thresholds (use cache to avoid re-sorting 170M values)
+        head_key = str(head)
+        if head_key in elbows_cache:
+            low_thresh  = elbows_cache[head_key]["low"]
+            high_thresh = elbows_cache[head_key]["high"]
+        else:
+            temp = torch.clone(DTA_imagent[:, head_adj, :, :]).flatten()
+            low_thresh, high_thresh = find_elbows(temp, plot_elbows=False, print_elbows=False)
+            elbows_cache[head_key] = {"low": low_thresh, "high": high_thresh}
+            with open(ELBOWS_CACHE_FILE, 'w') as _f:
+                json.dump(elbows_cache, _f)
 
         # Get top texts
         top_texts_dict = find_top_texts_topk(
@@ -727,21 +784,30 @@ for file_path, real_heads in dta_files:
         group_values_tensor = torch.tensor(group_values, device=stacked_text_embeds.device)
         group_entropy = calculate_entropy(group_values_tensor, is_logits=False, base=2)
 
-        # --- STORE RESULTS ---
-        
-        # 1. Accumulate the 5 metrics
-        # Note: We use .item() to convert single-value PyTorch tensors to standard Python floats for saving
-        all_metrics_logs.append({
-            "Head_Number": head,
-            "Head_Name": head_name,
-            "wSCI_Score": round(wSCI_score.item() if isinstance(wSCI_score, torch.Tensor) else wSCI_score, 4),
-            "Act_Eff_Dim": round(act_pr, 2),
-            "Text_Eff_Dim": round(text_pr, 2),
-            "Act_Entropy_bits": round(act_entropy.item() if isinstance(act_entropy, torch.Tensor) else act_entropy, 4),
-            "Group_Entropy_bits": round(group_entropy.item() if isinstance(group_entropy, torch.Tensor) else group_entropy, 4)
-        })
+        # Magnitude-based effective dimension (threshold by norm, not DTA attribution)
+        all_head_acts = get_all_activations_for_head(head, TENSORS_DIR, wnid_to_idx)
+        norms = torch.norm(all_head_acts, dim=-1)
+        mag_threshold = find_magnitude_threshold(norms)
+        high_mag_acts = all_head_acts[norms > mag_threshold]
+        if high_mag_acts.shape[0] > 1:
+            act_mag_eff_dim = calculate_weighted_effective_dimension(
+                high_mag_acts, weights=None, weight_transform="log"
+            )
+        else:
+            act_mag_eff_dim = 1.0
+        del all_head_acts, high_mag_acts, norms
 
-        print(f"    Metrics for Head {head}: wSCI={wSCI_score:.4f}, ActEffDim={act_pr:.2f}, TextEffDim={text_pr:.2f}, ActEnt={act_entropy:.4f} bits, GroupEnt={group_entropy:.4f} bits")
+        # --- STORE RESULTS ---
+        all_metrics_dict[head_name] = {
+            "wSCI_Score":        round(wSCI_score.item() if isinstance(wSCI_score, torch.Tensor) else wSCI_score, 4),
+            "Act_Eff_Dim":       round(act_pr, 2),
+            "Text_Eff_Dim":      round(text_pr, 2),
+            "Act_Entropy_bits":  round(act_entropy.item() if isinstance(act_entropy, torch.Tensor) else act_entropy, 4),
+            "Group_Entropy_bits":round(group_entropy.item() if isinstance(group_entropy, torch.Tensor) else group_entropy, 4),
+            "Act_Mag_Eff_Dim":   round(act_mag_eff_dim, 2),
+        }
+
+        print(f"    Metrics for Head {head}: wSCI={wSCI_score:.4f}, ActEffDim={act_pr:.2f}, TextEffDim={text_pr:.2f}, ActEnt={act_entropy:.4f} bits, GroupEnt={group_entropy:.4f} bits, MagEffDim={act_mag_eff_dim:.2f}")
 
         # 2. Accumulate the full group scores dictionary
         all_group_scores_dict[f"Head_{head}"] = {
@@ -758,16 +824,10 @@ for file_path, real_heads in dta_files:
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
 
-# 3. Save the logs to a CSV file
+# 3. Save the metrics as JSON: {head_name: {metric: value, ...}}
 print(f"\nSaving metrics to {LOGS_OUTPUT_FILE}...")
-with open(LOGS_OUTPUT_FILE, mode='w', newline='', encoding='utf-8') as csv_file:
-    # Use the keys from the first dictionary as the CSV header
-    fieldnames = all_metrics_logs[0].keys()
-    writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-    
-    writer.writeheader()
-    for log in all_metrics_logs:
-        writer.writerow(log)
+with open(LOGS_OUTPUT_FILE, mode='w', encoding='utf-8') as json_file:
+    json.dump(all_metrics_dict, json_file, indent=2)
 
 # 4. Save the full group scores to a JSON file
 print(f"Saving full group scores to {GROUP_SCORES_OUTPUT_FILE}...")

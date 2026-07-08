@@ -1,0 +1,338 @@
+{
+  "Layer 8 Head 0": {
+    "rank_mean": 0.41368088126182556,
+    "rank_consistency": 0.7688390016555786,
+    "median_disc": 0.291015625,
+    "top_k_mean": 0.93359375,
+    "gini": 0.1462792158126831
+  },
+  "Layer 8 Head 1": {
+    "rank_mean": 0.31189361214637756,
+    "rank_consistency": 0.7546432018280029,
+    "median_disc": 0.05419921875,
+    "top_k_mean": 0.8515625,
+    "gini": 0.14477777481079102
+  },
+  "Layer 8 Head 2": {
+    "rank_mean": 0.29017022252082825,
+    "rank_consistency": 0.7770737409591675,
+    "median_disc": 0.0,
+    "top_k_mean": 0.69140625,
+    "gini": 0.1347888708114624
+  },
+  "Layer 8 Head 3": {
+    "rank_mean": 0.2705744802951813,
+    "rank_consistency": 0.7867437601089478,
+    "median_disc": -0.0220947265625,
+    "top_k_mean": 0.5859375,
+    "gini": 0.19208121299743652
+  },
+  "Layer 8 Head 4": {
+    "rank_mean": 0.2740212678909302,
+    "rank_consistency": 0.7818121314048767,
+    "median_disc": -0.0023651123046875,
+    "top_k_mean": 0.609375,
+    "gini": 0.1483442783355713
+  },
+  "Layer 8 Head 5": {
+    "rank_mean": 0.43261706829071045,
+    "rank_consistency": 0.7438532114028931,
+    "median_disc": 0.263671875,
+    "top_k_mean": 1.421875,
+    "gini": 0.2457571029663086
+  },
+  "Layer 8 Head 6": {
+    "rank_mean": 0.26761704683303833,
+    "rank_consistency": 0.795190691947937,
+    "median_disc": -0.03173828125,
+    "top_k_mean": 0.640625,
+    "gini": 0.17614614963531494
+  },
+  "Layer 8 Head 7": {
+    "rank_mean": 0.4211489260196686,
+    "rank_consistency": 0.7553619146347046,
+    "median_disc": 0.234375,
+    "top_k_mean": 1.03125,
+    "gini": 0.18796145915985107
+  },
+  "Layer 8 Head 8": {
+    "rank_mean": 0.4192765951156616,
+    "rank_consistency": 0.7986475229263306,
+    "median_disc": 0.255859375,
+    "top_k_mean": 0.98046875,
+    "gini": 0.1414046287536621
+  },
+  "Layer 8 Head 9": {
+    "rank_mean": 0.48225530982017517,
+    "rank_consistency": 0.7613697052001953,
+    "median_disc": 0.38671875,
+    "top_k_mean": 1.375,
+    "gini": 0.16897332668304443
+  },
+  "Layer 8 Head 10": {
+    "rank_mean": 0.31519147753715515,
+    "rank_consistency": 0.7551695108413696,
+    "median_disc": 0.04736328125,
+    "top_k_mean": 0.6953125,
+    "gini": 0.1587369441986084
+  },
+  "Layer 8 Head 11": {
+    "rank_mean": 0.28780850768089294,
+    "rank_consistency": 0.7977541089057922,
+    "median_disc": 0.0,
+    "top_k_mean": 0.58984375,
+    "gini": 0.1440601348876953
+  },
+  "Layer 9 Head 0": {
+    "rank_mean": 0.5385532379150391,
+    "rank_consistency": 0.7333186268806458,
+    "median_disc": 0.515625,
+    "top_k_mean": 1.96875,
+    "gini": 0.21149110794067383
+  },
+  "Layer 9 Head 1": {
+    "rank_mean": 0.6914467811584473,
+    "rank_consistency": 0.8150752186775208,
+    "median_disc": 0.94921875,
+    "top_k_mean": 2.140625,
+    "gini": 0.2532622814178467
+  },
+  "Layer 9 Head 2": {
+    "rank_mean": 0.618148922920227,
+    "rank_consistency": 0.7614573240280151,
+    "median_disc": 0.76953125,
+    "top_k_mean": 1.96875,
+    "gini": 0.23480665683746338
+  },
+  "Layer 9 Head 3": {
+    "rank_mean": 0.48261702060699463,
+    "rank_consistency": 0.7369440197944641,
+    "median_disc": 0.39453125,
+    "top_k_mean": 1.59375,
+    "gini": 0.2537156343460083
+  },
+  "Layer 9 Head 4": {
+    "rank_mean": 0.38668084144592285,
+    "rank_consistency": 0.7755354046821594,
+    "median_disc": 0.1982421875,
+    "top_k_mean": 0.95703125,
+    "gini": 0.17439091205596924
+  },
+  "Layer 9 Head 5": {
+    "rank_mean": 0.4137659966945648,
+    "rank_consistency": 0.7510656118392944,
+    "median_disc": 0.2431640625,
+    "top_k_mean": 1.4140625,
+    "gini": 0.23967599868774414
+  },
+  "Layer 9 Head 6": {
+    "rank_mean": 0.4570425748825073,
+    "rank_consistency": 0.7241288423538208,
+    "median_disc": 0.294921875,
+    "top_k_mean": 1.4921875,
+    "gini": 0.22012484073638916
+  },
+  "Layer 9 Head 7": {
+    "rank_mean": 0.2567872703075409,
+    "rank_consistency": 0.8402772545814514,
+    "median_disc": -0.01318359375,
+    "top_k_mean": 0.4140625,
+    "gini": 0.0876150131225586
+  },
+  "Layer 9 Head 8": {
+    "rank_mean": 0.5132127404212952,
+    "rank_consistency": 0.7685142159461975,
+    "median_disc": 0.4609375,
+    "top_k_mean": 1.3984375,
+    "gini": 0.18542492389678955
+  },
+  "Layer 9 Head 9": {
+    "rank_mean": 0.2685106098651886,
+    "rank_consistency": 0.8336764574050903,
+    "median_disc": 0.0419921875,
+    "top_k_mean": 0.419921875,
+    "gini": 0.09192001819610596
+  },
+  "Layer 9 Head 10": {
+    "rank_mean": 0.45389363169670105,
+    "rank_consistency": 0.7591829299926758,
+    "median_disc": 0.322265625,
+    "top_k_mean": 1.328125,
+    "gini": 0.1445760726928711
+  },
+  "Layer 9 Head 11": {
+    "rank_mean": 0.612531840801239,
+    "rank_consistency": 0.7643160223960876,
+    "median_disc": 0.73046875,
+    "top_k_mean": 2.109375,
+    "gini": 0.20433926582336426
+  },
+  "Layer 10 Head 0": {
+    "rank_mean": 0.5359148979187012,
+    "rank_consistency": 0.7126611471176147,
+    "median_disc": 0.39453125,
+    "top_k_mean": 3.015625,
+    "gini": 0.36077654361724854
+  },
+  "Layer 10 Head 1": {
+    "rank_mean": 0.4327021539211273,
+    "rank_consistency": 0.7015855312347412,
+    "median_disc": 0.240234375,
+    "top_k_mean": 1.9296875,
+    "gini": 0.23652982711791992
+  },
+  "Layer 10 Head 2": {
+    "rank_mean": 0.7368935346603394,
+    "rank_consistency": 0.7811613082885742,
+    "median_disc": 1.25,
+    "top_k_mean": 2.890625,
+    "gini": 0.1723719835281372
+  },
+  "Layer 10 Head 3": {
+    "rank_mean": 0.3574468493461609,
+    "rank_consistency": 0.7526023387908936,
+    "median_disc": 0.1064453125,
+    "top_k_mean": 1.3046875,
+    "gini": 0.2650793790817261
+  },
+  "Layer 10 Head 4": {
+    "rank_mean": 0.8090000748634338,
+    "rank_consistency": 0.8146047592163086,
+    "median_disc": 1.578125,
+    "top_k_mean": 3.21875,
+    "gini": 0.18606090545654297
+  },
+  "Layer 10 Head 5": {
+    "rank_mean": 0.785680890083313,
+    "rank_consistency": 0.828166127204895,
+    "median_disc": 1.265625,
+    "top_k_mean": 3.203125,
+    "gini": 0.22809767723083496
+  },
+  "Layer 10 Head 6": {
+    "rank_mean": 0.39429786801338196,
+    "rank_consistency": 0.7482852339744568,
+    "median_disc": 0.15234375,
+    "top_k_mean": 1.453125,
+    "gini": 0.26507437229156494
+  },
+  "Layer 10 Head 7": {
+    "rank_mean": 0.5689362287521362,
+    "rank_consistency": 0.7440600395202637,
+    "median_disc": 0.6015625,
+    "top_k_mean": 1.7734375,
+    "gini": 0.17960107326507568
+  },
+  "Layer 10 Head 8": {
+    "rank_mean": 0.2758936285972595,
+    "rank_consistency": 0.8154629468917847,
+    "median_disc": 0.0,
+    "top_k_mean": 0.478515625,
+    "gini": 0.11100530624389648
+  },
+  "Layer 10 Head 9": {
+    "rank_mean": 0.6072553992271423,
+    "rank_consistency": 0.7127339839935303,
+    "median_disc": 0.56640625,
+    "top_k_mean": 3.90625,
+    "gini": 0.41809606552124023
+  },
+  "Layer 10 Head 10": {
+    "rank_mean": 0.8537659645080566,
+    "rank_consistency": 0.8613795638084412,
+    "median_disc": 1.7734375,
+    "top_k_mean": 3.828125,
+    "gini": 0.24144816398620605
+  },
+  "Layer 10 Head 11": {
+    "rank_mean": 0.5049574375152588,
+    "rank_consistency": 0.7613248229026794,
+    "median_disc": 0.376953125,
+    "top_k_mean": 1.9296875,
+    "gini": 0.2048720121383667
+  },
+  "Layer 11 Head 0": {
+    "rank_mean": 0.48102131485939026,
+    "rank_consistency": 0.7548006176948547,
+    "median_disc": 0.34375,
+    "top_k_mean": 1.703125,
+    "gini": 0.240556001663208
+  },
+  "Layer 11 Head 1": {
+    "rank_mean": 0.4915319085121155,
+    "rank_consistency": 0.7454988956451416,
+    "median_disc": 0.408203125,
+    "top_k_mean": 1.625,
+    "gini": 0.21496450901031494
+  },
+  "Layer 11 Head 2": {
+    "rank_mean": 0.2900851368904114,
+    "rank_consistency": 0.7795109748840332,
+    "median_disc": 0.0179443359375,
+    "top_k_mean": 0.640625,
+    "gini": 0.11809253692626953
+  },
+  "Layer 11 Head 3": {
+    "rank_mean": 0.8460639119148254,
+    "rank_consistency": 0.8348546624183655,
+    "median_disc": 1.8359375,
+    "top_k_mean": 4.6875,
+    "gini": 0.2206970453262329
+  },
+  "Layer 11 Head 4": {
+    "rank_mean": 0.7161702513694763,
+    "rank_consistency": 0.7604713439941406,
+    "median_disc": 1.1328125,
+    "top_k_mean": 3.125,
+    "gini": 0.27611076831817627
+  },
+  "Layer 11 Head 5": {
+    "rank_mean": 0.8130850791931152,
+    "rank_consistency": 0.7734125852584839,
+    "median_disc": 2.1875,
+    "top_k_mean": 5.375,
+    "gini": 0.3015938997268677
+  },
+  "Layer 11 Head 6": {
+    "rank_mean": 0.621744692325592,
+    "rank_consistency": 0.75095134973526,
+    "median_disc": 0.66796875,
+    "top_k_mean": 3.0,
+    "gini": 0.3157287836074829
+  },
+  "Layer 11 Head 7": {
+    "rank_mean": 0.8385744690895081,
+    "rank_consistency": 0.8160624504089355,
+    "median_disc": 2.09375,
+    "top_k_mean": 5.25,
+    "gini": 0.3352835178375244
+  },
+  "Layer 11 Head 8": {
+    "rank_mean": 0.6892127394676208,
+    "rank_consistency": 0.7392885684967041,
+    "median_disc": 0.8125,
+    "top_k_mean": 4.78125,
+    "gini": 0.25813019275665283
+  },
+  "Layer 11 Head 9": {
+    "rank_mean": 0.3292340636253357,
+    "rank_consistency": 0.7523521184921265,
+    "median_disc": 0.0654296875,
+    "top_k_mean": 1.109375,
+    "gini": 0.20182502269744873
+  },
+  "Layer 11 Head 10": {
+    "rank_mean": 0.7671276330947876,
+    "rank_consistency": 0.7863753437995911,
+    "median_disc": 1.3515625,
+    "top_k_mean": 3.359375,
+    "gini": 0.2291407585144043
+  },
+  "Layer 11 Head 11": {
+    "rank_mean": 0.37395745515823364,
+    "rank_consistency": 0.7401454448699951,
+    "median_disc": 0.150390625,
+    "top_k_mean": 1.234375,
+    "gini": 0.2244633436203003
+  }
+}

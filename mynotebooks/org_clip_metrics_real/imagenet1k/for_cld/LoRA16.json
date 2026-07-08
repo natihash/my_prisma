@@ -1,0 +1,290 @@
+{
+  "Layer 8 Head 0": {
+    "rank_mean": 0.3247021436691284,
+    "rank_mean_distance_from_avg": -0.17529786595453822,
+    "top_k_mean": 0.929444432258606,
+    "top_k_mean_distance_from_avg": -1.3388488752146563
+  },
+  "Layer 8 Head 1": {
+    "rank_mean": 0.21417021751403809,
+    "rank_mean_distance_from_avg": -0.28582979210962856,
+    "top_k_mean": 0.6851957440376282,
+    "top_k_mean_distance_from_avg": -1.5830975634356341
+  },
+  "Layer 8 Head 2": {
+    "rank_mean": 0.23185107111930847,
+    "rank_mean_distance_from_avg": -0.26814893850435817,
+    "top_k_mean": 0.6297198534011841,
+    "top_k_mean_distance_from_avg": -1.6385734540720782
+  },
+  "Layer 8 Head 3": {
+    "rank_mean": 0.21291489899158478,
+    "rank_mean_distance_from_avg": -0.28708511063208186,
+    "top_k_mean": 0.6206680536270142,
+    "top_k_mean_distance_from_avg": -1.6476252538462481
+  },
+  "Layer 8 Head 4": {
+    "rank_mean": 0.23117020726203918,
+    "rank_mean_distance_from_avg": -0.26882980236162746,
+    "top_k_mean": 0.7209309339523315,
+    "top_k_mean_distance_from_avg": -1.5473623735209308
+  },
+  "Layer 8 Head 5": {
+    "rank_mean": 0.3697447180747986,
+    "rank_mean_distance_from_avg": -0.13025529154886806,
+    "top_k_mean": 1.3054988384246826,
+    "top_k_mean_distance_from_avg": -0.9627944690485797
+  },
+  "Layer 8 Head 6": {
+    "rank_mean": 0.19891490042209625,
+    "rank_mean_distance_from_avg": -0.3010851092015704,
+    "top_k_mean": 0.5489238500595093,
+    "top_k_mean_distance_from_avg": -1.719369457413753
+  },
+  "Layer 8 Head 7": {
+    "rank_mean": 0.3883191645145416,
+    "rank_mean_distance_from_avg": -0.11168084510912502,
+    "top_k_mean": 1.1502697467803955,
+    "top_k_mean_distance_from_avg": -1.1180235606928668
+  },
+  "Layer 8 Head 8": {
+    "rank_mean": 0.3787447214126587,
+    "rank_mean_distance_from_avg": -0.12125528821100795,
+    "top_k_mean": 1.1448347568511963,
+    "top_k_mean_distance_from_avg": -1.123458550622066
+  },
+  "Layer 8 Head 9": {
+    "rank_mean": 0.48502129316329956,
+    "rank_mean_distance_from_avg": -0.01497871646036708,
+    "top_k_mean": 1.3959749937057495,
+    "top_k_mean_distance_from_avg": -0.8723183137675128
+  },
+  "Layer 8 Head 10": {
+    "rank_mean": 0.2570638358592987,
+    "rank_mean_distance_from_avg": -0.24293617376436794,
+    "top_k_mean": 0.7015697360038757,
+    "top_k_mean_distance_from_avg": -1.5667235714693866
+  },
+  "Layer 8 Head 11": {
+    "rank_mean": 0.270978718996048,
+    "rank_mean_distance_from_avg": -0.22902129062761867,
+    "top_k_mean": 0.7992859482765198,
+    "top_k_mean_distance_from_avg": -1.4690073591967425
+  },
+  "Layer 9 Head 0": {
+    "rank_mean": 0.46108514070510864,
+    "rank_mean_distance_from_avg": -0.038914868918558,
+    "top_k_mean": 1.7845914363861084,
+    "top_k_mean_distance_from_avg": -0.4837018710871539
+  },
+  "Layer 9 Head 1": {
+    "rank_mean": 0.6088723540306091,
+    "rank_mean_distance_from_avg": 0.10887234440694249,
+    "top_k_mean": 2.2219719886779785,
+    "top_k_mean_distance_from_avg": -0.046321318795283783
+  },
+  "Layer 9 Head 2": {
+    "rank_mean": 0.5657234191894531,
+    "rank_mean_distance_from_avg": 0.06572340956578648,
+    "top_k_mean": 1.961888074874878,
+    "top_k_mean_distance_from_avg": -0.30640523259838437
+  },
+  "Layer 9 Head 3": {
+    "rank_mean": 0.4291914999485016,
+    "rank_mean_distance_from_avg": -0.07080850967516505,
+    "top_k_mean": 1.5091989040374756,
+    "top_k_mean_distance_from_avg": -0.7590944034357867
+  },
+  "Layer 9 Head 4": {
+    "rank_mean": 0.31546810269355774,
+    "rank_mean_distance_from_avg": -0.1845319069301089,
+    "top_k_mean": 1.0977314710617065,
+    "top_k_mean_distance_from_avg": -1.1705618364115558
+  },
+  "Layer 9 Head 5": {
+    "rank_mean": 0.3552127778530121,
+    "rank_mean_distance_from_avg": -0.14478723177065456,
+    "top_k_mean": 1.338484764099121,
+    "top_k_mean_distance_from_avg": -0.9298085433741412
+  },
+  "Layer 9 Head 6": {
+    "rank_mean": 0.45331916213035583,
+    "rank_mean_distance_from_avg": -0.046680847493310806,
+    "top_k_mean": 1.4720498323440552,
+    "top_k_mean_distance_from_avg": -0.7962434751292071
+  },
+  "Layer 9 Head 7": {
+    "rank_mean": 0.21744681894779205,
+    "rank_mean_distance_from_avg": -0.2825531906758746,
+    "top_k_mean": 0.576363205909729,
+    "top_k_mean_distance_from_avg": -1.6919301015635333
+  },
+  "Layer 9 Head 8": {
+    "rank_mean": 0.5021489262580872,
+    "rank_mean_distance_from_avg": 0.002148916634420517,
+    "top_k_mean": 1.5383967161178589,
+    "top_k_mean_distance_from_avg": -0.7298965913554034
+  },
+  "Layer 9 Head 9": {
+    "rank_mean": 0.2540000081062317,
+    "rank_mean_distance_from_avg": -0.24600000151743495,
+    "top_k_mean": 0.5924746990203857,
+    "top_k_mean_distance_from_avg": -1.6758186084528766
+  },
+  "Layer 9 Head 10": {
+    "rank_mean": 0.3614255487918854,
+    "rank_mean_distance_from_avg": -0.13857446083178127,
+    "top_k_mean": 1.289934515953064,
+    "top_k_mean_distance_from_avg": -0.9783587915201983
+  },
+  "Layer 9 Head 11": {
+    "rank_mean": 0.5281701683998108,
+    "rank_mean_distance_from_avg": 0.02817015877614415,
+    "top_k_mean": 2.019848585128784,
+    "top_k_mean_distance_from_avg": -0.24844472234447812
+  },
+  "Layer 10 Head 0": {
+    "rank_mean": 0.5520212650299072,
+    "rank_mean_distance_from_avg": 0.052021255406240585,
+    "top_k_mean": 3.221348762512207,
+    "top_k_mean_distance_from_avg": 0.9530554550389447
+  },
+  "Layer 10 Head 1": {
+    "rank_mean": 0.48542556166648865,
+    "rank_mean_distance_from_avg": -0.014574447957177994,
+    "top_k_mean": 2.365309476852417,
+    "top_k_mean_distance_from_avg": 0.0970161693791547
+  },
+  "Layer 10 Head 2": {
+    "rank_mean": 0.697212815284729,
+    "rank_mean_distance_from_avg": 0.19721280566106236,
+    "top_k_mean": 3.1532580852508545,
+    "top_k_mean_distance_from_avg": 0.8849647777775922
+  },
+  "Layer 10 Head 3": {
+    "rank_mean": 0.4076170325279236,
+    "rank_mean_distance_from_avg": -0.09238297709574306,
+    "top_k_mean": 1.9313833713531494,
+    "top_k_mean_distance_from_avg": -0.3369099361201129
+  },
+  "Layer 10 Head 4": {
+    "rank_mean": 0.7859575152397156,
+    "rank_mean_distance_from_avg": 0.28595750561604893,
+    "top_k_mean": 3.3266208171844482,
+    "top_k_mean_distance_from_avg": 1.058327509711186
+  },
+  "Layer 10 Head 5": {
+    "rank_mean": 0.7012553215026855,
+    "rank_mean_distance_from_avg": 0.2012553118790189,
+    "top_k_mean": 3.57635235786438,
+    "top_k_mean_distance_from_avg": 1.3080590503911176
+  },
+  "Layer 10 Head 6": {
+    "rank_mean": 0.457446813583374,
+    "rank_mean_distance_from_avg": -0.04255319604029262,
+    "top_k_mean": 1.8675100803375244,
+    "top_k_mean_distance_from_avg": -0.4007832271357379
+  },
+  "Layer 10 Head 7": {
+    "rank_mean": 0.6200000047683716,
+    "rank_mean_distance_from_avg": 0.11999999514470494,
+    "top_k_mean": 2.3363075256347656,
+    "top_k_mean_distance_from_avg": 0.06801421816150333
+  },
+  "Layer 10 Head 8": {
+    "rank_mean": 0.3228936195373535,
+    "rank_mean_distance_from_avg": -0.17710639008631313,
+    "top_k_mean": 0.910368800163269,
+    "top_k_mean_distance_from_avg": -1.3579245073099933
+  },
+  "Layer 10 Head 9": {
+    "rank_mean": 0.5925957560539246,
+    "rank_mean_distance_from_avg": 0.09259574643025792,
+    "top_k_mean": 3.7955334186553955,
+    "top_k_mean_distance_from_avg": 1.5272401111821332
+  },
+  "Layer 10 Head 10": {
+    "rank_mean": 0.8076170086860657,
+    "rank_mean_distance_from_avg": 0.30761699906239903,
+    "top_k_mean": 3.8110711574554443,
+    "top_k_mean_distance_from_avg": 1.542777849982182
+  },
+  "Layer 10 Head 11": {
+    "rank_mean": 0.5218510627746582,
+    "rank_mean_distance_from_avg": 0.021851053150991562,
+    "top_k_mean": 2.147434711456299,
+    "top_k_mean_distance_from_avg": -0.12085859601696347
+  },
+  "Layer 11 Head 0": {
+    "rank_mean": 0.6054680347442627,
+    "rank_mean_distance_from_avg": 0.10546802512059605,
+    "top_k_mean": 3.002714157104492,
+    "top_k_mean_distance_from_avg": 0.7344208496312299
+  },
+  "Layer 11 Head 1": {
+    "rank_mean": 0.7664893865585327,
+    "rank_mean_distance_from_avg": 0.2664893769348661,
+    "top_k_mean": 3.5870072841644287,
+    "top_k_mean_distance_from_avg": 1.3187139766911664
+  },
+  "Layer 11 Head 2": {
+    "rank_mean": 0.5536808967590332,
+    "rank_mean_distance_from_avg": 0.05368088713536656,
+    "top_k_mean": 2.13529896736145,
+    "top_k_mean_distance_from_avg": -0.1329943401118121
+  },
+  "Layer 11 Head 3": {
+    "rank_mean": 0.8726382851600647,
+    "rank_mean_distance_from_avg": 0.37263827553639806,
+    "top_k_mean": 4.9946393966674805,
+    "top_k_mean_distance_from_avg": 2.726346089194218
+  },
+  "Layer 11 Head 4": {
+    "rank_mean": 0.799510657787323,
+    "rank_mean_distance_from_avg": 0.29951064816365636,
+    "top_k_mean": 4.1365461349487305,
+    "top_k_mean_distance_from_avg": 1.8682528274754682
+  },
+  "Layer 11 Head 5": {
+    "rank_mean": 0.7959787249565125,
+    "rank_mean_distance_from_avg": 0.2959787153328458,
+    "top_k_mean": 5.667123317718506,
+    "top_k_mean_distance_from_avg": 3.3988300102452436
+  },
+  "Layer 11 Head 6": {
+    "rank_mean": 0.6914893388748169,
+    "rank_mean_distance_from_avg": 0.19148932925115025,
+    "top_k_mean": 4.298311710357666,
+    "top_k_mean_distance_from_avg": 2.0300184028844037
+  },
+  "Layer 11 Head 7": {
+    "rank_mean": 0.8624893426895142,
+    "rank_mean_distance_from_avg": 0.3624893330658475,
+    "top_k_mean": 5.253882884979248,
+    "top_k_mean_distance_from_avg": 2.9855895775059857
+  },
+  "Layer 11 Head 8": {
+    "rank_mean": 0.6665744781494141,
+    "rank_mean_distance_from_avg": 0.16657446852574742,
+    "top_k_mean": 5.222450256347656,
+    "top_k_mean_distance_from_avg": 2.954156948874394
+  },
+  "Layer 11 Head 9": {
+    "rank_mean": 0.49525532126426697,
+    "rank_mean_distance_from_avg": -0.004744688359399674,
+    "top_k_mean": 2.3647677898406982,
+    "top_k_mean_distance_from_avg": 0.09647448236743594
+  },
+  "Layer 11 Head 10": {
+    "rank_mean": 0.7262552976608276,
+    "rank_mean_distance_from_avg": 0.226255288037161,
+    "top_k_mean": 4.230052471160889,
+    "top_k_mean_distance_from_avg": 1.9617591636876264
+  },
+  "Layer 11 Head 11": {
+    "rank_mean": 0.5966171026229858,
+    "rank_mean_distance_from_avg": 0.0966170929993192,
+    "top_k_mean": 3.5075347423553467,
+    "top_k_mean_distance_from_avg": 1.2392414348820844
+  }
+}

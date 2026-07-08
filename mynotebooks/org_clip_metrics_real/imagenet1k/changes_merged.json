@@ -1,0 +1,1058 @@
+{
+    "Layer 8 Head 0": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.3477233946323395,
+            "top_k_mean": 0.9915913343429565
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.3247021436691284,
+            "top_k_mean": 0.929444432258606
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.5483404994010925,
+            "top_k_mean": 1.6968307495117188
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.4633830189704895,
+            "top_k_mean": 1.9517478942871094
+        }
+    },
+    "Layer 8 Head 1": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.22185108065605164,
+            "top_k_mean": 0.7636311650276184
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.21417021751403809,
+            "top_k_mean": 0.6851957440376282
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.2381063997745514,
+            "top_k_mean": 0.7729026675224304
+        },
+        "fft": {
+            "category": "ignored",
+            "rank_mean": 0.17763829231262207,
+            "top_k_mean": 0.8206457495689392
+        }
+    },
+    "Layer 8 Head 2": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.21702128648757935,
+            "top_k_mean": 0.6412724256515503
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.23185107111930847,
+            "top_k_mean": 0.6297198534011841
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.30155321955680847,
+            "top_k_mean": 0.8467519879341125
+        },
+        "fft": {
+            "category": "ignored",
+            "rank_mean": 0.20757447183132172,
+            "top_k_mean": 0.8163371086120605
+        }
+    },
+    "Layer 8 Head 3": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.2191702127456665,
+            "top_k_mean": 0.6374338269233704
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.21291489899158478,
+            "top_k_mean": 0.6206680536270142
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.2819361686706543,
+            "top_k_mean": 0.8011006116867065
+        },
+        "fft": {
+            "category": "ignored",
+            "rank_mean": 0.23559574782848358,
+            "top_k_mean": 0.9043914675712585
+        }
+    },
+    "Layer 8 Head 4": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.23112766444683075,
+            "top_k_mean": 0.7638680338859558
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.23117020726203918,
+            "top_k_mean": 0.7209309339523315
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.2702127695083618,
+            "top_k_mean": 0.819852888584137
+        },
+        "fft": {
+            "category": "ignored",
+            "rank_mean": 0.2603829801082611,
+            "top_k_mean": 1.14161217212677
+        }
+    },
+    "Layer 8 Head 5": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.3957021236419678,
+            "top_k_mean": 1.4416826963424683
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.3697447180747986,
+            "top_k_mean": 1.3054988384246826
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.5801277160644531,
+            "top_k_mean": 2.4489831924438477
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.5387446284294128,
+            "top_k_mean": 2.709522008895874
+        }
+    },
+    "Layer 8 Head 6": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.18974468111991882,
+            "top_k_mean": 0.5637515783309937
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.19891490042209625,
+            "top_k_mean": 0.5489238500595093
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.27646809816360474,
+            "top_k_mean": 0.8193155527114868
+        },
+        "fft": {
+            "category": "ignored",
+            "rank_mean": 0.2104468196630478,
+            "top_k_mean": 0.8437922596931458
+        }
+    },
+    "Layer 8 Head 7": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.4249574840068817,
+            "top_k_mean": 1.335209608078003
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.3883191645145416,
+            "top_k_mean": 1.1502697467803955
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.550000011920929,
+            "top_k_mean": 1.9585201740264893
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.49691495299339294,
+            "top_k_mean": 2.430793046951294
+        }
+    },
+    "Layer 8 Head 8": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.37202128767967224,
+            "top_k_mean": 1.2134124040603638
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.3787447214126587,
+            "top_k_mean": 1.1448347568511963
+        },
+        "lp": {
+            "category": "specialized",
+            "rank_mean": 0.5886383056640625,
+            "top_k_mean": 1.8161916732788086
+        },
+        "fft": {
+            "category": "specialized",
+            "rank_mean": 0.44902127981185913,
+            "top_k_mean": 1.8588335514068604
+        }
+    },
+    "Layer 8 Head 9": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.49953195452690125,
+            "top_k_mean": 1.4882742166519165
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.48502129316329956,
+            "top_k_mean": 1.3959749937057495
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.5455319285392761,
+            "top_k_mean": 1.5833489894866943
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.4685957431793213,
+            "top_k_mean": 1.8299251794815063
+        }
+    },
+    "Layer 8 Head 10": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.2667446732521057,
+            "top_k_mean": 0.7300432920455933
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.2570638358592987,
+            "top_k_mean": 0.7015697360038757
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.3027020990848541,
+            "top_k_mean": 0.8872213363647461
+        },
+        "fft": {
+            "category": "ignored",
+            "rank_mean": 0.2379574477672577,
+            "top_k_mean": 0.936294674873352
+        }
+    },
+    "Layer 8 Head 11": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.2719787359237671,
+            "top_k_mean": 0.8438303470611572
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.270978718996048,
+            "top_k_mean": 0.7992859482765198
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.3062340319156647,
+            "top_k_mean": 0.8635692596435547
+        },
+        "fft": {
+            "category": "ignored",
+            "rank_mean": 0.20872339606285095,
+            "top_k_mean": 0.858008861541748
+        }
+    },
+    "Layer 9 Head 0": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.47340425848960876,
+            "top_k_mean": 1.8839651346206665
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.46108514070510864,
+            "top_k_mean": 1.7845914363861084
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.64000004529953,
+            "top_k_mean": 2.555361270904541
+        },
+        "fft": {
+            "category": "specialized",
+            "rank_mean": 0.6524255871772766,
+            "top_k_mean": 3.8574633598327637
+        }
+    },
+    "Layer 9 Head 1": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.5964255928993225,
+            "top_k_mean": 2.29152774810791
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.6088723540306091,
+            "top_k_mean": 2.2219719886779785
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.7241276502609253,
+            "top_k_mean": 2.999675750732422
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.6550638675689697,
+            "top_k_mean": 3.616349697113037
+        }
+    },
+    "Layer 9 Head 2": {
+        "lora4": {
+            "category": "specialized",
+            "rank_mean": 0.5815531611442566,
+            "top_k_mean": 2.1441307067871094
+        },
+        "lora16": {
+            "category": "specialized",
+            "rank_mean": 0.5657234191894531,
+            "top_k_mean": 1.961888074874878
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.6901914477348328,
+            "top_k_mean": 2.6884002685546875
+        },
+        "fft": {
+            "category": "same_function",
+            "rank_mean": 0.6923404932022095,
+            "top_k_mean": 3.918840169906616
+        }
+    },
+    "Layer 9 Head 3": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.4288085103034973,
+            "top_k_mean": 1.5279406309127808
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.4291914999485016,
+            "top_k_mean": 1.5091989040374756
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.546489417552948,
+            "top_k_mean": 2.623844623565674
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.5239149332046509,
+            "top_k_mean": 3.4176182746887207
+        }
+    },
+    "Layer 9 Head 4": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.3684893846511841,
+            "top_k_mean": 1.229417324066162
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.31546810269355774,
+            "top_k_mean": 1.0977314710617065
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.41419148445129395,
+            "top_k_mean": 1.4738961458206177
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.41680851578712463,
+            "top_k_mean": 2.2763798236846924
+        }
+    },
+    "Layer 9 Head 5": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.36553195118904114,
+            "top_k_mean": 1.4628942012786865
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.3552127778530121,
+            "top_k_mean": 1.338484764099121
+        },
+        "lp": {
+            "category": "specialized",
+            "rank_mean": 0.5208723545074463,
+            "top_k_mean": 2.3289296627044678
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.5043191909790039,
+            "top_k_mean": 3.3083839416503906
+        }
+    },
+    "Layer 9 Head 6": {
+        "lora4": {
+            "category": "specialized",
+            "rank_mean": 0.45972344279289246,
+            "top_k_mean": 1.5470901727676392
+        },
+        "lora16": {
+            "category": "specialized",
+            "rank_mean": 0.45331916213035583,
+            "top_k_mean": 1.4720498323440552
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.5883191823959351,
+            "top_k_mean": 2.160784959793091
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.576085090637207,
+            "top_k_mean": 2.950261354446411
+        }
+    },
+    "Layer 9 Head 7": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.21665959060192108,
+            "top_k_mean": 0.6232218146324158
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.21744681894779205,
+            "top_k_mean": 0.576363205909729
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.28076595067977905,
+            "top_k_mean": 0.8224817514419556
+        },
+        "fft": {
+            "category": "ignored",
+            "rank_mean": 0.20721277594566345,
+            "top_k_mean": 0.8909850716590881
+        }
+    },
+    "Layer 9 Head 8": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.5311701893806458,
+            "top_k_mean": 1.6651214361190796
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.5021489262580872,
+            "top_k_mean": 1.5383967161178589
+        },
+        "lp": {
+            "category": "same_function",
+            "rank_mean": 0.5734893679618835,
+            "top_k_mean": 2.328300952911377
+        },
+        "fft": {
+            "category": "same_function",
+            "rank_mean": 0.5626809597015381,
+            "top_k_mean": 3.029017925262451
+        }
+    },
+    "Layer 9 Head 9": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.25144681334495544,
+            "top_k_mean": 0.6404452323913574
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.2540000081062317,
+            "top_k_mean": 0.5924746990203857
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.36261701583862305,
+            "top_k_mean": 1.107089638710022
+        },
+        "fft": {
+            "category": "ignored",
+            "rank_mean": 0.2968936264514923,
+            "top_k_mean": 1.2805756330490112
+        }
+    },
+    "Layer 9 Head 10": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.3565957546234131,
+            "top_k_mean": 1.3758655786514282
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.3614255487918854,
+            "top_k_mean": 1.289934515953064
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.41546809673309326,
+            "top_k_mean": 1.8205687999725342
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.4117872416973114,
+            "top_k_mean": 2.9072365760803223
+        }
+    },
+    "Layer 9 Head 11": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.5515957474708557,
+            "top_k_mean": 2.0623931884765625
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.5281701683998108,
+            "top_k_mean": 2.019848585128784
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.7000851035118103,
+            "top_k_mean": 2.92301869392395
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.6965106725692749,
+            "top_k_mean": 4.07149600982666
+        }
+    },
+    "Layer 10 Head 0": {
+        "lora4": {
+            "category": "same_function",
+            "rank_mean": 0.5345532298088074,
+            "top_k_mean": 3.2147631645202637
+        },
+        "lora16": {
+            "category": "same_function",
+            "rank_mean": 0.5520212650299072,
+            "top_k_mean": 3.221348762512207
+        },
+        "lp": {
+            "category": "same_function",
+            "rank_mean": 0.6289361715316772,
+            "top_k_mean": 3.2760047912597656
+        },
+        "fft": {
+            "category": "specialized",
+            "rank_mean": 0.6949148774147034,
+            "top_k_mean": 5.340137958526611
+        }
+    },
+    "Layer 10 Head 1": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.4686170220375061,
+            "top_k_mean": 2.2905166149139404
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.48542556166648865,
+            "top_k_mean": 2.365309476852417
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.49523404240608215,
+            "top_k_mean": 3.103850841522217
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.5626170039176941,
+            "top_k_mean": 5.515063285827637
+        }
+    },
+    "Layer 10 Head 2": {
+        "lora4": {
+            "category": "same_function",
+            "rank_mean": 0.7041702270507812,
+            "top_k_mean": 3.1864757537841797
+        },
+        "lora16": {
+            "category": "same_function",
+            "rank_mean": 0.697212815284729,
+            "top_k_mean": 3.1532580852508545
+        },
+        "lp": {
+            "category": "same_function",
+            "rank_mean": 0.7236383557319641,
+            "top_k_mean": 3.745683193206787
+        },
+        "fft": {
+            "category": "same_function",
+            "rank_mean": 0.7703617215156555,
+            "top_k_mean": 5.842370986938477
+        }
+    },
+    "Layer 10 Head 3": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.42555317282676697,
+            "top_k_mean": 1.943491816520691
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.4076170325279236,
+            "top_k_mean": 1.9313833713531494
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.3790212869644165,
+            "top_k_mean": 1.853818655014038
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.36804255843162537,
+            "top_k_mean": 2.7789947986602783
+        }
+    },
+    "Layer 10 Head 4": {
+        "lora4": {
+            "category": "same_function",
+            "rank_mean": 0.7958084940910339,
+            "top_k_mean": 3.282888174057007
+        },
+        "lora16": {
+            "category": "same_function",
+            "rank_mean": 0.7859575152397156,
+            "top_k_mean": 3.3266208171844482
+        },
+        "lp": {
+            "category": "same_function",
+            "rank_mean": 0.8071489930152893,
+            "top_k_mean": 3.535276174545288
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.8242340683937073,
+            "top_k_mean": 5.326352596282959
+        }
+    },
+    "Layer 10 Head 5": {
+        "lora4": {
+            "category": "specialized",
+            "rank_mean": 0.7244893312454224,
+            "top_k_mean": 3.5662343502044678
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.7012553215026855,
+            "top_k_mean": 3.57635235786438
+        },
+        "lp": {
+            "category": "specialized",
+            "rank_mean": 0.7061063647270203,
+            "top_k_mean": 4.007023811340332
+        },
+        "fft": {
+            "category": "specialized",
+            "rank_mean": 0.7041702270507812,
+            "top_k_mean": 5.826828479766846
+        }
+    },
+    "Layer 10 Head 6": {
+        "lora4": {
+            "category": "same_function",
+            "rank_mean": 0.4389148950576782,
+            "top_k_mean": 1.9998948574066162
+        },
+        "lora16": {
+            "category": "same_function",
+            "rank_mean": 0.457446813583374,
+            "top_k_mean": 1.8675100803375244
+        },
+        "lp": {
+            "category": "same_function",
+            "rank_mean": 0.3977659344673157,
+            "top_k_mean": 1.9385043382644653
+        },
+        "fft": {
+            "category": "same_function",
+            "rank_mean": 0.38725534081459045,
+            "top_k_mean": 3.130636215209961
+        }
+    },
+    "Layer 10 Head 7": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.6152766346931458,
+            "top_k_mean": 2.2738497257232666
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.6200000047683716,
+            "top_k_mean": 2.3363075256347656
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.5663191676139832,
+            "top_k_mean": 2.658907413482666
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.6054894328117371,
+            "top_k_mean": 4.512434005737305
+        }
+    },
+    "Layer 10 Head 8": {
+        "lora4": {
+            "category": "ignored",
+            "rank_mean": 0.3253829777240753,
+            "top_k_mean": 0.9266961216926575
+        },
+        "lora16": {
+            "category": "ignored",
+            "rank_mean": 0.3228936195373535,
+            "top_k_mean": 0.910368800163269
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.27053192257881165,
+            "top_k_mean": 0.8931378126144409
+        },
+        "fft": {
+            "category": "ignored",
+            "rank_mean": 0.24427659809589386,
+            "top_k_mean": 1.3211129903793335
+        }
+    },
+    "Layer 10 Head 9": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.5748298168182373,
+            "top_k_mean": 3.8976356983184814
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.5925957560539246,
+            "top_k_mean": 3.7955334186553955
+        },
+        "lp": {
+            "category": "specialized",
+            "rank_mean": 0.5735744833946228,
+            "top_k_mean": 4.010974407196045
+        },
+        "fft": {
+            "category": "specialized",
+            "rank_mean": 0.5682766437530518,
+            "top_k_mean": 5.856778621673584
+        }
+    },
+    "Layer 10 Head 10": {
+        "lora4": {
+            "category": "same_function",
+            "rank_mean": 0.8134042620658875,
+            "top_k_mean": 3.927436351776123
+        },
+        "lora16": {
+            "category": "same_function",
+            "rank_mean": 0.8076170086860657,
+            "top_k_mean": 3.8110711574554443
+        },
+        "lp": {
+            "category": "same_function",
+            "rank_mean": 0.7317659258842468,
+            "top_k_mean": 4.1333537101745605
+        },
+        "fft": {
+            "category": "same_function",
+            "rank_mean": 0.6880213022232056,
+            "top_k_mean": 5.217538356781006
+        }
+    },
+    "Layer 10 Head 11": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.5071276426315308,
+            "top_k_mean": 2.208199977874756
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.5218510627746582,
+            "top_k_mean": 2.147434711456299
+        },
+        "lp": {
+            "category": "specialized",
+            "rank_mean": 0.5345745086669922,
+            "top_k_mean": 2.4169185161590576
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.597851037979126,
+            "top_k_mean": 4.661726474761963
+        }
+    },
+    "Layer 11 Head 0": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.5897872447967529,
+            "top_k_mean": 2.8653106689453125
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.6054680347442627,
+            "top_k_mean": 3.002714157104492
+        },
+        "lp": {
+            "category": "specialized",
+            "rank_mean": 0.4856383204460144,
+            "top_k_mean": 2.3432178497314453
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.6081489324569702,
+            "top_k_mean": 5.314822673797607
+        }
+    },
+    "Layer 11 Head 1": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.7523617148399353,
+            "top_k_mean": 3.4844846725463867
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.7664893865585327,
+            "top_k_mean": 3.5870072841644287
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.4729361832141876,
+            "top_k_mean": 2.3236351013183594
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.5820638537406921,
+            "top_k_mean": 5.754361629486084
+        }
+    },
+    "Layer 11 Head 2": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.49085110425949097,
+            "top_k_mean": 2.029968500137329
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.5536808967590332,
+            "top_k_mean": 2.13529896736145
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.40270212292671204,
+            "top_k_mean": 1.8327096700668335
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.5044255256652832,
+            "top_k_mean": 4.672689914703369
+        }
+    },
+    "Layer 11 Head 3": {
+        "lora4": {
+            "category": "same_function",
+            "rank_mean": 0.8859787583351135,
+            "top_k_mean": 5.041347026824951
+        },
+        "lora16": {
+            "category": "same_function",
+            "rank_mean": 0.8726382851600647,
+            "top_k_mean": 4.9946393966674805
+        },
+        "lp": {
+            "category": "ignored",
+            "rank_mean": 0.2894255518913269,
+            "top_k_mean": 2.053748607635498
+        },
+        "fft": {
+            "category": "ignored",
+            "rank_mean": 0.2377021312713623,
+            "top_k_mean": 2.6555004119873047
+        }
+    },
+    "Layer 11 Head 4": {
+        "lora4": {
+            "category": "specialized",
+            "rank_mean": 0.7762978672981262,
+            "top_k_mean": 4.108534336090088
+        },
+        "lora16": {
+            "category": "specialized",
+            "rank_mean": 0.799510657787323,
+            "top_k_mean": 4.1365461349487305
+        },
+        "lp": {
+            "category": "specialized",
+            "rank_mean": 0.553957462310791,
+            "top_k_mean": 3.054800271987915
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.61838299036026,
+            "top_k_mean": 5.685935974121094
+        }
+    },
+    "Layer 11 Head 5": {
+        "lora4": {
+            "category": "same_function",
+            "rank_mean": 0.7968723773956299,
+            "top_k_mean": 5.650920391082764
+        },
+        "lora16": {
+            "category": "same_function",
+            "rank_mean": 0.7959787249565125,
+            "top_k_mean": 5.667123317718506
+        },
+        "lp": {
+            "category": "same_function",
+            "rank_mean": 0.593744695186615,
+            "top_k_mean": 4.621558666229248
+        },
+        "fft": {
+            "category": "same_function",
+            "rank_mean": 0.6020212769508362,
+            "top_k_mean": 6.4671807289123535
+        }
+    },
+    "Layer 11 Head 6": {
+        "lora4": {
+            "category": "same_function",
+            "rank_mean": 0.6851915121078491,
+            "top_k_mean": 4.102027416229248
+        },
+        "lora16": {
+            "category": "same_function",
+            "rank_mean": 0.6914893388748169,
+            "top_k_mean": 4.298311710357666
+        },
+        "lp": {
+            "category": "same_function",
+            "rank_mean": 0.5326595902442932,
+            "top_k_mean": 2.7309670448303223
+        },
+        "fft": {
+            "category": "same_function",
+            "rank_mean": 0.6344042420387268,
+            "top_k_mean": 5.239779949188232
+        }
+    },
+    "Layer 11 Head 7": {
+        "lora4": {
+            "category": "specialized",
+            "rank_mean": 0.8695744872093201,
+            "top_k_mean": 5.276596546173096
+        },
+        "lora16": {
+            "category": "specialized",
+            "rank_mean": 0.8624893426895142,
+            "top_k_mean": 5.253882884979248
+        },
+        "lp": {
+            "category": "specialized",
+            "rank_mean": 0.6435319185256958,
+            "top_k_mean": 4.205146789550781
+        },
+        "fft": {
+            "category": "specialized",
+            "rank_mean": 0.6786170601844788,
+            "top_k_mean": 6.016818523406982
+        }
+    },
+    "Layer 11 Head 8": {
+        "lora4": {
+            "category": "same_function",
+            "rank_mean": 0.6556808948516846,
+            "top_k_mean": 5.065830707550049
+        },
+        "lora16": {
+            "category": "same_function",
+            "rank_mean": 0.6665744781494141,
+            "top_k_mean": 5.222450256347656
+        },
+        "lp": {
+            "category": "same_function",
+            "rank_mean": 0.47197872400283813,
+            "top_k_mean": 3.1750574111938477
+        },
+        "fft": {
+            "category": "same_function",
+            "rank_mean": 0.4814468026161194,
+            "top_k_mean": 4.5961432456970215
+        }
+    },
+    "Layer 11 Head 9": {
+        "lora4": {
+            "category": "specialized",
+            "rank_mean": 0.4597872197628021,
+            "top_k_mean": 2.235579490661621
+        },
+        "lora16": {
+            "category": "specialized",
+            "rank_mean": 0.49525532126426697,
+            "top_k_mean": 2.3647677898406982
+        },
+        "lp": {
+            "category": "specialized",
+            "rank_mean": 0.41321274638175964,
+            "top_k_mean": 2.1169955730438232
+        },
+        "fft": {
+            "category": "specialized",
+            "rank_mean": 0.5317872762680054,
+            "top_k_mean": 5.101681709289551
+        }
+    },
+    "Layer 11 Head 10": {
+        "lora4": {
+            "category": "same_function",
+            "rank_mean": 0.7220000624656677,
+            "top_k_mean": 4.085475921630859
+        },
+        "lora16": {
+            "category": "same_function",
+            "rank_mean": 0.7262552976608276,
+            "top_k_mean": 4.230052471160889
+        },
+        "lp": {
+            "category": "same_function",
+            "rank_mean": 0.6440212726593018,
+            "top_k_mean": 3.307415723800659
+        },
+        "fft": {
+            "category": "same_function",
+            "rank_mean": 0.7070212960243225,
+            "top_k_mean": 5.207579135894775
+        }
+    },
+    "Layer 11 Head 11": {
+        "lora4": {
+            "category": "repurposed",
+            "rank_mean": 0.5485106706619263,
+            "top_k_mean": 3.389194965362549
+        },
+        "lora16": {
+            "category": "repurposed",
+            "rank_mean": 0.5966171026229858,
+            "top_k_mean": 3.5075347423553467
+        },
+        "lp": {
+            "category": "repurposed",
+            "rank_mean": 0.43510639667510986,
+            "top_k_mean": 2.0471227169036865
+        },
+        "fft": {
+            "category": "repurposed",
+            "rank_mean": 0.6474468111991882,
+            "top_k_mean": 6.267354488372803
+        }
+    }
+}

@@ -1,0 +1,482 @@
+{
+  "Layer 8 Head 0": {
+    "category": "Changed function",
+    "subtype": "weak",
+    "ambiguous": true,
+    "justification": "Places/geography -> diffuse animal/object grab-bag",
+    "rank_mean": 0.4634,
+    "top_k_mean": 1.9517,
+    "rank_mean_dist_from_avg": -0.0366,
+    "top_k_mean_dist_from_avg": -1.6094
+  },
+  "Layer 8 Head 1": {
+    "category": "Became useless",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Was facial-expression/emotion head; no ImageNet purchase",
+    "rank_mean": 0.1776,
+    "top_k_mean": 0.8206,
+    "rank_mean_dist_from_avg": -0.3224,
+    "top_k_mean_dist_from_avg": -2.7405
+  },
+  "Layer 8 Head 2": {
+    "category": "Became useless",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Was sky/space/stars/aerial head; lowest top_k",
+    "rank_mean": 0.2076,
+    "top_k_mean": 0.8163,
+    "rank_mean_dist_from_avg": -0.2924,
+    "top_k_mean_dist_from_avg": -2.7448
+  },
+  "Layer 8 Head 3": {
+    "category": "Became useless",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Was art-style/fashion/pattern head; scattered now",
+    "rank_mean": 0.2356,
+    "top_k_mean": 0.9044,
+    "rank_mean_dist_from_avg": -0.2644,
+    "top_k_mean_dist_from_avg": -2.6568
+  },
+  "Layer 8 Head 4": {
+    "category": "Became useless",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Was facial-expression/portrait head",
+    "rank_mean": 0.2604,
+    "top_k_mean": 1.1416,
+    "rank_mean_dist_from_avg": -0.2396,
+    "top_k_mean_dist_from_avg": -2.4196
+  },
+  "Layer 8 Head 5": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Retro/texture aesthetic -> manufactured household objects",
+    "rank_mean": 0.5387,
+    "top_k_mean": 2.7095,
+    "rank_mean_dist_from_avg": 0.0387,
+    "top_k_mean_dist_from_avg": -0.8517
+  },
+  "Layer 8 Head 6": {
+    "category": "Became useless",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Was monochrome/places head",
+    "rank_mean": 0.2104,
+    "top_k_mean": 0.8438,
+    "rank_mean_dist_from_avg": -0.2896,
+    "top_k_mean_dist_from_avg": -2.7174
+  },
+  "Layer 8 Head 7": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Illustration/art/fantasy -> dogs & animals",
+    "rank_mean": 0.4969,
+    "top_k_mean": 2.4308,
+    "rank_mean_dist_from_avg": -0.0031,
+    "top_k_mean_dist_from_avg": -1.1304
+  },
+  "Layer 8 Head 8": {
+    "category": "Specialized",
+    "subtype": "weak",
+    "ambiguous": true,
+    "justification": "Keeps text/signage thread, adds objects; low power",
+    "rank_mean": 0.449,
+    "top_k_mean": 1.8588,
+    "rank_mean_dist_from_avg": -0.051,
+    "top_k_mean_dist_from_avg": -1.7023
+  },
+  "Layer 8 Head 9": {
+    "category": "Changed function",
+    "subtype": "weak",
+    "ambiguous": true,
+    "justification": "Night/lighting/urban -> scattered objects/animals",
+    "rank_mean": 0.4686,
+    "top_k_mean": 1.8299,
+    "rank_mean_dist_from_avg": -0.0314,
+    "top_k_mean_dist_from_avg": -1.7312
+  },
+  "Layer 8 Head 10": {
+    "category": "Became useless",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Was places/water/marine/caricature head; breadth collapsed",
+    "rank_mean": 0.238,
+    "top_k_mean": 0.9363,
+    "rank_mean_dist_from_avg": -0.262,
+    "top_k_mean_dist_from_avg": -2.6249
+  },
+  "Layer 8 Head 11": {
+    "category": "Became useless",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Was composition/photo-technique head (abstract framing)",
+    "rank_mean": 0.2087,
+    "top_k_mean": 0.858,
+    "rank_mean_dist_from_avg": -0.2913,
+    "top_k_mean_dist_from_avg": -2.7032
+  },
+  "Layer 9 Head 0": {
+    "category": "Specialized",
+    "subtype": null,
+    "ambiguous": true,
+    "justification": "Keeps fire/light + timepiece thread, adds animals",
+    "rank_mean": 0.6524,
+    "top_k_mean": 3.8575,
+    "rank_mean_dist_from_avg": 0.1524,
+    "top_k_mean_dist_from_avg": 0.2963
+  },
+  "Layer 9 Head 1": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Retro/vaporwave/color aesthetic -> clothing & attire",
+    "rank_mean": 0.6551,
+    "top_k_mean": 3.6163,
+    "rank_mean_dist_from_avg": 0.1551,
+    "top_k_mean_dist_from_avg": 0.0552
+  },
+  "Layer 9 Head 2": {
+    "category": "Same function",
+    "subtype": "feature-preserved",
+    "ambiguous": true,
+    "justification": "Texture/pattern computation intact, now on dog-coat texture (top group misleading)",
+    "rank_mean": 0.6923,
+    "top_k_mean": 3.9188,
+    "rank_mean_dist_from_avg": 0.1923,
+    "top_k_mean_dist_from_avg": 0.3577
+  },
+  "Layer 9 Head 3": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Aerial/overhead landscape -> household objects & barriers",
+    "rank_mean": 0.5239,
+    "top_k_mean": 3.4176,
+    "rank_mean_dist_from_avg": 0.0239,
+    "top_k_mean_dist_from_avg": -0.1436
+  },
+  "Layer 9 Head 4": {
+    "category": "Changed function",
+    "subtype": "weak",
+    "ambiguous": true,
+    "justification": "Texture/collage/subject-count -> scattered",
+    "rank_mean": 0.4168,
+    "top_k_mean": 2.2764,
+    "rank_mean_dist_from_avg": -0.0832,
+    "top_k_mean_dist_from_avg": -1.2848
+  },
+  "Layer 9 Head 5": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Motion-blur/people/professions -> clothing & sportswear",
+    "rank_mean": 0.5043,
+    "top_k_mean": 3.3084,
+    "rank_mean_dist_from_avg": 0.0043,
+    "top_k_mean_dist_from_avg": -0.2528
+  },
+  "Layer 9 Head 6": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": true,
+    "justification": "Aerial/landscape -> reptiles & marine animals (aquatic thread carries over)",
+    "rank_mean": 0.5761,
+    "top_k_mean": 2.9503,
+    "rank_mean_dist_from_avg": 0.0761,
+    "top_k_mean_dist_from_avg": -0.6109
+  },
+  "Layer 9 Head 7": {
+    "category": "Became useless",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Was caricature/illustration-of-people head",
+    "rank_mean": 0.2072,
+    "top_k_mean": 0.891,
+    "rank_mean_dist_from_avg": -0.2928,
+    "top_k_mean_dist_from_avg": -2.6702
+  },
+  "Layer 9 Head 8": {
+    "category": "Same function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Built/commercial interior spaces preserved",
+    "rank_mean": 0.5627,
+    "top_k_mean": 3.029,
+    "rank_mean_dist_from_avg": 0.0627,
+    "top_k_mean_dist_from_avg": -0.5322
+  },
+  "Layer 9 Head 9": {
+    "category": "Became useless",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Was futuristic/tech/sci-fi illustration head",
+    "rank_mean": 0.2969,
+    "top_k_mean": 1.2806,
+    "rank_mean_dist_from_avg": -0.2031,
+    "top_k_mean_dist_from_avg": -2.2806
+  },
+  "Layer 9 Head 10": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Futuristic-tech/urban -> dog breeds",
+    "rank_mean": 0.4118,
+    "top_k_mean": 2.9072,
+    "rank_mean_dist_from_avg": -0.0882,
+    "top_k_mean_dist_from_avg": -0.6539
+  },
+  "Layer 9 Head 11": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Illustration/art -> mechanical devices (device thread links)",
+    "rank_mean": 0.6965,
+    "top_k_mean": 4.0715,
+    "rank_mean_dist_from_avg": 0.1965,
+    "top_k_mean_dist_from_avg": 0.5103
+  },
+  "Layer 10 Head 0": {
+    "category": "Specialized",
+    "subtype": null,
+    "ambiguous": true,
+    "justification": "Round-object thread retained -> containers/vessels",
+    "rank_mean": 0.6949,
+    "top_k_mean": 5.3401,
+    "rank_mean_dist_from_avg": 0.1949,
+    "top_k_mean_dist_from_avg": 1.779
+  },
+  "Layer 10 Head 1": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Geography/places -> domestic pets (dogs/cats)",
+    "rank_mean": 0.5626,
+    "top_k_mean": 5.5151,
+    "rank_mean_dist_from_avg": 0.0626,
+    "top_k_mean_dist_from_avg": 1.9539
+  },
+  "Layer 10 Head 2": {
+    "category": "Same function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Headwear & clothing preserved (bonnet in both)",
+    "rank_mean": 0.7704,
+    "top_k_mean": 5.8424,
+    "rank_mean_dist_from_avg": 0.2704,
+    "top_k_mean_dist_from_avg": 2.2812
+  },
+  "Layer 10 Head 3": {
+    "category": "Changed function",
+    "subtype": "weak",
+    "ambiguous": true,
+    "justification": "Retro/art aesthetic -> text-bearing objects (typography thread)",
+    "rank_mean": 0.368,
+    "top_k_mean": 2.779,
+    "rank_mean_dist_from_avg": -0.132,
+    "top_k_mean_dist_from_avg": -0.7822
+  },
+  "Layer 10 Head 4": {
+    "category": "Mixed",
+    "subtype": null,
+    "ambiguous": true,
+    "justification": "Transport+animal+sport retained; dynamic-motion framing lost, fashion added",
+    "rank_mean": 0.8242,
+    "top_k_mean": 5.3264,
+    "rank_mean_dist_from_avg": 0.3242,
+    "top_k_mean_dist_from_avg": 1.7652
+  },
+  "Layer 10 Head 5": {
+    "category": "Specialized",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Pattern/structure thread -> architectural & geometric structures",
+    "rank_mean": 0.7042,
+    "top_k_mean": 5.8268,
+    "rank_mean_dist_from_avg": 0.2042,
+    "top_k_mean_dist_from_avg": 2.2657
+  },
+  "Layer 10 Head 6": {
+    "category": "Same function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Retail/commercial/cultural venues preserved",
+    "rank_mean": 0.3873,
+    "top_k_mean": 3.1306,
+    "rank_mean_dist_from_avg": -0.1127,
+    "top_k_mean_dist_from_avg": -0.4305
+  },
+  "Layer 10 Head 7": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Children/people/emotion/social -> clothing/food/objects",
+    "rank_mean": 0.6055,
+    "top_k_mean": 4.5124,
+    "rank_mean_dist_from_avg": 0.1055,
+    "top_k_mean_dist_from_avg": 0.9513
+  },
+  "Layer 10 Head 8": {
+    "category": "Became useless",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Was broad animal/subject-count/scene head; stays scattered",
+    "rank_mean": 0.2443,
+    "top_k_mean": 1.3211,
+    "rank_mean_dist_from_avg": -0.2557,
+    "top_k_mean_dist_from_avg": -2.2401
+  },
+  "Layer 10 Head 9": {
+    "category": "Specialized",
+    "subtype": null,
+    "ambiguous": true,
+    "justification": "Slender/elongated-object thread -> implements/medical (necklace+transport retained)",
+    "rank_mean": 0.5683,
+    "top_k_mean": 5.8568,
+    "rank_mean_dist_from_avg": 0.0683,
+    "top_k_mean_dist_from_avg": 2.2956
+  },
+  "Layer 10 Head 10": {
+    "category": "Same function",
+    "subtype": null,
+    "ambiguous": true,
+    "justification": "Water/aquatic & landscape preserved, extended to water-vessels",
+    "rank_mean": 0.688,
+    "top_k_mean": 5.2175,
+    "rank_mean_dist_from_avg": 0.188,
+    "top_k_mean_dist_from_avg": 1.6564
+  },
+  "Layer 10 Head 11": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Urban scenes -> mixed appliances/food/tech/clocks",
+    "rank_mean": 0.5979,
+    "top_k_mean": 4.6617,
+    "rank_mean_dist_from_avg": 0.0979,
+    "top_k_mean_dist_from_avg": 1.1006
+  },
+  "Layer 11 Head 0": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Geography/places -> animals/wildlife",
+    "rank_mean": 0.6081,
+    "top_k_mean": 5.3148,
+    "rank_mean_dist_from_avg": 0.1081,
+    "top_k_mean_dist_from_avg": 1.7536
+  },
+  "Layer 11 Head 1": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Reflections/mood/composition -> scattered objects+animals",
+    "rank_mean": 0.5821,
+    "top_k_mean": 5.7544,
+    "rank_mean_dist_from_avg": 0.0821,
+    "top_k_mean_dist_from_avg": 2.1932
+  },
+  "Layer 11 Head 2": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Mood/symmetry/fantasy -> reptiles & large animals + fungi",
+    "rank_mean": 0.5044,
+    "top_k_mean": 4.6727,
+    "rank_mean_dist_from_avg": 0.0044,
+    "top_k_mean_dist_from_avg": 1.1115
+  },
+  "Layer 11 Head 3": {
+    "category": "Same function",
+    "subtype": "weak-rank",
+    "ambiguous": true,
+    "justification": "Occupational/medical-emergency domain preserved (labels->equipment); thin rank",
+    "rank_mean": 0.2377,
+    "top_k_mean": 2.6555,
+    "rank_mean_dist_from_avg": -0.2623,
+    "top_k_mean_dist_from_avg": -0.9057
+  },
+  "Layer 11 Head 4": {
+    "category": "Changed function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Subject-count/people/groups -> cats & animals",
+    "rank_mean": 0.6184,
+    "top_k_mean": 5.6859,
+    "rank_mean_dist_from_avg": 0.1184,
+    "top_k_mean_dist_from_avg": 2.1248
+  },
+  "Layer 11 Head 5": {
+    "category": "Same function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Animals -> animals (strongest top_k; preserved)",
+    "rank_mean": 0.602,
+    "top_k_mean": 6.4672,
+    "rank_mean_dist_from_avg": 0.102,
+    "top_k_mean_dist_from_avg": 2.906
+  },
+  "Layer 11 Head 6": {
+    "category": "Same function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Natural scenery / landscapes & landforms preserved",
+    "rank_mean": 0.6344,
+    "top_k_mean": 5.2398,
+    "rank_mean_dist_from_avg": 0.1344,
+    "top_k_mean_dist_from_avg": 1.6786
+  },
+  "Layer 11 Head 7": {
+    "category": "Specialized",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Graspable everyday objects -> instruments, tools, implements",
+    "rank_mean": 0.6786,
+    "top_k_mean": 6.0168,
+    "rank_mean_dist_from_avg": 0.1786,
+    "top_k_mean_dist_from_avg": 2.4556
+  },
+  "Layer 11 Head 8": {
+    "category": "Same function",
+    "subtype": null,
+    "ambiguous": false,
+    "justification": "Domestic & office objects/containers/textiles preserved",
+    "rank_mean": 0.4814,
+    "top_k_mean": 4.5961,
+    "rank_mean_dist_from_avg": -0.0186,
+    "top_k_mean_dist_from_avg": 1.035
+  },
+  "Layer 11 Head 9": {
+    "category": "Specialized",
+    "subtype": "lost-task",
+    "ambiguous": true,
+    "justification": "Number-reading lost (no ImageNet class); latent texture/material function promoted",
+    "rank_mean": 0.5318,
+    "top_k_mean": 5.1017,
+    "rank_mean_dist_from_avg": 0.0318,
+    "top_k_mean_dist_from_avg": 1.5405
+  },
+  "Layer 11 Head 10": {
+    "category": "Same function",
+    "subtype": "feature-preserved",
+    "ambiguous": true,
+    "justification": "Color computation intact, now on color-named/colorful animals (top group misleading)",
+    "rank_mean": 0.707,
+    "top_k_mean": 5.2076,
+    "rank_mean_dist_from_avg": 0.207,
+    "top_k_mean_dist_from_avg": 1.6464
+  },
+  "Layer 11 Head 11": {
+    "category": "Changed function",
+    "subtype": "lost-task",
+    "ambiguous": true,
+    "justification": "Letter-reading lost (no ImageNet class) -> animals/colorful produce/colors",
+    "rank_mean": 0.6474,
+    "top_k_mean": 6.2674,
+    "rank_mean_dist_from_avg": 0.1474,
+    "top_k_mean_dist_from_avg": 2.7062
+  }
+}

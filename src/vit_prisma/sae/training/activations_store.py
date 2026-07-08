@@ -42,7 +42,16 @@ class CacheVisionActivationStore:
 
     def _load_cached_activations(self, total_size, context_size, num_layers, d_in):
         """
-        Load cached activations from disk until the buffer is filled or no more files are found.
+        Load cached activations from disk until the buffer is filled.
+
+        Streams through the cached ``{i}.pt`` files, remembering the current file
+        and the offset within it on ``self`` so each buffer refill continues
+        exactly where the previous one stopped (instead of restarting from file 0
+        every time). Files are visited in a random order that is reshuffled every
+        time the whole set has been consumed (i.e. once per epoch), which mixes the
+        class-ordered cache without having to re-generate it. With a single cache
+        file (e.g. the CLS-only cache) the order is just ``[0]``, so previous
+        single-file setups keep working unchanged.
         """
         buffer_size = total_size * context_size
         new_buffer = torch.zeros(
@@ -51,36 +60,57 @@ class CacheVisionActivationStore:
             device=self.cfg.device,
         )
         n_tokens_filled = 0
-        next_cache_idx = 0
 
-        # Load from cached files one by one
+        # Discover the cache files once and build a (shuffled) read order. This
+        # state is persisted on the store so it survives across buffer refills.
+        if not hasattr(self, "_cache_file_order"):
+            n_files = 0
+            while os.path.exists(f"{self.cfg.cached_activations_path}/{n_files}.pt"):
+                n_files += 1
+            self._n_cache_files = n_files
+            self._cache_within_file = 0
+            self._cache_order_pos = 0
+            self._cache_file_order = self._new_cache_file_order()
+
+        if self._n_cache_files == 0:
+            return new_buffer[:0, ...]  # no cache files found
+
+        files_consumed = 0  # per-call guard so empty/tiny caches still terminate
         while n_tokens_filled < buffer_size:
-            cache_file = f"{self.cfg.cached_activations_path}/{next_cache_idx}.pt"
-            if not os.path.exists(cache_file):
-                # self._print_cache_warning(n_tokens_filled, buffer_size)
-                new_buffer = new_buffer[:n_tokens_filled, ...]
-                return new_buffer
+            file_idx = self._cache_file_order[self._cache_order_pos]
+            cache_file = f"{self.cfg.cached_activations_path}/{file_idx}.pt"
 
-            activations = self.load_file_cached(cache_file)
-            if n_tokens_filled + activations.shape[0] > buffer_size:
-                # Take only the needed subset
-                activations = activations[: buffer_size - n_tokens_filled, ...]
-                taking_subset_of_file = True
+            # Resume from where we stopped in this file on the previous call.
+            activations = self.load_file_cached(cache_file)[self._cache_within_file :, ...]
+            take = min(activations.shape[0], buffer_size - n_tokens_filled)
+            new_buffer[n_tokens_filled : n_tokens_filled + take, ...] = activations[:take, ...]
+            n_tokens_filled += take
+
+            if take < activations.shape[0]:
+                # Buffer is full; resume from this offset in this file next time.
+                self._cache_within_file += take
             else:
-                taking_subset_of_file = False
+                # File exhausted; advance to the next file in the current order,
+                # reshuffling once we have been through every file (one epoch).
+                self._cache_within_file = 0
+                self._cache_order_pos += 1
+                if self._cache_order_pos >= self._n_cache_files:
+                    self._cache_order_pos = 0
+                    self._cache_file_order = self._new_cache_file_order()
+                files_consumed += 1
+                if files_consumed >= self._n_cache_files:
+                    # Whole cache is smaller than one buffer; stop here rather than
+                    # repeat data, which also guarantees the loop terminates.
+                    break
 
-            new_buffer[
-                n_tokens_filled : n_tokens_filled + activations.shape[0], ...
-            ] = activations
-            n_tokens_filled += activations.shape[0]
+        return new_buffer[:n_tokens_filled, ...]
 
-            if taking_subset_of_file:
-                self.next_idx_within_buffer = activations.shape[0]
-            else:
-                next_cache_idx += 1
-                self.next_idx_within_buffer = 0
-
-        return new_buffer
+    def _new_cache_file_order(self):
+        """Read order for the cache files: a random permutation by default, or
+        sequential ``0..N-1`` if ``cfg.shuffle_cache_files`` is set to False."""
+        if getattr(self.cfg, "shuffle_cache_files", True):
+            return torch.randperm(self._n_cache_files).tolist()
+        return list(range(self._n_cache_files))
 
     def get_data_loader(self) -> Iterator[Any]:
         """

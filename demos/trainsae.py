@@ -1,6 +1,6 @@
 import sys
 import logging
-sys.path.insert(0, "/home/nfm/ViT-Prisma/src")
+sys.path.insert(0, "/home/nfm/Desktop/rhome/nfm/ViT-Prisma/src")
 logging.getLogger("PIL").setLevel(logging.WARNING)
 
 from vit_prisma.sae import VisionModelSAERunnerConfig
@@ -74,29 +74,38 @@ sae_trainer_cfg = VisionModelSAERunnerConfig(
     # unnormalized activations, which is in the wrong space).
     b_dec_init_method='zeros',
 
-    wandb_project="claude_clip2_topk",
+    wandb_project="claude_topk_cls",
     expansion_factor=16,
     use_ghost_grads=False,
 
-    lr=0.0002,
-    lr_warm_up_steps=200,
+    # Stability tuning to avoid the NaNs from the previous CLS run. The cache is
+    # clean (no inf/nan, values in ~[-5, 5]) and inputs are layer-normed to ~unit
+    # scale, so the NaNs were training divergence, not bad data. 2e-4 was too hot
+    # given the many passes this config makes over the small CLS cache; 5e-5 with
+    # a longer warmup keeps it stable. max_grad_norm is the default but set here
+    # explicitly (clips global grad norm to 1.0) as an extra NaN guard.
+    lr=5e-5,
+    lr_warm_up_steps=500,
+    max_grad_norm=1.0,
 
+    # CLS-only training: one token (the CLS token) per image, so context_size=1
+    # matches the per-image token count the cache reshape uses.
+    # (To go back to all-patches: cls_token_only=False, context_size=197, and
+    #  point cached_activations_path at the "_all" cache.)
     cls_token_only=True,
     context_size=1,
 
     num_workers=6,
     store_batch_size=256,
-    # n_batches_in_buffer=32 gives data_for_loader = 32*0.75*256 = 6144 tokens,
-    # which divides cleanly by train_batch_size=2048 (3 steps per buffer fill).
-    # Twice as fast as 64 with no meaningful quality loss.
     n_batches_in_buffer=32,
     train_batch_size=2048,
 
-    cached_activations_path='/home/nfm/ViT-Prisma/demos/activation_cache/blocks11_resid_post_cls',
+    # CLS-only cache (single file). This is the "_cls" cache, not "_all".
+    cached_activations_path='/home/nfm/Desktop/rhome/nfm/ViT-Prisma/demos/activation_cache/blocks11_resid_post_cls',
     use_cached_activations=True,
 
 
-    checkpoint_path='/home/nfm/ViT-Prisma/demos/sae_ckpts',
+    checkpoint_path='/home/nfm/Desktop/rhome/nfm/ViT-Prisma/demos/sae_ckpts',
     num_epochs=5,
     n_checkpoints=10,
 )
@@ -105,4 +114,3 @@ pprint(sae_trainer_cfg)
 
 trainer = VisionSAETrainer(sae_trainer_cfg, model, train_dataset, eval_dataset)
 sae = trainer.run()
-

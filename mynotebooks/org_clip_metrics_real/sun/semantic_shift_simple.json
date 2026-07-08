@@ -1,0 +1,290 @@
+{
+  "L8.H0": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "repurposed"
+  },
+  "L8.H1": {
+    "FFT": "ignored",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "ignored"
+  },
+  "L8.H2": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "repurposed",
+    "LP": "ignored"
+  },
+  "L8.H3": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L8.H4": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L8.H5": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L8.H6": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "repurposed",
+    "LP": "ignored"
+  },
+  "L8.H7": {
+    "FFT": "repurposed",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "repurposed"
+  },
+  "L8.H8": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "ignored",
+    "LP": "repurposed"
+  },
+  "L8.H9": {
+    "FFT": "specialized",
+    "LoRA4": "specialized",
+    "LoRA16": "specialized",
+    "LP": "repurposed"
+  },
+  "L8.H10": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L8.H11": {
+    "FFT": "repurposed",
+    "LoRA4": "ignored",
+    "LoRA16": "repurposed",
+    "LP": "ignored"
+  },
+  "L9.H0": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L9.H1": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L9.H2": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L9.H3": {
+    "FFT": "same_function",
+    "LoRA4": "repurposed",
+    "LoRA16": "same_function",
+    "LP": "repurposed"
+  },
+  "L9.H4": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L9.H5": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L9.H6": {
+    "FFT": "same_function",
+    "LoRA4": "same_function",
+    "LoRA16": "same_function",
+    "LP": "repurposed"
+  },
+  "L9.H7": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L9.H8": {
+    "FFT": "specialized",
+    "LoRA4": "specialized",
+    "LoRA16": "specialized",
+    "LP": "repurposed"
+  },
+  "L9.H9": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L9.H10": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "specialized",
+    "LP": "ignored"
+  },
+  "L9.H11": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L10.H0": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L10.H1": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L10.H2": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "ignored"
+  },
+  "L10.H3": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L10.H4": {
+    "FFT": "repurposed",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L10.H5": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L10.H6": {
+    "FFT": "ignored",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L10.H7": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L10.H8": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L10.H9": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L10.H10": {
+    "FFT": "specialized",
+    "LoRA4": "repurposed",
+    "LoRA16": "specialized",
+    "LP": "specialized"
+  },
+  "L10.H11": {
+    "FFT": "ignored",
+    "LoRA4": "same_function",
+    "LoRA16": "same_function",
+    "LP": "repurposed"
+  },
+  "L11.H0": {
+    "FFT": "repurposed",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L11.H1": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "ignored"
+  },
+  "L11.H2": {
+    "FFT": "ignored",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L11.H3": {
+    "FFT": "ignored",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L11.H4": {
+    "FFT": "repurposed",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L11.H5": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L11.H6": {
+    "FFT": "repurposed",
+    "LoRA4": "specialized",
+    "LoRA16": "specialized",
+    "LP": "specialized"
+  },
+  "L11.H7": {
+    "FFT": "repurposed",
+    "LoRA4": "repurposed",
+    "LoRA16": "repurposed",
+    "LP": "repurposed"
+  },
+  "L11.H8": {
+    "FFT": "ignored",
+    "LoRA4": "same_function",
+    "LoRA16": "same_function",
+    "LP": "same_function"
+  },
+  "L11.H9": {
+    "FFT": "repurposed",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  },
+  "L11.H10": {
+    "FFT": "repurposed",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "repurposed"
+  },
+  "L11.H11": {
+    "FFT": "repurposed",
+    "LoRA4": "ignored",
+    "LoRA16": "ignored",
+    "LP": "ignored"
+  }
+}

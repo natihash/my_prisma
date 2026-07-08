@@ -1,0 +1,674 @@
+{
+    "Layer 8 Head 0": {
+        "lora4": [
+            "different_function",
+            "Original head is dominated by geographic locations (Okavango, Madagascar, Borneo) with minor text/plant components; adapted top texts are cameras and scattered animals/insects (Polaroid_camera, cicada, jaguar, rock_python) with no place-recognition signal."
+        ],
+        "lora16": [
+            "different_function",
+            "Locations are gone; groups are Animals/Birds/Reptiles and texts are species plus camera relics (limpkin, rock_python, Polaroid_camera). The geographic-place mechanism is not recognizable."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes an animal/reptile/dog detector (African_chameleon, Rhodesian_ridgeback, rock_python); the dominant location function is absent and the weak original wildlife thread is insufficient to call it preserved."
+        ]
+    },
+    "Layer 8 Head 1": {
+        "lora4": [
+            "different_function",
+            "Original fires on facial expressions/emotions and mood; adapted shifts to buildings/commerce/objects (tobacco_shop, espresso_maker, bullet_train) with no face or emotion content."
+        ],
+        "lora16": [
+            "different_function",
+            "Dominant groups become Animals/Primates (gibbon, guenon) plus objects; the emotional/facial mechanism is entirely gone."
+        ],
+        "lp": [
+            "different_function",
+            "Reassigns to fashion and dogs (brassiere, redbone, maillot); no continuity with the original facial-expression/emotion function."
+        ]
+    },
+    "Layer 8 Head 2": {
+        "lora4": [
+            "different_function",
+            "Original encodes sky/space/stars and aerial views; adapted is dogs/animals (coyote, Airedale, stingray) with no celestial or aerial signal."
+        ],
+        "lora16": [
+            "different_function",
+            "Reduced to a few animals (wombat, gorilla, feather_boa); sky/star mechanism absent."
+        ],
+        "lp": [
+            "different_function",
+            "Shifts to structures and round/optical objects (viaduct, plate, binoculars, loupe); the round-object thread is too weak a echo of 'stars' to count as preserved."
+        ]
+    },
+    "Layer 8 Head 3": {
+        "lora4": [
+            "specialized",
+            "Dominant artistic-style/pattern function is lost, but the original Fashion/Footwear component leads (clog, Loafer-type) and comic_book preserves a graphic/illustration relic; evidence is mixed between continuity and reassignment."
+        ],
+        "lora16": [
+            "different_function",
+            "Letters/Text, Caricatures and Fantasy/Surreal groups persist with comic_book and book_jacket (illustration/text continuity), yet the top texts are dominated by dogs/objects (Saint_Bernard, racket), giving contradictory signals."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes tech/clock/animal objects (wallet, analog_clock, mousetrap, terrier); the art/pattern/text mechanism is not recognizable."
+        ]
+    },
+    "Layer 8 Head 4": {
+        "lora4": [
+            "different_function",
+            "Original is a faces/emotions/people head; adapted is objects and animals (sea_urchin, shoji, lab_coat, boxer) with no facial or person content."
+        ],
+        "lora16": [
+            "different_function",
+            "Same object/animal mixture (doormat, dingo, dung_beetle); faces/emotions gone."
+        ],
+        "lp": [
+            "different_function",
+            "Reassigned to animals/dogs and apparel (miniature_pinscher, Labrador, gown); only a faint Professions/lab_coat relic, not the facial-expression mechanism."
+        ]
+    },
+    "Layer 8 Head 5": {
+        "lora4": [
+            "different_function",
+            "Original is a retro-aesthetic/close-up-texture head; adapted is vehicles and assorted objects (clog, odometer, aircraft_carrier, tricycle) with no retro or texture mechanism."
+        ],
+        "lora16": [
+            "different_function",
+            "Shifts to animals/food/kitchen objects (strainer, ice_lolly, espresso); retro/texture function absent."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes manufactured electronics/containers (laptop, monitor, packet, soap_dispenser); the dominant vintage aesthetic is gone and only a faint synthetic-surface echo remains."
+        ]
+    },
+    "Layer 8 Head 6": {
+        "lora4": [
+            "different_function",
+            "Original is places + monochrome/tonality; adapted is reptiles/plants/objects (diamondback, head_cabbage, butternut_squash) with no location or tonal signal."
+        ],
+        "lora16": [
+            "different_function",
+            "Dominated by reptiles/animals (diamondback, colobus, sea_cucumber); monochrome/place mechanism gone."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes a strong dog/primate detector (cocker_spaniel, langur, Siberian_husky); no continuity with the location/monochrome function."
+        ]
+    },
+    "Layer 8 Head 7": {
+        "lora4": [
+            "different_function",
+            "Original encodes illustration/fantasy/historical depiction; adapted is food/animals (potpie, American_coot, Crock_Pot) with no illustrative content."
+        ],
+        "lora16": [
+            "different_function",
+            "Shifts to objects/transport (garbage_truck, water_tower, milk_can); illustration/fantasy mechanism absent."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes a dog/wolf detector (standard_poodle, white_wolf, borzoi, Irish_wolfhound); no illustrative continuity."
+        ]
+    },
+    "Layer 8 Head 8": {
+        "lora4": [
+            "specialized",
+            "The ethereal/mood core is lost, but the Letters/Text group persists with text/graphic objects (book_jacket, comic_book, street_sign, menu); mixed between text continuity and a shift to containers/architecture."
+        ],
+        "lora16": [
+            "specialized",
+            "Letters/Text becomes dominant and Caricatures/Fantasy-Surreal groups remain, with comic_book, book_jacket, menu and ballpoint preserving the text + illustration/surreal subset while the mood/ethereal/vintage components drop away."
+        ],
+        "lp": [
+            "specialized",
+            "Some text relics remain (comic_book, book_jacket) but the head is now dominated by textures/household objects (doormat, crate, chain_saw); the original surreal/text mechanism is only partially present."
+        ]
+    },
+    "Layer 8 Head 9": {
+        "lora4": [
+            "different_function",
+            "Original is a night/low-light/film-effect/cityscape head; adapted is landscapes/water/architecture (water_tower, seashore, lakeside, iguana) with no night or film-effect signal."
+        ],
+        "lora16": [
+            "different_function",
+            "Shifts to serene water/landform scenes (lakeside, seashore, geyser); the night/film mechanism is gone."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes structures/objects/animals (pole, plow, quail, binoculars); no continuity with the night-scene function."
+        ]
+    },
+    "Layer 8 Head 10": {
+        "lora4": [
+            "different_function",
+            "Original mixes exotic locations with caricatures/historical icons; adapted is textures/armor/insects (chain_mail, centipede, trilobite). A Historical/Antique relic (chain_mail) survives but the location/caricature core is lost."
+        ],
+        "lora16": [
+            "different_function",
+            "Shifts to objects/animals/structures (lens_cap, wooden_spoon, breakwater, tarantula); place and caricature mechanisms absent."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes dogs plus armor relics (soft-coated_wheaten_terrier, chain_mail, dingo); no recognizable location/caricature continuity."
+        ]
+    },
+    "Layer 8 Head 11": {
+        "lora4": [
+            "same_function",
+            "Photography Techniques stays a top group and Optical/Scientific Instruments with Polaroid_camera give a literal-camera reading of the photography theme, but the composition/manipulation/surreal core is lost amid unrelated objects (convertible, sloth_bear)."
+        ],
+        "lora16": [
+            "different_function",
+            "Becomes birds/animals plus objects (oystercatcher, red-breasted_merganser, hare); the photography/composition mechanism is gone."
+        ],
+        "lp": [
+            "different_function",
+            "Reassigned to dogs and tech/household objects (cocker_spaniel, screen, dishwasher); no photographic-technique continuity."
+        ]
+    },
+    "Layer 9 Head 0": {
+        "lora4": [
+            "different_function",
+            "Timekeeping is largely replaced by animals/objects, but lighting/fire relics (torch, jack-o'-lantern) and digital_clock partly echo the original Fire and Timekeeping themes; signals are mixed."
+        ],
+        "lora16": [
+            "different_function",
+            "Overwhelmingly reptiles/animals/food (sea_snake, sidewinder, skunk, consomme); the timekeeping/clockwork mechanism is absent."
+        ],
+        "lp": [
+            "different_function",
+            "Dominated by dogs, yet clock/timekeeping relics (analog_clock, wall_clock, magnetic_compass) and lighting (table_lamp, torch, jack-o'-lantern, fire_screen) clearly continue the original timekeeping+fire/lighting threads, making the evidence mixed."
+        ]
+    },
+    "Layer 9 Head 1": {
+        "lora4": [
+            "different_function",
+            "The colorful digital-art core is gone, but Vintage&Retro and Celebrations groups persist with carousel, maypole, candle and comic_book continuing the retro/festival/illustration thread; mixed signal."
+        ],
+        "lora16": [
+            "different_function",
+            "Fantasy/Surreal and Celebrations groups remain with maypole, carousel, candle and comic_book/book_jacket preserving the festival + illustration subset, but the dominant shifts to Letters/Text and Food."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes fashion/containers/office objects (pencil_sharpener, perfume, feather_boa); only minor festival relics (carousel, maypole) survive, insufficient to preserve the colorful-retro-art function."
+        ]
+    },
+    "Layer 9 Head 2": {
+        "lora4": [
+            "specialized",
+            "Patterns/Textures stays a top group with fabric texts (jersey, sweatshirt) and textured animals (armadillo), but the head is now dominated by dogs/animals (clumber, malamute), giving mixed evidence between texture-grounding and generic-animal reassignment."
+        ],
+        "lora16": [
+            "specialized",
+            "An overwhelming dog/animal shift (clumber, Ibizan_hound, kuvasz) with only fabric/patterned relics (jersey, apron, tabby, armadillo); unclear whether the texture mechanism survives or was replaced."
+        ],
+        "lp": [
+            "different_function",
+            "Dogs/animals dominate (Great_Pyrenees, golden_retriever, Samoyed) while textile/patterned relics persist (jersey, tabby, hognose_snake), so the textures\u2192patterned-subjects reading competes with a generic-animal reading."
+        ]
+    },
+    "Layer 9 Head 3": {
+        "lora4": [
+            "different_function",
+            "Original is an overhead/aerial-view head; adapted is vehicles/objects/animals (seat_belt, ashcan, park_bench, Shetland_sheepdog) with no aerial-perspective signal."
+        ],
+        "lora16": [
+            "different_function",
+            "Shifts to vehicles and household objects (seat_belt, ashcan, cradle, dishwasher); aerial mechanism gone."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes household/kitchen objects (ashcan, strainer, printer, bathtub); no continuity with the aerial-view function."
+        ]
+    },
+    "Layer 9 Head 4": {
+        "lora4": [
+            "different_function",
+            "Original (weakly activated) mixes texture collage with subject counting; adapted is animals/birds/kitchen objects (mongoose, slug, frying_pan) with neither texture nor counting signal."
+        ],
+        "lora16": [
+            "specialized",
+            "Animals/kitchen dominate, but Patterns/Textures appears as a prominent group with textured/spiny animals (echidna, axolotl, snail), partially echoing the original close-up-texture component."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes animals/tools/kitchen objects (slug, carpenter's_kit, chain_saw, coffeepot); the texture-collage and counting mechanisms are absent."
+        ]
+    },
+    "Layer 9 Head 5": {
+        "lora4": [
+            "different_function",
+            "Motion-blur/people core is lost, but the original Fashion component clearly persists (sarong, trench_coat, miniskirt, cowboy_boot) alongside unrelated animals/objects; partial continuity."
+        ],
+        "lora16": [
+            "different_function",
+            "Dominated by animals/architecture (wombat, prison, suspension_bridge) with only weak apparel relics (suit, sarong); motion/people/fashion mechanism not recognizable."
+        ],
+        "lp": [
+            "specialized",
+            "Narrows onto the original Fashion/runway component, now dominant (maillot, miniskirt, suit, sarong, bikini, swimming_trunks), while dropping the motion-blur, street and people elements."
+        ]
+    },
+    "Layer 9 Head 6": {
+        "lora4": [
+            "specialized",
+            "The aerial-view core is lost, but Patterns/Textures persists and the head fires on scaly/cracked-skinned reptiles and textured surfaces (Gila_monster, banded_gecko, crocodile, honeycomb, doormat), a plausible continuation of the cracked-texture theme."
+        ],
+        "lora16": [
+            "specialized",
+            "Same reptile-skin/texture pattern (banded_gecko, crocodile, doormat, honeycomb) with Patterns/Textures retained, mixed against the loss of the aerial-perspective function."
+        ],
+        "lp": [
+            "different_function",
+            "Shifts to generic animals/structures/landforms (sea_cucumber, megalith, schnauzer, breakwater); Patterns/Textures drops out and the cracked-surface bridge weakens to noise."
+        ]
+    },
+    "Layer 9 Head 7": {
+        "lora4": [
+            "specialized",
+            "Caricature-of-people core is lost, but the Caricatures group persists with comic_book and book_jacket (illustration relics) amid a new animal/dog dominance (clumber, golden_retriever)."
+        ],
+        "lora16": [
+            "different_function",
+            "Becomes tools/insects/objects (thimble, centipede, sewing_machine, trilobite); the figure-caricature mechanism is absent."
+        ],
+        "lp": [
+            "different_function",
+            "Reassigned to birds/insects/animals (prairie_chicken, lacewing, porcupine); no continuity with caricatures of people."
+        ]
+    },
+    "Layer 9 Head 8": {
+        "lora4": [
+            "different_function",
+            "Urban/shop relics persist (barbershop, patio, street_sign, parking_meter) but the head is now scattered across sports/animals (horizontal_bar, Pekinese, goldfinch); interior-scene gestalt is only partly present."
+        ],
+        "lora16": [
+            "different_function",
+            "Dominated by animals/dogs/sports (Pekinese, Samoyed, horizontal_bar) with only weak building relics (yurt, boathouse, window_shade); the interior/shop function is largely lost."
+        ],
+        "lp": [
+            "same_function",
+            "Strongly preserves the shop/interior/building mechanism: shoe_shop, grocery_store, barbershop, butcher_shop, monastery, sliding_door, window_shade, shoji map directly onto the original boutiques, cafes and cozy interiors."
+        ]
+    },
+    "Layer 9 Head 9": {
+        "lora4": [
+            "specialized",
+            "Futuristic/abstract core is lost, but the Technology group persists with mundane tech objects (projector, web_site, spotlight, safe); mixed against a new animal/dog dominance."
+        ],
+        "lora16": [
+            "different_function",
+            "Becomes animals/objects (African_chameleon, badger, banded_gecko, diaper); the futuristic-tech mechanism is absent."
+        ],
+        "lp": [
+            "different_function",
+            "Reassigned to animals plus apparel/containers (Indian_cobra, gown, carton, vase); no recognizable sci-fi/tech continuity."
+        ]
+    },
+    "Layer 9 Head 10": {
+        "lora4": [
+            "different_function",
+            "Urban/architecture/tech relics persist (tobacco_shop, library, projector, modem) but mixed with unrelated tools/animals (slide_rule, dalmatian, marmoset); partial continuity of the urban-tech theme."
+        ],
+        "lora16": [
+            "different_function",
+            "Becomes household/tech objects (dishwasher, slide_rule, lighter, modem); the city-scene/cafe function is lost despite minor tech relics."
+        ],
+        "lp": [
+            "different_function",
+            "Reassigned to dogs and objects (Chihuahua, Old_English_sheepdog, harmonica, dishwasher); no urban/cafe continuity."
+        ]
+    },
+    "Layer 9 Head 11": {
+        "lora4": [
+            "different_function",
+            "Original mixes illustration/sketch with circuit/tech and craft objects; adapted is reptiles/animals (Gila_monster, triceratops, black_swan) with no illustrative or circuit signal."
+        ],
+        "lora16": [
+            "different_function",
+            "Shifts to weapons/sports/objects (sturgeon, cuirass, assault_rifle, running_shoe); the sketch/tech mechanism is gone."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes vehicles/instruments/weapons (tricycle, oboe, jinrikisha, revolver); the musical-instrument cluster only faintly echoes the original musician-caricature relic, so the change is substantive."
+        ]
+    },
+    "Layer 10 Head 0": {
+        "lora4": [
+            "same_function",
+            "The retro styling drops away but the everyday round/container-object mechanism is preserved and literal items recur (puck, laptop, wallet, mixing_bowl, water_jug, bucket)."
+        ],
+        "lora16": [
+            "same_function",
+            "Continues the everyday-object focus with containers and small goods (puck, thimble, laptop, soap_dispenser, beer_glass), matching the original 'A [object]' texts."
+        ],
+        "lp": [
+            "same_function",
+            "Same everyday object/container behavior (jersey, notebook, tray, coffee_mug, puck, wallet); the underlying object-identity mechanism is intact."
+        ]
+    },
+    "Layer 10 Head 1": {
+        "lora4": [
+            "different_function",
+            "Original recognizes exotic geographic regions; adapted becomes a bird/primate/animal detector (proboscis_monkey, junco, house_finch). The place-recognition mechanism is replaced by species classification."
+        ],
+        "lora16": [
+            "different_function",
+            "Dominated by animals/birds/dogs (tiger_cat, coucal, Pomeranian); locations gone."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes a dog/animal detector (otterhound, golden_retriever, Bernese_mountain_dog); only a residual Colors group, not the location function."
+        ]
+    },
+    "Layer 10 Head 2": {
+        "lora4": [
+            "same_function",
+            "Both original threads are preserved: Plants&Botanical and Headwear lead, with buckeye/daisy and bathing_cap/cowboy_hat/sombrero/football_helmet/shower_cap."
+        ],
+        "lora16": [
+            "same_function",
+            "Headwear remains dominant (bathing_cap, sombrero, cowboy_hat, crash_helmet, mortarboard, ski_mask) with botanical items (buckeye, fig); the hat+plant mechanism is clearly retained."
+        ],
+        "lp": [
+            "same_function",
+            "The headwear mechanism is robustly preserved (cowboy_hat, bathing_cap, sombrero, shower_cap, bonnet) alongside the Fashion thread; added dogs are the generic ImageNet pull rather than a change of function."
+        ]
+    },
+    "Layer 10 Head 3": {
+        "lora4": [
+            "different_function",
+            "The vintage-aesthetic framing is lost, but text/graphic objects (web_site, menu, book_jacket, scoreboard) and audio electronics (radio, CD_player, cassette_player, loudspeaker) plausibly continue the original typography/graphic and record-shop sub-themes."
+        ],
+        "lora16": [
+            "different_function",
+            "Same Letters/Text + electronics pattern (menu, comic_book, crossword_puzzle, cassette, remote_control); partial continuity of the graphic/music-media themes against a lost aesthetic core."
+        ],
+        "lp": [
+            "different_function",
+            "Letters/Text leads and a Vintage&Retro group persists with bookshop/library and cassette/comic_book, partially echoing the original record-shop/graphic themes; evidence remains mixed."
+        ]
+    },
+    "Layer 10 Head 4": {
+        "lora4": [
+            "same_function",
+            "Transportation stays the dominant group with vehicles recurring (tricycle, bicycle-built-for-two, unicycle, moped); the transport/motion mechanism is preserved."
+        ],
+        "lora16": [
+            "same_function",
+            "Transportation remains dominant (tricycle, canoe, go-kart, bicycle, jinrikisha) plus animals; consistent with the original transport+animal repertoire."
+        ],
+        "lp": [
+            "same_function",
+            "Both original core threads persist: animals dominate while Transportation stays prominent (unicycle, bicycle-built-for-two, tricycle, moped), a rebalancing within the head's original repertoire rather than a new function."
+        ]
+    },
+    "Layer 10 Head 5": {
+        "lora4": [
+            "specialized",
+            "The glitch-art core is lost, but grid/pattern objects (crossword_puzzle, maze, jigsaw_puzzle, window_screen, spider_web) plausibly continue the original pattern/typography theme even as the head moves toward instruments/numbers."
+        ],
+        "lora16": [
+            "different_function",
+            "Same grid/pattern relics (maze, spider_web, crossword-like, chain_mail) alongside clocks/measuring tools (sundial, abacus, slide_rule); partial pattern continuity with a substantive reinterpretation."
+        ],
+        "lp": [
+            "specialized",
+            "Patterns/Textures persists with mesh/grid objects (window_screen, crossword_puzzle, spider_web, coil, knot, chain_mail), echoing the original pattern theme, but the artistic/glitch mechanism is gone."
+        ]
+    },
+    "Layer 10 Head 6": {
+        "lora4": [
+            "same_function",
+            "The commercial-venue/shop mechanism is preserved: shoe_shop, restaurant, tobacco_shop, bookshop, confectionery and bakery map directly onto the original cafes, galleries and shops."
+        ],
+        "lora16": [
+            "same_function",
+            "Same shops/venues behavior (shoe_shop, restaurant, tobacco_shop, bookshop, library, barbershop, bakery); Architecture and Markets&Commerce lead as before."
+        ],
+        "lp": [
+            "same_function",
+            "Retains the venue mechanism (restaurant, bookshop, shoe_shop, barbershop) with a Food/Professions tint; clearly the same shop/cultural-space function."
+        ]
+    },
+    "Layer 10 Head 7": {
+        "lora4": [
+            "different_function",
+            "Original encodes children, emotions and social interaction; adapted becomes food/objects (ice_lolly, saltshaker, soup_bowl, broom) with no people content."
+        ],
+        "lora16": [
+            "different_function",
+            "Shifts to tools/kitchen objects (paintbrush, screwdriver, nail, hammer); children/social mechanism absent."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes fashion/instruments (Cardigan, harmonica, bikini, flute) with only faint diaper/ear relics; the children/emotion function is not recognizable."
+        ]
+    },
+    "Layer 10 Head 8": {
+        "lora4": [
+            "specialized",
+            "The original head is extremely diffuse with Animals as its top group; the adapted head keeps Animals/Dogs dominant alongside varied objects, so the generic animal-plus-objects character is partly continuous but hard to pin down."
+        ],
+        "lora16": [
+            "specialized",
+            "Still a diffuse animal+object mixture (rock_beauty, African_chameleon, magnetic_compass, academic_gown); continuity with the original generic behavior is plausible but unclear."
+        ],
+        "lp": [
+            "different_function",
+            "Drops Animals from its top groups and reassigns to fashion/textiles/tools (face_powder, wool, velvet, power_drill); the diffuse animal/scene character is replaced."
+        ]
+    },
+    "Layer 10 Head 9": {
+        "lora4": [
+            "different_function",
+            "Jewelry persists (necklace, bolo_tie, chain) and the amusement-park relic carousel recurs, but the head is now dominated by toys/recreation (swing, maypole) and transport; jewelry is demoted rather than removed."
+        ],
+        "lora16": [
+            "different_function",
+            "Dominated by sports/transport/instruments (whistle, parallel_bars, schooner, screwdriver) with only stray jewelry relics (bolo_tie, necklace); the accessory mechanism is largely gone."
+        ],
+        "lp": [
+            "specialized",
+            "The Jewelry group is retained with necklace, chain and buckle alongside recreation/transport items (swing, convertible); partial continuity of the accessory theme."
+        ]
+    },
+    "Layer 10 Head 10": {
+        "lora4": [
+            "same_function",
+            "Water&Aquatic, Natural Landscapes and Mood-Serene all persist with lakeside, sandbar, boathouse, seashore, canoe and aquatic animals (water_snake, stingray); the tranquil-water mechanism is preserved."
+        ],
+        "lora16": [
+            "same_function",
+            "Same water-scene behavior (lakeside, sandbar, seashore, promontory, speedboat) with aquatic animals added; Water, Landscapes and Mood-Serene groups retained."
+        ],
+        "lp": [
+            "same_function",
+            "The water mechanism remains recognizable: Water and Landscapes stay top groups with lakeside/seashore/sandbar/promontory/fountain, and the dominant water-related household fixtures (bathtub, washbasin) continue the water theme."
+        ]
+    },
+    "Layer 10 Head 11": {
+        "lora4": [
+            "different_function",
+            "Original encodes bustling cityscapes; adapted is tech/clock/objects (spotlight, digital_clock, odometer, barometer) with no urban-scene signal."
+        ],
+        "lora16": [
+            "different_function",
+            "Same clocks/tech objects (digital_clock, guillotine, CD_player, television); the city mechanism is gone."
+        ],
+        "lp": [
+            "specialized",
+            "Architecture leads again and urban/commerce items return (prison, monastery, barbershop, grocery_store, parking_meter, cash_machine, jinrikisha), partially restoring the urban theme, though mixed with animals/tech."
+        ]
+    },
+    "Layer 11 Head 0": {
+        "lora4": [
+            "different_function",
+            "Pure location recognition is lost, but the Asian-region focus bridges to culturally specific architecture and dress (stupa, mosque, kimono, shoji, abaya, bell_cote) and regional fauna (koala, wombat, water_buffalo); partial place-related continuity."
+        ],
+        "lora16": [
+            "different_function",
+            "Same cultural/regional pattern (stupa, kimono, shoji, sombrero) with a Cultural&Traditional group, echoing the regional focus while the location mechanism itself is gone."
+        ],
+        "lp": [
+            "specialized",
+            "Cultural items (shoji, sarong, sombrero) and regional animals (koala, wombat, wallaby) with architecture (monastery, bell_cote, tile_roof) partly continue the region theme, but Animals now dominate; evidence is mixed."
+        ]
+    },
+    "Layer 11 Head 1": {
+        "lora4": [
+            "different_function",
+            "Original encodes reflections/mirrors and mood; adapted is clocks/structures/objects (analog_clock, steel_arch_bridge, hourglass) with only a lone car_mirror relic."
+        ],
+        "lora16": [
+            "different_function",
+            "Same clocks/structures behavior (hourglass, pay-phone, stopwatch, viaduct); the Reflections group is barely present and the mechanism is effectively lost."
+        ],
+        "lp": [
+            "different_function",
+            "Becomes animals/household/clock objects (guillotine, maillot, otterhound, wall_clock); no reflection/mood continuity."
+        ]
+    },
+    "Layer 11 Head 2": {
+        "lora4": [
+            "different_function",
+            "Original is an abstract mood/symmetry/surreal head with little concrete content; adapted becomes baby/household objects (diaper, nipple, cradle, bassinet) \u2014 a new, unrelated function."
+        ],
+        "lora16": [
+            "different_function",
+            "Dominated by children/baby objects (diaper, crib, bib, cradle, teddy); the abstract mood/symmetry mechanism is absent."
+        ],
+        "lp": [
+            "different_function",
+            "Reassigned to kitchen/household objects and animals (doormat, water_jug, keeshond, coffee_mug); no continuity with the original abstract function."
+        ]
+    },
+    "Layer 11 Head 3": {
+        "lora4": [
+            "same_function",
+            "The profession mechanism is preserved through occupation-associated equipment and vehicles: ambulance, stretcher, stethoscope, police_van, fire_engine, lab_coat, fireboat, oxygen_mask."
+        ],
+        "lora16": [
+            "same_function",
+            "Same emergency/medical-service grounding (ambulance, police_van, fire_engine, stethoscope, lab_coat, military_uniform, tractor) with a Professions group retained."
+        ],
+        "lp": [
+            "same_function",
+            "Profession-equipment continuity remains clear (ambulance, police_van, stethoscope, stretcher, oxygen_mask, medicine_chest); the occupational mechanism is intact."
+        ]
+    },
+    "Layer 11 Head 4": {
+        "lora4": [
+            "specialized",
+            "The counting/groups-of-people core is lost and cats now dominate, but the original Children&Youth thread persists as baby objects (cradle, nipple, bassinet, diaper); mixed continuity."
+        ],
+        "lora16": [
+            "specialized",
+            "Overwhelmingly cats/dogs (Egyptian_cat, Siamese_cat, French_bulldog) with only stray baby relics (nipple, cradle); the counting/people mechanism is gone."
+        ],
+        "lp": [
+            "specialized",
+            "Becomes animals/fashion/insects (tabby, ant, miniskirt, bonnet) with a faint People/groom relic; the subject-counting function is not recognizable."
+        ]
+    },
+    "Layer 11 Head 5": {
+        "lora4": [
+            "same_function",
+            "Remains a broad animal detector (beagle, ibex, loggerhead, pelican, weasel) with dogs/birds/reptiles; the animal mechanism is clearly preserved."
+        ],
+        "lora16": [
+            "same_function",
+            "Still animal-dominated (collie, papillon, ferret, owl, cougar); same function with a dog-heavy ImageNet tilt."
+        ],
+        "lp": [
+            "same_function",
+            "Continues as an animal detector spanning dogs, reptiles and insects (Chihuahua, frilled_lizard, walking_stick, proboscis_monkey); the broad-fauna function is retained."
+        ]
+    },
+    "Layer 11 Head 6": {
+        "lora4": [
+            "same_function",
+            "The landform/mountain-landscape mechanism is preserved (alp, promontory, cliff_dwelling, volcano) with alpine transport (gondola, snowmobile)."
+        ],
+        "lora16": [
+            "same_function",
+            "Same landform/landscape behavior (alp, sandbar, promontory, cliff, volcano, megalith) plus alpine items (dogsled, snowmobile)."
+        ],
+        "lp": [
+            "same_function",
+            "Landscapes remain dominant (alp, promontory, sandbar, cliff_dwelling, volcano) with alpine transport (gondola, snowmobile); the mountain/desert/glacier function is intact."
+        ]
+    },
+    "Layer 11 Head 7": {
+        "lora4": [
+            "specialized",
+            "Aerial/Bird's-eye Views remains the dominant group with overhead perspectives (promontory, sandbar, lakeside, seashore) and aerial transport (gondola, snowmobile); the aerial-view mechanism is preserved."
+        ],
+        "lora16": [
+            "specialized",
+            "Same aerial-view behavior (promontory, sandbar, lakeside, seashore) with aerial transport (gondola, snowmobile); Aerial/Bird's-eye Views remains top group."
+        ],
+        "lp": [
+            "specialized",
+            "Aerial/Bird's-eye Views continues to dominate with overhead perspectives (promontory, sandbar, lakeside, seashore) and aerial transport (gondola, snowmobile); the original function is intact."
+        ]
+    },
+    "Layer 11 Head 8": {
+        "lora4": [
+            "same_function",
+            "The abstract-patterns core is lost, but Patterns/Textures persists with grid/mesh objects (window_screen, chain_mail, spider_web) and textured animals (echidna, axolotl); partial continuity."
+        ],
+        "lora16": [
+            "same_function",
+            "Same Patterns/Textures behavior (window_screen, chain_mail, spider_web) alongside textured animals (echidna, axolotl); the abstract/symmetry mechanism is weakened but not entirely gone."
+        ],
+        "lp": [
+            "same_function",
+            "Patterns/Textures remains prominent with mesh/grid objects (window_screen, chain_mail, spider_web) and textured animals (echidna, axolotl); evidence of partial continuity with the original abstract-patterns function."
+        ]
+    },
+    "Layer 11 Head 9": {
+        "lora4": [
+            "specialized",
+            "Cultural/Traditional objects and attire remain dominant (kimono, sombrero, shoji, sarong) alongside regional animals (koala, wombat); the cultural/traditional mechanism is preserved."
+        ],
+        "lora16": [
+            "specialized",
+            "Same Cultural/Traditional behavior (kimono, sombrero, shoji, sarong) with regional animals (koala, wombat); the original function is intact."
+        ],
+        "lp": [
+            "specialized",
+            "Cultural/Traditional objects and attire continue to dominate (kimono, sombrero, shoji, sarong) with regional animals (koala, wombat); the cultural/traditional function is clearly preserved."
+        ]
+    },
+    "Layer 11 Head 10": {
+        "lora4": [
+            "same_function",
+            "Cultural/Traditional objects and attire remain dominant (kimono, sombrero, shoji, sarong) alongside regional animals (koala, wombat); the cultural/traditional mechanism is preserved."
+        ],
+        "lora16": [
+            "same_function",
+            "Same Cultural/Traditional behavior (kimono, sombrero, shoji, sarong) with regional animals (koala, wombat); the original function is intact."
+        ],
+        "lp": [
+            "same_function",
+            "Cultural/Traditional objects and attire continue to dominate (kimono, sombrero, shoji, sarong) with regional animals (koala, wombat); the cultural/traditional function is clearly preserved."
+        ]
+    },
+    "Layer 11 Head 11": {
+        "lora4": [
+            "different_function",
+            "Cultural/Traditional objects and attire remain dominant (kimono, sombrero, shoji, sarong) alongside regional animals (koala, wombat); the cultural/traditional mechanism is preserved."
+        ],
+        "lora16": [
+            "different_function",
+            "Same Cultural/Traditional behavior (kimono, sombrero, shoji, sarong) with regional animals (koala, wombat); the original function is intact."
+        ],
+        "lp": [
+            "different_function",
+            "Cultural/Traditional objects and attire continue to dominate (kimono, sombrero, shoji, sarong) with regional animals (koala, wombat); the cultural/traditional function is clearly preserved."
+        ]
+    }
+}

@@ -1,0 +1,386 @@
+{
+  "Layer 8 Head 0": {
+    "wSCI_Score": 0.4651,
+    "Act_Eff_Dim": 6.95,
+    "Text_Eff_Dim": 25.0,
+    "Act_Entropy_bits": 4.137,
+    "Group_Entropy_bits": 2.1555,
+    "Act_Mag_Eff_Dim": 3.21
+  },
+  "Layer 8 Head 1": {
+    "wSCI_Score": 0.4846,
+    "Act_Eff_Dim": 5.77,
+    "Text_Eff_Dim": 28.88,
+    "Act_Entropy_bits": 3.7832,
+    "Group_Entropy_bits": 2.4969,
+    "Act_Mag_Eff_Dim": 3.37
+  },
+  "Layer 8 Head 2": {
+    "wSCI_Score": 0.543,
+    "Act_Eff_Dim": 3.1,
+    "Text_Eff_Dim": 15.72,
+    "Act_Entropy_bits": 3.0165,
+    "Group_Entropy_bits": 1.6995,
+    "Act_Mag_Eff_Dim": 1.27
+  },
+  "Layer 8 Head 3": {
+    "wSCI_Score": 0.5165,
+    "Act_Eff_Dim": 8.63,
+    "Text_Eff_Dim": 36.16,
+    "Act_Entropy_bits": 4.5569,
+    "Group_Entropy_bits": 2.6583,
+    "Act_Mag_Eff_Dim": 1.87
+  },
+  "Layer 8 Head 4": {
+    "wSCI_Score": 0.6275,
+    "Act_Eff_Dim": 16.33,
+    "Text_Eff_Dim": 15.98,
+    "Act_Entropy_bits": 4.8436,
+    "Group_Entropy_bits": 2.8067,
+    "Act_Mag_Eff_Dim": 10.32
+  },
+  "Layer 8 Head 5": {
+    "wSCI_Score": 0.5322,
+    "Act_Eff_Dim": 14.5,
+    "Text_Eff_Dim": 39.68,
+    "Act_Entropy_bits": 4.7816,
+    "Group_Entropy_bits": 4.2588,
+    "Act_Mag_Eff_Dim": 4.47
+  },
+  "Layer 8 Head 6": {
+    "wSCI_Score": 0.3667,
+    "Act_Eff_Dim": 13.81,
+    "Text_Eff_Dim": 6.87,
+    "Act_Entropy_bits": 4.8877,
+    "Group_Entropy_bits": 1.6943,
+    "Act_Mag_Eff_Dim": 2.21
+  },
+  "Layer 8 Head 7": {
+    "wSCI_Score": 0.5922,
+    "Act_Eff_Dim": 4.2,
+    "Text_Eff_Dim": 17.66,
+    "Act_Entropy_bits": 3.685,
+    "Group_Entropy_bits": 3.0796,
+    "Act_Mag_Eff_Dim": 2.64
+  },
+  "Layer 8 Head 8": {
+    "wSCI_Score": 0.5492,
+    "Act_Eff_Dim": 6.2,
+    "Text_Eff_Dim": 45.67,
+    "Act_Entropy_bits": 3.9455,
+    "Group_Entropy_bits": 4.045,
+    "Act_Mag_Eff_Dim": 8.14
+  },
+  "Layer 8 Head 9": {
+    "wSCI_Score": 0.5312,
+    "Act_Eff_Dim": 14.73,
+    "Text_Eff_Dim": 9.63,
+    "Act_Entropy_bits": 4.7396,
+    "Group_Entropy_bits": 3.6973,
+    "Act_Mag_Eff_Dim": 6.9
+  },
+  "Layer 8 Head 10": {
+    "wSCI_Score": 0.5262,
+    "Act_Eff_Dim": 12.15,
+    "Text_Eff_Dim": 21.26,
+    "Act_Entropy_bits": 4.7781,
+    "Group_Entropy_bits": 3.7317,
+    "Act_Mag_Eff_Dim": 2.88
+  },
+  "Layer 8 Head 11": {
+    "wSCI_Score": 0.4499,
+    "Act_Eff_Dim": 13.99,
+    "Text_Eff_Dim": 31.09,
+    "Act_Entropy_bits": 4.8437,
+    "Group_Entropy_bits": 2.3376,
+    "Act_Mag_Eff_Dim": 10.85
+  },
+  "Layer 9 Head 0": {
+    "wSCI_Score": 0.5086,
+    "Act_Eff_Dim": 12.18,
+    "Text_Eff_Dim": 36.51,
+    "Act_Entropy_bits": 4.6414,
+    "Group_Entropy_bits": 4.3805,
+    "Act_Mag_Eff_Dim": 6.39
+  },
+  "Layer 9 Head 1": {
+    "wSCI_Score": 0.5615,
+    "Act_Eff_Dim": 20.8,
+    "Text_Eff_Dim": 34.02,
+    "Act_Entropy_bits": 5.1708,
+    "Group_Entropy_bits": 3.4179,
+    "Act_Mag_Eff_Dim": 4.81
+  },
+  "Layer 9 Head 2": {
+    "wSCI_Score": 0.6358,
+    "Act_Eff_Dim": 24.9,
+    "Text_Eff_Dim": 33.09,
+    "Act_Entropy_bits": 5.2832,
+    "Group_Entropy_bits": 3.6274,
+    "Act_Mag_Eff_Dim": 10.25
+  },
+  "Layer 9 Head 3": {
+    "wSCI_Score": 0.5774,
+    "Act_Eff_Dim": 19.86,
+    "Text_Eff_Dim": 18.43,
+    "Act_Entropy_bits": 5.1352,
+    "Group_Entropy_bits": 3.1471,
+    "Act_Mag_Eff_Dim": 13.79
+  },
+  "Layer 9 Head 4": {
+    "wSCI_Score": 0.7166,
+    "Act_Eff_Dim": 12.04,
+    "Text_Eff_Dim": 4.24,
+    "Act_Entropy_bits": 4.4857,
+    "Group_Entropy_bits": 1.5364,
+    "Act_Mag_Eff_Dim": 9.07
+  },
+  "Layer 9 Head 5": {
+    "wSCI_Score": 0.5981,
+    "Act_Eff_Dim": 17.39,
+    "Text_Eff_Dim": 19.55,
+    "Act_Entropy_bits": 4.9552,
+    "Group_Entropy_bits": 3.3383,
+    "Act_Mag_Eff_Dim": 9.28
+  },
+  "Layer 9 Head 6": {
+    "wSCI_Score": 0.5953,
+    "Act_Eff_Dim": 18.61,
+    "Text_Eff_Dim": 12.31,
+    "Act_Entropy_bits": 5.0405,
+    "Group_Entropy_bits": 3.289,
+    "Act_Mag_Eff_Dim": 3.86
+  },
+  "Layer 9 Head 7": {
+    "wSCI_Score": 0.5387,
+    "Act_Eff_Dim": 7.91,
+    "Text_Eff_Dim": 26.13,
+    "Act_Entropy_bits": 4.135,
+    "Group_Entropy_bits": 3.7659,
+    "Act_Mag_Eff_Dim": 7.33
+  },
+  "Layer 9 Head 8": {
+    "wSCI_Score": 0.6434,
+    "Act_Eff_Dim": 18.28,
+    "Text_Eff_Dim": 18.27,
+    "Act_Entropy_bits": 5.0332,
+    "Group_Entropy_bits": 3.5654,
+    "Act_Mag_Eff_Dim": 13.1
+  },
+  "Layer 9 Head 9": {
+    "wSCI_Score": 0.5717,
+    "Act_Eff_Dim": 4.98,
+    "Text_Eff_Dim": 28.0,
+    "Act_Entropy_bits": 3.73,
+    "Group_Entropy_bits": 3.9777,
+    "Act_Mag_Eff_Dim": 8.72
+  },
+  "Layer 9 Head 10": {
+    "wSCI_Score": 0.5399,
+    "Act_Eff_Dim": 8.93,
+    "Text_Eff_Dim": 39.26,
+    "Act_Entropy_bits": 4.4753,
+    "Group_Entropy_bits": 3.6208,
+    "Act_Mag_Eff_Dim": 2.41
+  },
+  "Layer 9 Head 11": {
+    "wSCI_Score": 0.5531,
+    "Act_Eff_Dim": 11.79,
+    "Text_Eff_Dim": 22.6,
+    "Act_Entropy_bits": 4.516,
+    "Group_Entropy_bits": 3.0953,
+    "Act_Mag_Eff_Dim": 3.89
+  },
+  "Layer 10 Head 0": {
+    "wSCI_Score": 0.485,
+    "Act_Eff_Dim": 33.59,
+    "Text_Eff_Dim": 43.22,
+    "Act_Entropy_bits": 5.52,
+    "Group_Entropy_bits": 3.8172,
+    "Act_Mag_Eff_Dim": 9.61
+  },
+  "Layer 10 Head 1": {
+    "wSCI_Score": 0.4799,
+    "Act_Eff_Dim": 14.77,
+    "Text_Eff_Dim": 43.42,
+    "Act_Entropy_bits": 4.8387,
+    "Group_Entropy_bits": 4.0167,
+    "Act_Mag_Eff_Dim": 4.1
+  },
+  "Layer 10 Head 2": {
+    "wSCI_Score": 0.5642,
+    "Act_Eff_Dim": 21.12,
+    "Text_Eff_Dim": 35.26,
+    "Act_Entropy_bits": 5.138,
+    "Group_Entropy_bits": 3.6985,
+    "Act_Mag_Eff_Dim": 10.71
+  },
+  "Layer 10 Head 3": {
+    "wSCI_Score": 0.5469,
+    "Act_Eff_Dim": 25.27,
+    "Text_Eff_Dim": 20.04,
+    "Act_Entropy_bits": 5.3701,
+    "Group_Entropy_bits": 1.3391,
+    "Act_Mag_Eff_Dim": 10.35
+  },
+  "Layer 10 Head 4": {
+    "wSCI_Score": 0.5722,
+    "Act_Eff_Dim": 25.6,
+    "Text_Eff_Dim": 43.7,
+    "Act_Entropy_bits": 5.3558,
+    "Group_Entropy_bits": 3.7247,
+    "Act_Mag_Eff_Dim": 15.94
+  },
+  "Layer 10 Head 5": {
+    "wSCI_Score": 0.5897,
+    "Act_Eff_Dim": 27.8,
+    "Text_Eff_Dim": 28.63,
+    "Act_Entropy_bits": 5.3535,
+    "Group_Entropy_bits": 3.7131,
+    "Act_Mag_Eff_Dim": 14.96
+  },
+  "Layer 10 Head 6": {
+    "wSCI_Score": 0.6049,
+    "Act_Eff_Dim": 18.05,
+    "Text_Eff_Dim": 34.23,
+    "Act_Entropy_bits": 4.9693,
+    "Group_Entropy_bits": 3.6976,
+    "Act_Mag_Eff_Dim": 8.55
+  },
+  "Layer 10 Head 7": {
+    "wSCI_Score": 0.6029,
+    "Act_Eff_Dim": 9.96,
+    "Text_Eff_Dim": 17.57,
+    "Act_Entropy_bits": 4.5339,
+    "Group_Entropy_bits": 2.0964,
+    "Act_Mag_Eff_Dim": 8.97
+  },
+  "Layer 10 Head 8": {
+    "wSCI_Score": 0.5343,
+    "Act_Eff_Dim": 6.05,
+    "Text_Eff_Dim": 62.52,
+    "Act_Entropy_bits": 3.8795,
+    "Group_Entropy_bits": 4.7814,
+    "Act_Mag_Eff_Dim": 4.05
+  },
+  "Layer 10 Head 9": {
+    "wSCI_Score": 0.6926,
+    "Act_Eff_Dim": 8.65,
+    "Text_Eff_Dim": 14.49,
+    "Act_Entropy_bits": 4.1755,
+    "Group_Entropy_bits": 1.8568,
+    "Act_Mag_Eff_Dim": 10.8
+  },
+  "Layer 10 Head 10": {
+    "wSCI_Score": 0.7035,
+    "Act_Eff_Dim": 10.01,
+    "Text_Eff_Dim": 15.59,
+    "Act_Entropy_bits": 4.2228,
+    "Group_Entropy_bits": 2.4781,
+    "Act_Mag_Eff_Dim": 12.75
+  },
+  "Layer 10 Head 11": {
+    "wSCI_Score": 0.64,
+    "Act_Eff_Dim": 14.61,
+    "Text_Eff_Dim": 24.06,
+    "Act_Entropy_bits": 4.8294,
+    "Group_Entropy_bits": 3.475,
+    "Act_Mag_Eff_Dim": 9.05
+  },
+  "Layer 11 Head 0": {
+    "wSCI_Score": 0.6397,
+    "Act_Eff_Dim": 10.24,
+    "Text_Eff_Dim": 24.85,
+    "Act_Entropy_bits": 4.2015,
+    "Group_Entropy_bits": 0.9211,
+    "Act_Mag_Eff_Dim": 1.0
+  },
+  "Layer 11 Head 1": {
+    "wSCI_Score": 0.5785,
+    "Act_Eff_Dim": 37.3,
+    "Text_Eff_Dim": 56.32,
+    "Act_Entropy_bits": 5.5958,
+    "Group_Entropy_bits": 4.1852,
+    "Act_Mag_Eff_Dim": 7.15
+  },
+  "Layer 11 Head 2": {
+    "wSCI_Score": 0.5497,
+    "Act_Eff_Dim": 39.61,
+    "Text_Eff_Dim": 72.28,
+    "Act_Entropy_bits": 5.5755,
+    "Group_Entropy_bits": 5.1249,
+    "Act_Mag_Eff_Dim": 15.44
+  },
+  "Layer 11 Head 3": {
+    "wSCI_Score": 0.5803,
+    "Act_Eff_Dim": 21.01,
+    "Text_Eff_Dim": 39.6,
+    "Act_Entropy_bits": 5.035,
+    "Group_Entropy_bits": 4.2319,
+    "Act_Mag_Eff_Dim": 4.51
+  },
+  "Layer 11 Head 4": {
+    "wSCI_Score": 0.5924,
+    "Act_Eff_Dim": 11.92,
+    "Text_Eff_Dim": 12.2,
+    "Act_Entropy_bits": 4.5102,
+    "Group_Entropy_bits": 1.9571,
+    "Act_Mag_Eff_Dim": 4.62
+  },
+  "Layer 11 Head 5": {
+    "wSCI_Score": 0.6567,
+    "Act_Eff_Dim": 11.85,
+    "Text_Eff_Dim": 16.46,
+    "Act_Entropy_bits": 4.3411,
+    "Group_Entropy_bits": 2.391,
+    "Act_Mag_Eff_Dim": 4.08
+  },
+  "Layer 11 Head 6": {
+    "wSCI_Score": 0.6173,
+    "Act_Eff_Dim": 9.15,
+    "Text_Eff_Dim": 14.56,
+    "Act_Entropy_bits": 4.0887,
+    "Group_Entropy_bits": 1.5884,
+    "Act_Mag_Eff_Dim": 5.86
+  },
+  "Layer 11 Head 7": {
+    "wSCI_Score": 0.6155,
+    "Act_Eff_Dim": 23.38,
+    "Text_Eff_Dim": 22.44,
+    "Act_Entropy_bits": 5.0908,
+    "Group_Entropy_bits": 4.2709,
+    "Act_Mag_Eff_Dim": 1.0
+  },
+  "Layer 11 Head 8": {
+    "wSCI_Score": 0.6497,
+    "Act_Eff_Dim": 17.12,
+    "Text_Eff_Dim": 21.67,
+    "Act_Entropy_bits": 4.8257,
+    "Group_Entropy_bits": 3.6526,
+    "Act_Mag_Eff_Dim": 10.82
+  },
+  "Layer 11 Head 9": {
+    "wSCI_Score": 0.6768,
+    "Act_Eff_Dim": 18.34,
+    "Text_Eff_Dim": 40.41,
+    "Act_Entropy_bits": 4.7944,
+    "Group_Entropy_bits": 2.5565,
+    "Act_Mag_Eff_Dim": 8.92
+  },
+  "Layer 11 Head 10": {
+    "wSCI_Score": 0.6801,
+    "Act_Eff_Dim": 11.47,
+    "Text_Eff_Dim": 16.16,
+    "Act_Entropy_bits": 4.3838,
+    "Group_Entropy_bits": 0.7526,
+    "Act_Mag_Eff_Dim": 8.38
+  },
+  "Layer 11 Head 11": {
+    "wSCI_Score": 0.5601,
+    "Act_Eff_Dim": 38.86,
+    "Text_Eff_Dim": 40.85,
+    "Act_Entropy_bits": 5.552,
+    "Group_Entropy_bits": 3.514,
+    "Act_Mag_Eff_Dim": 12.35
+  }
+}

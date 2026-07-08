@@ -1,0 +1,737 @@
+{
+  "analysis": "Semantic-functionality evolution of CLIP attention heads when adapting to ImageNet-1k, compared across four adaptation techniques.",
+  "task": "imagenet1k",
+  "techniques": [
+    "lora4",
+    "lora16",
+    "lp",
+    "fft"
+  ],
+  "head_scope": "Last 4 transformer blocks (Layers 8-11). Only heads with interesting cross-technique behaviour (divergence or notable agreement) are reported.",
+  "labels_source": "Per-technique semantic_change, top_k_mean and rank_mean are taken from imagenet1k/changes_merged.json (Ignored is reported as 'became_useless').",
+  "categories": {
+    "same_function": "Preserved org function / computation.",
+    "different_function": "Theme overwritten.",
+    "specialized": "Narrowed: some org functions retained, others dropped.",
+    "became_useless": "Low top_k_mean relative to the layer (reported as 'Ignored' in the source)."
+  },
+  "heads": {
+    "Layer 9 Head 2": {
+      "before_org_top_groups": {
+        "Patterns, Textures & Designs": 1485.466,
+        "Artistic Styles & Movements": 734.076,
+        "Textures & Materials (Close-up)": 634.504,
+        "Macro & Close-up Photography": 525.562,
+        "Graffiti & Street Art": 324.89
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Animals": 919.395,
+            "Dogs & Canines": 581.75,
+            "Patterns, Textures & Designs": 144.79,
+            "Food & Cuisine": 144.358,
+            "Aerial & Bird's-Eye Views": 76.792
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 2.144,
+          "rank_mean": 0.582
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Animals": 1940.401,
+            "Dogs & Canines": 1754.52,
+            "Food & Cuisine": 78.658,
+            "Sports & Athletics": 71.847,
+            "Fashion & Clothing": 62.086
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 1.962,
+          "rank_mean": 0.566
+        },
+        "lp": {
+          "after_top_groups": {
+            "Animals": 1751.002,
+            "Dogs & Canines": 1264.861,
+            "Fashion & Clothing": 220.752,
+            "Colors": 219.383,
+            "Household Objects & Furniture": 214.582
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 2.688,
+          "rank_mean": 0.69
+        },
+        "fft": {
+          "after_top_groups": {
+            "Animals": 1383.515,
+            "Dogs & Canines": 971.379,
+            "Colors": 283.292,
+            "Patterns, Textures & Designs": 99.965,
+            "Reptiles & Amphibians": 72.123
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 3.919,
+          "rank_mean": 0.692
+        }
+      },
+      "cross_technique_summary": "Most divergent head in the set: a texture/pattern head read four different ways -- LoRA (4 & 16) -> specialized, LP -> different_function, FFT -> same_function (the texture computation survives, now applied to dog-coat texture). Adapter capacity changes the verdict."
+    },
+    "Layer 11 Head 3": {
+      "before_org_top_groups": {
+        "Professions & Occupations": 2770.641,
+        "Transportation & Vehicles": 949.754,
+        "Water & Aquatic": 809.539,
+        "Marine & Aquatic Life": 769.879,
+        "Food & Cuisine": 614.035
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Transportation & Vehicles": 2370.392,
+            "Medical & Scientific": 842.231,
+            "Sports & Athletics": 697.583,
+            "Architecture & Buildings": 553.155,
+            "Kitchen & Cooking Equipment": 508.993
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 5.041,
+          "rank_mean": 0.886
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Transportation & Vehicles": 1868.102,
+            "Medical & Scientific": 466.614,
+            "Fashion & Clothing": 424.928,
+            "Professions & Occupations": 402.69,
+            "Colors": 347.581
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 4.995,
+          "rank_mean": 0.873
+        },
+        "lp": {
+          "after_top_groups": {
+            "Transportation & Vehicles": 905.271,
+            "Fashion & Clothing": 525.18,
+            "Weapons & Armor": 473.043,
+            "Medical & Scientific": 469.555,
+            "Architecture & Buildings": 376.266
+          },
+          "semantic_change": "became_useless",
+          "top_k_mean": 2.054,
+          "rank_mean": 0.289
+        },
+        "fft": {
+          "after_top_groups": {
+            "Transportation & Vehicles": 767.044,
+            "Medical & Scientific": 409.243,
+            "Architecture & Buildings": 324.565,
+            "Optical & Scientific Instruments": 247.961,
+            "Kitchen & Cooking Equipment": 240.544
+          },
+          "semantic_change": "became_useless",
+          "top_k_mean": 2.656,
+          "rank_mean": 0.238
+        }
+      },
+      "cross_technique_summary": "Capacity paradox: the low-capacity LoRA adapters preserve this professions/transport/marine head (same_function), while the high-capacity LP and FFT overwrite it into uselessness (Ignored). More tuning is not always more preservation."
+    },
+    "Layer 8 Head 0": {
+      "before_org_top_groups": {
+        "Locations & Places": 29.737,
+        "Letters, Text & Writing": 4.209,
+        "Plants & Botanical": 1.574,
+        "Natural Landscapes": 0.969,
+        "Trees & Forests": 0.824
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Photography Techniques & Styles": 903.961,
+            "Optical & Scientific Instruments": 903.961,
+            "Animals": 596.548,
+            "Insects & Arachnids": 575.049,
+            "Plants & Botanical": 76.415
+          },
+          "semantic_change": "became_useless",
+          "top_k_mean": 0.992,
+          "rank_mean": 0.348
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Animals": 234.095,
+            "Birds": 124.889,
+            "Reptiles & Amphibians": 97.322,
+            "Photography Techniques & Styles": 61.27,
+            "Optical & Scientific Instruments": 61.27
+          },
+          "semantic_change": "became_useless",
+          "top_k_mean": 0.929,
+          "rank_mean": 0.325
+        },
+        "lp": {
+          "after_top_groups": {
+            "Animals": 114.568,
+            "Dogs & Canines": 52.679,
+            "Reptiles & Amphibians": 29.804,
+            "Tools & Hardware": 18.0,
+            "Insects & Arachnids": 14.506
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 1.697,
+          "rank_mean": 0.548
+        },
+        "fft": {
+          "after_top_groups": {
+            "Animals": 424.256,
+            "Dogs & Canines": 99.909,
+            "Marine & Aquatic Life": 95.276,
+            "Reptiles & Amphibians": 80.54,
+            "Birds": 70.616
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 1.952,
+          "rank_mean": 0.463
+        }
+      },
+      "cross_technique_summary": "Opposite of L11H3: LoRA leaves this places head essentially untouched (Ignored / no engagement), while LP and FFT actively repurpose it (different_function). Full tuning is needed to recruit it."
+    },
+    "Layer 9 Head 4": {
+      "before_org_top_groups": {
+        "Textures & Materials (Close-up)": 71.559,
+        "Vintage & Retro Aesthetics": 35.08,
+        "Subject Count": 12.27,
+        "Artistic Styles & Movements": 1.625
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Animals": 852.036,
+            "Birds": 608.117,
+            "Marine & Aquatic Life": 188.569,
+            "Kitchen & Cooking Equipment": 155.812,
+            "Water & Aquatic": 66.75
+          },
+          "semantic_change": "became_useless",
+          "top_k_mean": 1.229,
+          "rank_mean": 0.368
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Animals": 1863.83,
+            "Kitchen & Cooking Equipment": 1050.806,
+            "Marine & Aquatic Life": 522.768,
+            "Patterns, Textures & Designs": 447.956,
+            "Birds": 357.944
+          },
+          "semantic_change": "became_useless",
+          "top_k_mean": 1.098,
+          "rank_mean": 0.315
+        },
+        "lp": {
+          "after_top_groups": {
+            "Animals": 438.937,
+            "Kitchen & Cooking Equipment": 221.371,
+            "Tools & Hardware": 210.953,
+            "Dogs & Canines": 147.496,
+            "Marine & Aquatic Life": 107.117
+          },
+          "semantic_change": "became_useless",
+          "top_k_mean": 1.474,
+          "rank_mean": 0.414
+        },
+        "fft": {
+          "after_top_groups": {
+            "Water & Aquatic": 30.187,
+            "Tools & Hardware": 25.989,
+            "Natural Landforms & Geology": 16.771,
+            "Animals": 16.282,
+            "Transportation & Vehicles": 14.53
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 2.276,
+          "rank_mean": 0.417
+        }
+      },
+      "cross_technique_summary": "Only FFT manages to recruit this texture/subject-count head (different_function); LoRA4, LoRA16 and LP all leave it useless. A head that needs full capacity to be activated."
+    },
+    "Layer 9 Head 6": {
+      "before_org_top_groups": {
+        "Aerial & Bird's-Eye Views": 644.487,
+        "Natural Landscapes": 199.236,
+        "Water & Aquatic": 148.029,
+        "Textures & Materials (Close-up)": 96.686,
+        "Reflections & Mirrors": 88.734
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Animals": 1841.93,
+            "Reptiles & Amphibians": 1464.78,
+            "Patterns, Textures & Designs": 230.324,
+            "Sports & Athletics": 44.076,
+            "Children & Youth": 38.371
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 1.547,
+          "rank_mean": 0.46
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Animals": 1637.951,
+            "Reptiles & Amphibians": 1301.581,
+            "Patterns, Textures & Designs": 184.124,
+            "Birds": 63.323,
+            "Fashion & Clothing": 36.521
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 1.472,
+          "rank_mean": 0.453
+        },
+        "lp": {
+          "after_top_groups": {
+            "Animals": 315.807,
+            "Reptiles & Amphibians": 98.168,
+            "Dogs & Canines": 76.88,
+            "Marine & Aquatic Life": 73.847,
+            "Structures & Barriers": 46.779
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 2.161,
+          "rank_mean": 0.588
+        },
+        "fft": {
+          "after_top_groups": {
+            "Animals": 551.341,
+            "Reptiles & Amphibians": 254.958,
+            "Marine & Aquatic Life": 185.018,
+            "Tools & Hardware": 128.917,
+            "Transportation & Vehicles": 92.128
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 2.95,
+          "rank_mean": 0.576
+        }
+      },
+      "cross_technique_summary": "LoRA4/16 specialize this aerial/landscape head (retain the aquatic thread), whereas LP and FFT push it all the way to a different function (reptiles/marine). Smooth capacity gradient: specialize -> repurpose."
+    },
+    "Layer 10 Head 0": {
+      "before_org_top_groups": {
+        "Vintage & Retro Aesthetics": 715.252,
+        "Locations & Places": 342.768,
+        "Circles & Round Objects": 133.161,
+        "Sports & Athletics": 104.927,
+        "Celebrations & Festivals": 104.427
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Kitchen & Cooking Equipment": 495.479,
+            "Technology & Electronics": 358.852,
+            "Sports & Athletics": 279.646,
+            "Office & Stationery": 275.486,
+            "Containers & Vessels": 234.318
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 3.215,
+          "rank_mean": 0.535
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Kitchen & Cooking Equipment": 615.738,
+            "Technology & Electronics": 567.846,
+            "Fashion & Clothing": 502.99,
+            "Containers & Vessels": 398.827,
+            "Household Objects & Furniture": 330.144
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 3.221,
+          "rank_mean": 0.552
+        },
+        "lp": {
+          "after_top_groups": {
+            "Kitchen & Cooking Equipment": 542.868,
+            "Fashion & Clothing": 328.657,
+            "Containers & Vessels": 327.132,
+            "Office & Stationery": 163.805,
+            "Household Objects & Furniture": 154.269
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 3.276,
+          "rank_mean": 0.629
+        },
+        "fft": {
+          "after_top_groups": {
+            "Kitchen & Cooking Equipment": 108.849,
+            "Containers & Vessels": 99.013,
+            "Technology & Electronics": 83.966,
+            "Fashion & Clothing": 75.25,
+            "Office & Stationery": 43.795
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 5.34,
+          "rank_mean": 0.695
+        }
+      },
+      "cross_technique_summary": "Stable under LoRA4/16 and LP (same_function, round-object/vessel thread), but FFT alone specializes it onto containers/kitchen equipment."
+    },
+    "Layer 10 Head 4": {
+      "before_org_top_groups": {
+        "Transportation & Vehicles": 1168.956,
+        "Sports & Athletics": 1062.41,
+        "Futuristic & Science Fiction": 1045.132,
+        "Animals": 634.026,
+        "Music, Dance & Performance": 570.686
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Transportation & Vehicles": 1556.504,
+            "Fashion & Clothing": 1249.438,
+            "Weapons & Armor": 974.232,
+            "Jewelry & Accessories": 813.486,
+            "Animals": 794.487
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 3.283,
+          "rank_mean": 0.796
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Transportation & Vehicles": 976.773,
+            "Animals": 358.438,
+            "Weapons & Armor": 353.939,
+            "Fashion & Clothing": 281.683,
+            "Outdoor & Camping": 218.531
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 3.327,
+          "rank_mean": 0.786
+        },
+        "lp": {
+          "after_top_groups": {
+            "Animals": 1251.852,
+            "Transportation & Vehicles": 643.12,
+            "Fashion & Clothing": 624.148,
+            "Dogs & Canines": 565.158,
+            "Marine & Aquatic Life": 434.868
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 3.535,
+          "rank_mean": 0.807
+        },
+        "fft": {
+          "after_top_groups": {
+            "Fashion & Clothing": 248.211,
+            "Animals": 201.363,
+            "Transportation & Vehicles": 176.187,
+            "Sports & Athletics": 146.609,
+            "Dogs & Canines": 70.201
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 5.326,
+          "rank_mean": 0.824
+        }
+      },
+      "cross_technique_summary": "Transport/sport/animal head held as same_function by LoRA4/16 and LP, but FFT changes it (different_function) by adding fashion and dropping the dynamic-motion framing."
+    },
+    "Layer 10 Head 9": {
+      "before_org_top_groups": {
+        "Jewelry & Accessories": 186.238,
+        "Transportation & Vehicles": 22.361,
+        "Caricatures & Illustrations": 17.717,
+        "Timekeeping & Clocks": 17.402,
+        "People & Portraits": 6.98
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Toys, Games & Recreation": 837.102,
+            "Transportation & Vehicles": 494.943,
+            "Sports & Athletics": 353.701,
+            "Musical Instruments": 238.085,
+            "Fashion & Clothing": 189.026
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 3.898,
+          "rank_mean": 0.575
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Sports & Athletics": 2317.538,
+            "Transportation & Vehicles": 1698.099,
+            "Musical Instruments": 1527.435,
+            "Toys, Games & Recreation": 588.452,
+            "Outdoor & Camping": 525.39
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 3.796,
+          "rank_mean": 0.593
+        },
+        "lp": {
+          "after_top_groups": {
+            "Toys, Games & Recreation": 140.136,
+            "Transportation & Vehicles": 44.208,
+            "Jewelry & Accessories": 36.354,
+            "Patterns, Textures & Designs": 26.864,
+            "Musical Instruments": 16.381
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 4.011,
+          "rank_mean": 0.574
+        },
+        "fft": {
+          "after_top_groups": {
+            "Medical & Scientific": 188.404,
+            "Transportation & Vehicles": 156.654,
+            "Optical & Scientific Instruments": 82.448,
+            "Toys, Games & Recreation": 74.739,
+            "Musical Instruments": 63.33
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 5.857,
+          "rank_mean": 0.568
+        }
+      },
+      "cross_technique_summary": "LoRA4/16 read it as different_function while LP and FFT read it as specialized (slender/elongated-object thread retained into implements/medical). Adapter vs full-tune disagree on whether a thread survives."
+    },
+    "Layer 11 Head 5": {
+      "before_org_top_groups": {
+        "Animals": 8604.836,
+        "Reptiles & Amphibians": 2923.742,
+        "Insects & Arachnids": 2400.594,
+        "Macro & Close-up Photography": 1640.078,
+        "Birds": 1555.836
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Animals": 18125.301,
+            "Dogs & Canines": 7190.859,
+            "Birds": 2357.739,
+            "Reptiles & Amphibians": 1857.322,
+            "Cats & Felines": 1060.907
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 5.651,
+          "rank_mean": 0.797
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Animals": 13593.846,
+            "Dogs & Canines": 8340.063,
+            "Colors": 1153.31,
+            "Birds": 1062.112,
+            "Cats & Felines": 673.873
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 5.667,
+          "rank_mean": 0.796
+        },
+        "lp": {
+          "after_top_groups": {
+            "Animals": 450.583,
+            "Dogs & Canines": 389.458,
+            "Fashion & Clothing": 53.786,
+            "Reptiles & Amphibians": 22.512
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 4.622,
+          "rank_mean": 0.594
+        },
+        "fft": {
+          "after_top_groups": {
+            "Animals": 1842.906,
+            "Dogs & Canines": 762.266,
+            "Reptiles & Amphibians": 302.146,
+            "Insects & Arachnids": 247.201,
+            "Patterns, Textures & Designs": 245.14
+          },
+          "semantic_change": "same_function",
+          "top_k_mean": 6.467,
+          "rank_mean": 0.602
+        }
+      },
+      "cross_technique_summary": "Similarity anchor: the dominant animal head is same_function under ALL four techniques -- a function so strong and so aligned with ImageNet that adaptation method does not matter."
+    },
+    "Layer 11 Head 7": {
+      "before_org_top_groups": {
+        "Circles & Round Objects": 549.758,
+        "Fashion & Clothing": 324.047,
+        "Food & Cuisine": 138.336,
+        "Water & Aquatic": 103.324,
+        "Kitchen & Cooking Equipment": 100.75
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Musical Instruments": 823.183,
+            "Kitchen & Cooking Equipment": 754.369,
+            "Fashion & Clothing": 243.692,
+            "Architecture & Buildings": 243.501,
+            "Circles & Round Objects": 231.733
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 5.277,
+          "rank_mean": 0.87
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Kitchen & Cooking Equipment": 3024.804,
+            "Musical Instruments": 2056.896,
+            "Containers & Vessels": 1637.643,
+            "Fashion & Clothing": 1160.971,
+            "Household Objects & Furniture": 1134.345
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 5.254,
+          "rank_mean": 0.862
+        },
+        "lp": {
+          "after_top_groups": {
+            "Musical Instruments": 489.771,
+            "Containers & Vessels": 327.017,
+            "Kitchen & Cooking Equipment": 306.97,
+            "Household Objects & Furniture": 253.65,
+            "Fashion & Clothing": 184.478
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 4.205,
+          "rank_mean": 0.644
+        },
+        "fft": {
+          "after_top_groups": {
+            "Musical Instruments": 698.83,
+            "Tools & Hardware": 322.718,
+            "Household Objects & Furniture": 313.313,
+            "Kitchen & Cooking Equipment": 312.906,
+            "Medical & Scientific": 306.485
+          },
+          "semantic_change": "specialized",
+          "top_k_mean": 6.017,
+          "rank_mean": 0.679
+        }
+      },
+      "cross_technique_summary": "Similarity anchor: graspable-objects head is specialized under all four techniques (-> instruments/tools/implements). Consistent narrowing regardless of method."
+    },
+    "Layer 11 Head 1": {
+      "before_org_top_groups": {
+        "Reflections & Mirrors": 1122.059,
+        "Mood & Atmosphere (Serene / Peaceful)": 779.492,
+        "Composition & Framing": 300.391,
+        "Vintage & Retro Aesthetics": 207.629,
+        "Lighting & Light Effects": 194.23
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Timekeeping & Clocks": 795.931,
+            "Structures & Barriers": 684.381,
+            "Household Objects & Furniture": 467.283,
+            "Circles & Round Objects": 433.295,
+            "Technology & Electronics": 422.123
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 3.484,
+          "rank_mean": 0.752
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Timekeeping & Clocks": 191.37,
+            "Historical & Antique": 176.933,
+            "Technology & Electronics": 79.419,
+            "Urban & City Scenes": 73.667,
+            "Household Objects & Furniture": 37.416
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 3.587,
+          "rank_mean": 0.766
+        },
+        "lp": {
+          "after_top_groups": {
+            "Animals": 1202.631,
+            "Household Objects & Furniture": 1118.665,
+            "Fashion & Clothing": 665.619,
+            "Dogs & Canines": 630.907,
+            "Technology & Electronics": 470.061
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 2.324,
+          "rank_mean": 0.473
+        },
+        "fft": {
+          "after_top_groups": {
+            "Household Objects & Furniture": 243.585,
+            "Animals": 155.591,
+            "Musical Instruments": 103.511,
+            "Dogs & Canines": 98.378,
+            "Historical & Antique": 88.927
+          },
+          "semantic_change": "different_function",
+          "top_k_mean": 5.754,
+          "rank_mean": 0.582
+        }
+      },
+      "cross_technique_summary": "Similarity anchor: reflections/mood/composition head is different_function under all four techniques -- abstract aesthetic functions are reliably overwritten on ImageNet."
+    },
+    "Layer 8 Head 1": {
+      "before_org_top_groups": {
+        "Facial Expressions & Emotions": 15.856,
+        "Locations & Places": 5.337,
+        "Mood & Atmosphere (Serene / Peaceful)": 1.471,
+        "Spirals, Swirls & Vortexes": 0.514,
+        "Trees & Forests": 0.435
+      },
+      "techniques": {
+        "lora4": {
+          "after_top_groups": {
+            "Architecture & Buildings": 867.979,
+            "Markets & Commerce": 865.203,
+            "Kitchen & Cooking Equipment": 59.881,
+            "Transportation & Vehicles": 54.187,
+            "Vintage & Retro Aesthetics": 50.728
+          },
+          "semantic_change": "became_useless",
+          "top_k_mean": 0.764,
+          "rank_mean": 0.222
+        },
+        "lora16": {
+          "after_top_groups": {
+            "Animals": 565.837,
+            "Primates": 565.043,
+            "Fashion & Clothing": 139.554,
+            "Architecture & Buildings": 14.641,
+            "Markets & Commerce": 14.641
+          },
+          "semantic_change": "became_useless",
+          "top_k_mean": 0.685,
+          "rank_mean": 0.214
+        },
+        "lp": {
+          "after_top_groups": {
+            "Fashion & Clothing": 483.479,
+            "Animals": 181.861,
+            "Dogs & Canines": 180.892,
+            "Colors": 178.995
+          },
+          "semantic_change": "became_useless",
+          "top_k_mean": 0.773,
+          "rank_mean": 0.238
+        },
+        "fft": {
+          "after_top_groups": {
+            "Household Objects & Furniture": 10.933,
+            "Food & Cuisine": 2.066,
+            "Containers & Vessels": 0.431,
+            "Weather & Atmosphere": 0.431,
+            "Animals": 0.401
+          },
+          "semantic_change": "became_useless",
+          "top_k_mean": 0.821,
+          "rank_mean": 0.178
+        }
+      },
+      "cross_technique_summary": "Similarity anchor (death): a facial-expression/emotion head that is Ignored / useless under every technique -- no method can give it ImageNet purchase."
+    }
+  }
+}
